@@ -1,0 +1,47 @@
+DarkMode
+blue accent #6783B7
+blue accent lighter #8CB4FF
+
+NavBar
+
+button
+primary default 
+border-primary: #858585;
+    --border-secondary: #696969;
+    --button-primary-default: #fff;
+    --button-primary-hover: #cdcdcd;
+    --button-primary-active: #9e9e9e;
+    --button-primary-inactive: #fff;
+    --button-secondary-default: #4e4e4e;
+    --button-secondary-hover: #858585;
+    --button-secondary-active: #9e9e9e;
+    --button-secondary-inactive: #4e4e4e
+    button-secondary-border-focus: #0085f2;
+
+text  \
+#CDCDCD
+
+Main page
+
+bg-[#1c1c1c]
+text= #FFFFFF
+
+Toolbar
+
+bg-[#343434]
+text-[#CDCDCD]
+
+Left Slider
+
+bg-[#1c1c1c]
+
+sliders 
+
+
+point sample = #4D1E27
+text point sample = #F6707F
+
+
+
+
+LightMode
