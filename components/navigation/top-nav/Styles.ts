@@ -26,10 +26,10 @@ export const IconContainer = tw.div`flex
   text-lg
   space-x-5
   justify-end
-  md:pr-5
+  mr-2
   text-gray-800`;
 
-export const HeaderLinkContainer = tw.div`
+export const DropDownContainer = tw.div`
   hidden
   lg:flex
   flex-1
@@ -101,5 +101,11 @@ hover:text-black
   duration-300
   ease-linear
   hover:shadow-lg
-  mr-2
+`;
+
+export const ActionButtonContainer = tw.div`
+  flex
+  flex-row
+  items-center
+  space-x-3
 `;

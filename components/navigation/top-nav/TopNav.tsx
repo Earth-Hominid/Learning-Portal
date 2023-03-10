@@ -1,5 +1,5 @@
 import Logo from '../logo/Logo';
-
+import ThemeButton from '../theme-button/ThemeButton';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import {
@@ -7,25 +7,34 @@ import {
   InsideContainer,
   LinkText,
   IconContainer,
-  HeaderLinkContainer,
+  DropDownContainer,
   RelativeContainer,
   AbsoluteContainer,
   StyledButton,
   ActionButtonHolder,
+  ActionButtonContainer,
 } from './Styles';
 
 const TopNav = ({
   handleNavigationMenuClick,
   navigationMenuToggle,
+  darkMode,
+  englishMode,
+  handleToggleThemeClick,
+  handleToggleLanguage,
 }: {
   handleNavigationMenuClick: Function;
   navigationMenuToggle: boolean;
+  handleToggleThemeClick: Function;
+  handleToggleLanguage: Function;
+  englishMode: boolean | null;
+  darkMode: boolean | null;
 }) => {
   return (
     <MainContainer>
       <InsideContainer>
         <Logo />
-        <HeaderLinkContainer>
+        <DropDownContainer>
           <a href="#">
             <ActionButtonHolder>
               <LinkText>Guias</LinkText>
@@ -36,13 +45,15 @@ const TopNav = ({
               <LinkText>Recursos</LinkText>
             </ActionButtonHolder>
           </a>
-        </HeaderLinkContainer>
+        </DropDownContainer>
+
+        <ActionButtonContainer></ActionButtonContainer>
         <IconContainer>
           <RelativeContainer>
             <AbsoluteContainer></AbsoluteContainer>
             <StyledButton
               onClick={handleNavigationMenuClick}
-              className="md:hidden"
+              className="lg:hidden"
             >
               {navigationMenuToggle ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -52,6 +63,11 @@ const TopNav = ({
             </StyledButton>
           </RelativeContainer>
         </IconContainer>
+        <ThemeButton
+          handleToggleThemeClick={handleToggleThemeClick}
+          darkMode={darkMode}
+          englishMode={englishMode}
+        />
       </InsideContainer>
     </MainContainer>
   );

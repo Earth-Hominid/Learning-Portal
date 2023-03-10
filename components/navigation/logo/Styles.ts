@@ -25,10 +25,10 @@ export const Title = tw.p`
 `;
 
 export const Subtitle = tw.div`
-dark:text-[#FDF335]
+dark:text-yellow-100
 text-black
   pl-1
   rounded-sm
-  font-nunito
+  font-schoolbell
   text-sm
 `;

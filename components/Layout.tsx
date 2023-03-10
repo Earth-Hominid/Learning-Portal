@@ -2,10 +2,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
 import { DarkContext } from '@/context/dark-context';
+import { LanguageContext } from '@/context/language-context';
 
 import Header from './Header';
 import Showcase from './showcase/Showcase';
-import ToolBar from './header/toolbar/ToolBar';
+import ToolBar from './navigation/toolbar/ToolBar';
 
 interface Props {
   title: string;
@@ -36,6 +37,7 @@ const Layout: React.FC<Props> = ({
 }) => {
   const router = useRouter();
   const { darkMode, handleToggleThemeClick } = useContext(DarkContext);
+  const { englishMode, handleToggleLanguage } = useContext(LanguageContext);
 
   return (
     <div className={`${darkMode ? 'dark' : ''}`}>
@@ -51,6 +53,8 @@ const Layout: React.FC<Props> = ({
         <Header
           darkMode={darkMode}
           handleToggleThemeClick={handleToggleThemeClick}
+          englishMode={englishMode}
+          handleToggleLanguage={handleToggleLanguage}
         />
       </header>
       <main className="min-h-screen">

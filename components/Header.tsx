@@ -1,14 +1,21 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import TopNav from './header/top-nav/TopNav';
-import BottomNav from './header/bottom-nav/BottomNav';
+import TopNav from './navigation/top-nav/TopNav';
+import BottomNav from './navigation/bottom-nav/BottomNav';
 
 interface DarkModeContextType {
   darkMode: boolean | null;
+  englishMode: boolean | null;
   handleToggleThemeClick: Function;
+  handleToggleLanguage: Function;
 }
 
-const Header = ({ handleToggleThemeClick, darkMode }: DarkModeContextType) => {
+const Header = ({
+  handleToggleThemeClick,
+  darkMode,
+  englishMode,
+  handleToggleLanguage,
+}: DarkModeContextType) => {
   const [navigationMenuToggle, setNavigationMenuToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,9 +44,16 @@ const Header = ({ handleToggleThemeClick, darkMode }: DarkModeContextType) => {
         handleToggleThemeClick={handleToggleThemeClick}
         handleNavigationMenuClick={handleNavigationMenuClick}
         navigationMenuToggle={navigationMenuToggle}
+        handleToggleLanguage={handleToggleLanguage}
+        englishMode={englishMode}
       />
       {navigationMenuToggle ? (
-        <BottomNav toggleNavigationButton={toggleNavigationButton} />
+        <BottomNav
+          toggleNavigationButton={toggleNavigationButton}
+          englishMode={englishMode}
+          darkMode={darkMode}
+          handleToggleLanguage={handleToggleLanguage}
+        />
       ) : (
         ''
       )}

@@ -18,24 +18,20 @@ border-primary: #858585;
     --button-secondary-inactive: #4e4e4e
     button-secondary-border-focus: #0085f2;
 
-text  \
+text  
 #CDCDCD
 
 Main page
-
 bg-[#1c1c1c]
 text= #FFFFFF
-
-Toolbar
-
+-----
+Toolbar 
 bg-[#343434]
 text-[#CDCDCD]
-
+-----
 Left Slider
-
 bg-[#1c1c1c]
-
-sliders 
+sliders
 
 
 point sample = #4D1E27
