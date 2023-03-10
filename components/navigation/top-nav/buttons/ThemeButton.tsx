@@ -1,5 +1,5 @@
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
-import { StyledButton, ButtonText } from './Styles';
+import { StyledThemeButton, ThemeButtonText } from './Styles';
 
 const ThemeButton = ({
   darkMode,
@@ -11,14 +11,14 @@ const ThemeButton = ({
   englishMode: boolean | null;
 }) => {
   return (
-    <StyledButton>
+    <StyledThemeButton>
       {darkMode ? (
         <SunIcon className="h-4 w-4" />
       ) : (
         <MoonIcon className="h-4 w-4" />
       )}
-      <ButtonText>{englishMode ? 'Theme' : 'Tema'}</ButtonText>
-    </StyledButton>
+      <ThemeButtonText>{englishMode ? 'Theme' : 'Tema'}</ThemeButtonText>
+    </StyledThemeButton>
   );
 };
 

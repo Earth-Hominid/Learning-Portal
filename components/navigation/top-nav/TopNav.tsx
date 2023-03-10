@@ -1,5 +1,7 @@
 import Logo from '../logo/Logo';
-import ThemeButton from '../theme-button/ThemeButton';
+import ThemeButton from './buttons/ThemeButton';
+import LogInButton from './buttons/LogIn';
+import SignUpButton from './buttons/SignUp';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import {
@@ -68,6 +70,7 @@ const TopNav = ({
           darkMode={darkMode}
           englishMode={englishMode}
         />
+        <LogInButton englishMode={englishMode} />
       </InsideContainer>
     </MainContainer>
   );
