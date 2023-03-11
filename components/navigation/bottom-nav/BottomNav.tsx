@@ -3,15 +3,21 @@ import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import MenuAccordian from './accordian/MenuAccordian';
 import SearchBar from '../searchbar/SearchBar';
+import ThemeButton from '../top-nav/buttons/ThemeButton';
+import LanguageButton from '../top-nav/buttons/LanguageButton';
+import LogInButton from '../top-nav/buttons/LogIn';
+import SignUpButton from '../top-nav/buttons/SignUp';
 
 import {
   BottomNavigationMenu,
   ActionButtonHolder,
   NavigationMenu,
+  AuthHolder,
 } from './Styles';
 
 const BottomNav = ({
   toggleNavigationButton,
+  handleToggleThemeClick,
   englishMode,
   darkMode,
   handleToggleLanguage,
@@ -20,6 +26,7 @@ const BottomNav = ({
   englishMode: boolean | null;
   darkMode: boolean | null;
   handleToggleLanguage: () => void;
+  handleToggleThemeClick: () => void;
 }) => {
   const router = useRouter();
 
@@ -57,6 +64,27 @@ const BottomNav = ({
 
   return (
     <BottomNavigationMenu>
+      <AuthHolder>
+        <li>
+          <ThemeButton
+            handleToggleThemeClick={handleToggleThemeClick}
+            darkMode={darkMode}
+            englishMode={englishMode}
+          />
+        </li>
+        <li>
+          <LanguageButton
+            handleToggleLanguage={handleToggleLanguage}
+            englishMode={englishMode}
+          />
+        </li>
+      </AuthHolder>
+      <ActionButtonHolder>
+        <SignUpButton englishMode={englishMode} />
+      </ActionButtonHolder>
+      <ActionButtonHolder>
+        <LogInButton englishMode={englishMode} />
+      </ActionButtonHolder>
       <ActionButtonHolder>
         <SearchBar />
       </ActionButtonHolder>

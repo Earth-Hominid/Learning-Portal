@@ -46,17 +46,8 @@ const Header = ({
         navigationMenuToggle={navigationMenuToggle}
         handleToggleLanguage={handleToggleLanguage}
         englishMode={englishMode}
+        toggleNavigationButton={toggleNavigationButton}
       />
-      {navigationMenuToggle ? (
-        <BottomNav
-          toggleNavigationButton={toggleNavigationButton}
-          englishMode={englishMode}
-          darkMode={darkMode}
-          handleToggleLanguage={handleToggleLanguage}
-        />
-      ) : (
-        ''
-      )}
     </>
   );
 };

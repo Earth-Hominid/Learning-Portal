@@ -13,9 +13,21 @@ export const BottomNavigationMenu = tw.div`
 export const ActionButtonHolder = tw.div`
   flex 
   flex-row
+  items-center
+  justify-center
   space-x-2
   p-3
 `;
 
 export const NavigationMenu = tw.div`
+`;
+
+export const AuthHolder = tw.ul`
+  flex
+  flex-row
+  w-full
+  items-center
+  space-x-2
+  mx-3
+  mt-5
 `;

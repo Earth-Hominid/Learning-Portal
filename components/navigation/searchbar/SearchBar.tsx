@@ -26,6 +26,7 @@ const SearchBar = () => {
       </IconHolder>
       <PlaceholderInput
         type="text"
+        autoComplete="off"
         value={term}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setTerm(e.target.value)

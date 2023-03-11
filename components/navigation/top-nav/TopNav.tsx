@@ -4,6 +4,7 @@ import LanguageButton from './buttons/LanguageButton';
 import LogInButton from './buttons/LogIn';
 import SignUpButton from './buttons/SignUp';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import BottomNav from '../bottom-nav/BottomNav';
 
 import {
   MainContainer,
@@ -25,13 +26,15 @@ const TopNav = ({
   englishMode,
   handleToggleThemeClick,
   handleToggleLanguage,
+  toggleNavigationButton,
 }: {
-  handleNavigationMenuClick: Function;
+  handleNavigationMenuClick: () => void;
   navigationMenuToggle: boolean;
   handleToggleThemeClick: () => void;
   handleToggleLanguage: () => void;
   englishMode: boolean | null;
   darkMode: boolean | null;
+  toggleNavigationButton: () => void;
 }) => {
   return (
     <MainContainer>
@@ -86,6 +89,17 @@ const TopNav = ({
           </li>
         </AuthHolder>
       </InsideContainer>
+      {navigationMenuToggle ? (
+        <BottomNav
+          toggleNavigationButton={toggleNavigationButton}
+          englishMode={englishMode}
+          darkMode={darkMode}
+          handleToggleLanguage={handleToggleLanguage}
+          handleToggleThemeClick={handleToggleThemeClick}
+        />
+      ) : (
+        ''
+      )}
     </MainContainer>
   );
 };

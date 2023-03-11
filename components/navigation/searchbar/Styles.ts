@@ -6,33 +6,39 @@ export const SearchForm = tw.form`
   items-center
   space-x-2
   border
-  border-zinc-200
-  rounded-md
+  border-[#cdcdcd]
+  dark:border-yellow-100
+  rounded-full
   px-3
   py-1
-  bg-zinc-50
+  dark:bg-[#1c1c1c]
+  active:border-[#FDF335]
+  max-w-sm
+  text-sm
 `;
 
 export const IconHolder = tw.div`
-  h-6
-  w-6
+  h-5
+  w-5
   text-gray-500
+  dark:text-yellow-100
 `;
 
 export const PlaceholderInput = tw.input`
-  text-gray-500
   flex
   flex-1
   py-1
   px-2
-  border-md
-  bg-zinc-50
-  focus:outline-none 
-  focus:border-gray-500 
-  focus:ring-1
-  focus:rounded-md
-  focus:ring-gray-500
-  focus:bg-yellow-50
+  placeholder:text-[#cdcdcd]
+  text-[#616161]
+  bg-white
+  dark:text-[#cdcdcd]
+  dark:placeholder:text-yellow-50
+  dark:bg-[#1c1c1c]
+  focus:outline-none
+  focus:ring-none
+ 
+  rounded-full
 `;
 
 export const HiddenButton = tw.button``;

@@ -13,9 +13,9 @@ const ThemeButton = ({
   return (
     <StyledThemeButton onClick={handleToggleThemeClick}>
       {darkMode ? (
-        <SunIcon className="h-4 w-4" />
-      ) : (
         <MoonIcon className="h-4 w-4" />
+      ) : (
+        <SunIcon className="h-4 w-4" />
       )}
       <ThemeButtonText>{englishMode ? 'Theme' : 'Tema'}</ThemeButtonText>
     </StyledThemeButton>
