@@ -18,17 +18,6 @@ export const InsideContainer = tw.div`
   justify-between
 `;
 
-export const IconContainer = tw.div`flex
-  flex-row
-  flex-1
-  w-full
-  items-center
-  text-lg
-  space-x-5
-  justify-end
-  mr-2
-  text-gray-800`;
-
 export const MainNav = tw.nav`
   hidden
   lg:flex
@@ -38,7 +27,7 @@ export const MainNav = tw.nav`
   ml-5
 `;
 
-export const ActionButtonHolder = tw.div`
+export const LinkContainer = tw.div`
   flex
   flex-row
   space-x-1
@@ -63,6 +52,14 @@ export const LinkText = tw.h3`
   whitespace-nowrap
 `;
 
+export const IconContainer = tw.div`
+  flex
+  flex-row
+  items-center
+  justify-end
+  mr-2
+`;
+
 export const RelativeContainer = tw.div`
   relative
   group
@@ -73,9 +70,11 @@ export const AbsoluteContainer = tw.div`
   group-hover:flex
   blur-sm
   absolute
-  rounded-lg
+  rounded-full
   -inset-0.5
-  bg-black
+  dark:hover:bg-[#858585]
+  dark:bg-[#858585]
+  bg-[#FDF335]
   opacity-90
   group-hover:opacity-100
   transition
@@ -87,30 +86,23 @@ export const StyledButton = tw.button`
   relative  
   group
   dark:text-[#cdcdcd]
-  dark:hover:bg-[#858585]
-  text-black
-  rounded-lg
-  p-1
-  mx-auto
-  hover:rounded-lg
-  flex
-  items-center
-  justify-center
-  border
-  border-transparent
-hover:border-black
-hover:text-black
-  transition-all
-  duration-300
-  ease-linear
-  hover:shadow-lg
-`;
-
-export const ActionButtonContainer = tw.div`
-  flex
-  flex-row
-  items-center
-  space-x-3
+  dark:bg-[#151F28]
+  dark:hover:border-[#1c1c1c]
+  dark:hover:text-yellow-100
+  bg-white
+  hover:text-black
+    rounded-full
+    p-2
+    flex
+    items-center
+    justify-center
+    border
+    border-transparent
+  hover:border-black
+    transition-all
+    duration-300
+    ease-linear
+    hover:shadow-lg
 `;
 
 export const AuthHolder = tw.ul`

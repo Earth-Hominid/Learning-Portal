@@ -14,8 +14,7 @@ import {
   RelativeContainer,
   AbsoluteContainer,
   StyledButton,
-  ActionButtonHolder,
-  ActionButtonContainer,
+  LinkContainer,
   AuthHolder,
 } from './Styles';
 
@@ -40,18 +39,16 @@ const TopNav = ({
         <Logo />
         <MainNav aria-label={'Main menu'}>
           <a href="#">
-            <ActionButtonHolder>
+            <LinkContainer>
               <LinkText>{englishMode ? 'Guides' : 'Guias'}</LinkText>
-            </ActionButtonHolder>
+            </LinkContainer>
           </a>
           <a href="#">
-            <ActionButtonHolder>
+            <LinkContainer>
               <LinkText>{englishMode ? 'Resources' : 'Recursos'}</LinkText>
-            </ActionButtonHolder>
+            </LinkContainer>
           </a>
         </MainNav>
-
-        <ActionButtonContainer></ActionButtonContainer>
         <IconContainer>
           <RelativeContainer>
             <AbsoluteContainer></AbsoluteContainer>
