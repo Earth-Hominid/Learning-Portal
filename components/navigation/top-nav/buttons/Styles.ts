@@ -31,33 +31,22 @@ export const StyledOutButton = tw.button`
 `;
 
 export const StyledThemeButton = tw.button`
-  hidden  
-  lg:flex
+  flex
+  flex-row
+  items-center
+  justify-center
   dark:hover:bg-[#858585]
   dark:text-[#CDCDCD]
   text-[#616161]
   hover:bg-[#CDCDCD]
   p-1
-  flex-row
-  justify-center
-  items-center
+  whitespace-nowrap
   rounded-sm
-  mx-2
 `;
 
 export const ThemeButtonText = tw.p`
   font-roboto
   text-sm
   font-bold
-  ml-1
-`;
-
-export const LogButton = tw.button`
-  flex
-  items-center
-  py-2 
-  px-1 
-  bg-transparent
-  text-[#6a6a6a]
-  dark:text-
+  pl-1
 `;

@@ -44,11 +44,12 @@ export const ActionButtonHolder = tw.div`
   space-x-1
   items-center
   justify-center
-  dark:text-[#cdcdcd]
   text-[#4e4e4e]
   hover:text-[#0085F2]
   hover:bg-[#0085f2]/[.063]
   dark:hover:bg-[#1B324C]
+  dark:text-[#cdcdcd]
+  dark:hover:text-[#8CB4FF]
   rounded-lg
   cursor-pointer
   p-2
@@ -116,6 +117,7 @@ export const AuthHolder = tw.div`
   hidden
   lg:flex
   flex-row
+  items-center
   space-x-2
   mx-3
 `;
