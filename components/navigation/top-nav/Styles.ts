@@ -29,7 +29,7 @@ export const IconContainer = tw.div`flex
   mr-2
   text-gray-800`;
 
-export const DropDownContainer = tw.div`
+export const MainNav = tw.nav`
   hidden
   lg:flex
   flex-1
@@ -113,7 +113,7 @@ export const ActionButtonContainer = tw.div`
   space-x-3
 `;
 
-export const AuthHolder = tw.div`
+export const AuthHolder = tw.ul`
   hidden
   lg:flex
   flex-row

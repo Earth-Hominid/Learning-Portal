@@ -10,7 +10,7 @@ import {
   InsideContainer,
   LinkText,
   IconContainer,
-  DropDownContainer,
+  MainNav,
   RelativeContainer,
   AbsoluteContainer,
   StyledButton,
@@ -38,7 +38,7 @@ const TopNav = ({
     <MainContainer>
       <InsideContainer>
         <Logo />
-        <DropDownContainer>
+        <MainNav aria-label={'Main menu'}>
           <a href="#">
             <ActionButtonHolder>
               <LinkText>{englishMode ? 'Guides' : 'Guias'}</LinkText>
@@ -49,7 +49,7 @@ const TopNav = ({
               <LinkText>{englishMode ? 'Resources' : 'Recursos'}</LinkText>
             </ActionButtonHolder>
           </a>
-        </DropDownContainer>
+        </MainNav>
 
         <ActionButtonContainer></ActionButtonContainer>
         <IconContainer>
@@ -68,17 +68,25 @@ const TopNav = ({
           </RelativeContainer>
         </IconContainer>
         <AuthHolder>
-          <ThemeButton
-            handleToggleThemeClick={handleToggleThemeClick}
-            darkMode={darkMode}
-            englishMode={englishMode}
-          />
-          <LanguageButton
-            handleToggleLanguage={handleToggleLanguage}
-            englishMode={englishMode}
-          />
-          <LogInButton englishMode={englishMode} />
-          <SignUpButton englishMode={englishMode} />
+          <li>
+            <ThemeButton
+              handleToggleThemeClick={handleToggleThemeClick}
+              darkMode={darkMode}
+              englishMode={englishMode}
+            />
+          </li>
+          <li>
+            <LanguageButton
+              handleToggleLanguage={handleToggleLanguage}
+              englishMode={englishMode}
+            />
+          </li>
+          <li>
+            <LogInButton englishMode={englishMode} />
+          </li>
+          <li>
+            <SignUpButton englishMode={englishMode} />
+          </li>
         </AuthHolder>
       </InsideContainer>
     </MainContainer>
