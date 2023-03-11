@@ -6,8 +6,8 @@ import BottomNav from './navigation/bottom-nav/BottomNav';
 interface DarkModeContextType {
   darkMode: boolean | null;
   englishMode: boolean | null;
-  handleToggleThemeClick: Function;
-  handleToggleLanguage: Function;
+  handleToggleThemeClick: () => void;
+  handleToggleLanguage: () => void;
 }
 
 const Header = ({

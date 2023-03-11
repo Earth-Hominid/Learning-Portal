@@ -58,7 +58,7 @@ const Layout: React.FC<Props> = ({
         />
       </header>
       <main className="min-h-screen">
-        {router.pathname === '/' && <Showcase />}
+        {router.pathname === '/' && <Showcase englishMode={englishMode} />}
         {router.pathname !== '/' && (
           <ToolBar
             mainPage={mainPage}

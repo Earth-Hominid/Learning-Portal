@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from 'react';
 
 interface DarkModeInterface {
   darkMode?: boolean | null;
-  handleToggleThemeClick?: Function;
+  handleToggleThemeClick?: () => void;
 }
 
 type ThemeProps = { children: React.ReactNode };
@@ -28,16 +28,16 @@ export const DarkProvider = ({ children }: ThemeProps) => {
 
   // check and reset theme
   const checkDarkMode = () => {
+    const theme = localStorage.getItem('theme');
     if (
-      localStorage.theme === 'dark' ||
+      theme ||
       (!('theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
-      document.documentElement.classList.add('dark');
-      setDarkMode(true);
+      setDarkMode(theme === 'dark' ? true : false);
     } else {
-      document.documentElement.classList.remove('dark');
-      setDarkMode(false);
+      localStorage.setItem('theme', 'dark');
+      setDarkMode(true);
     }
   };
 

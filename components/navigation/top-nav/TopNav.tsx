@@ -1,5 +1,6 @@
 import Logo from '../logo/Logo';
 import ThemeButton from './buttons/ThemeButton';
+import LanguageButton from './buttons/LanguageButton';
 import LogInButton from './buttons/LogIn';
 import SignUpButton from './buttons/SignUp';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -25,10 +26,10 @@ const TopNav = ({
   handleToggleThemeClick,
   handleToggleLanguage,
 }: {
-  handleNavigationMenuClick: Function;
+  handleNavigationMenuClick: () => void;
   navigationMenuToggle: boolean;
-  handleToggleThemeClick: Function;
-  handleToggleLanguage: Function;
+  handleToggleThemeClick: () => void;
+  handleToggleLanguage: () => void;
   englishMode: boolean | null;
   darkMode: boolean | null;
 }) => {
@@ -39,12 +40,12 @@ const TopNav = ({
         <DropDownContainer>
           <a href="#">
             <ActionButtonHolder>
-              <LinkText>Guias</LinkText>
+              <LinkText>{englishMode ? 'Guides' : 'Guias'}</LinkText>
             </ActionButtonHolder>
           </a>
           <a href="#">
             <ActionButtonHolder>
-              <LinkText>Recursos</LinkText>
+              <LinkText>{englishMode ? 'Resources' : 'Recursos'}</LinkText>
             </ActionButtonHolder>
           </a>
         </DropDownContainer>
@@ -68,6 +69,10 @@ const TopNav = ({
         <ThemeButton
           handleToggleThemeClick={handleToggleThemeClick}
           darkMode={darkMode}
+          englishMode={englishMode}
+        />
+        <LanguageButton
+          handleToggleLanguage={handleToggleLanguage}
           englishMode={englishMode}
         />
         <LogInButton englishMode={englishMode} />

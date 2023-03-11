@@ -26,9 +26,9 @@ export const Title = tw.p`
 
 export const Subtitle = tw.div`
 dark:text-yellow-100
-text-black
+text-[#ff8c00]
   pl-1
   rounded-sm
   font-schoolbell
-  text-sm
+  text-xs
 `;

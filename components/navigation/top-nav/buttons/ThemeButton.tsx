@@ -6,12 +6,12 @@ const ThemeButton = ({
   handleToggleThemeClick,
   englishMode,
 }: {
-  handleToggleThemeClick: Function;
+  handleToggleThemeClick: () => void;
   darkMode: boolean | null;
   englishMode: boolean | null;
 }) => {
   return (
-    <StyledThemeButton>
+    <StyledThemeButton onClick={handleToggleThemeClick}>
       {darkMode ? (
         <SunIcon className="h-4 w-4" />
       ) : (
