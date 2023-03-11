@@ -111,3 +111,11 @@ export const ActionButtonContainer = tw.div`
   items-center
   space-x-3
 `;
+
+export const AuthHolder = tw.div`
+  hidden
+  lg:flex
+  flex-row
+  space-x-2
+  mx-3
+`;

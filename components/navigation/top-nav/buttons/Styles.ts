@@ -3,19 +3,22 @@ import tw from 'tailwind-styled-components';
 export const StyledSignUpButton = tw.button`
   flex
   items-center
+  justify-center
   dark:text-[#1b1b1b]
-  dark:bg-[#ffffff]
+  dark:bg-[#fff]
   dark:hover:bg-[#CDCDCD]
   text-[#ffffff]
-  bg-[#696969]
-  hover:bg-[#1C1C1C]
+  bg-[#1b1b1b]
+  hover:bg-[#696969]
   text-sm
   font-inter
   font-semibold
   mx-2
-  py-1
-  px-2
+  py-2
+  px-3
   rounded-md
+  tracking-wide
+  leading-4
 `;
 
 export const StyledOutButton = tw.button`

@@ -16,6 +16,7 @@ import {
   StyledButton,
   ActionButtonHolder,
   ActionButtonContainer,
+  AuthHolder,
 } from './Styles';
 
 const TopNav = ({
@@ -66,16 +67,19 @@ const TopNav = ({
             </StyledButton>
           </RelativeContainer>
         </IconContainer>
-        <ThemeButton
-          handleToggleThemeClick={handleToggleThemeClick}
-          darkMode={darkMode}
-          englishMode={englishMode}
-        />
-        <LanguageButton
-          handleToggleLanguage={handleToggleLanguage}
-          englishMode={englishMode}
-        />
-        <LogInButton englishMode={englishMode} />
+        <AuthHolder>
+          <ThemeButton
+            handleToggleThemeClick={handleToggleThemeClick}
+            darkMode={darkMode}
+            englishMode={englishMode}
+          />
+          <LanguageButton
+            handleToggleLanguage={handleToggleLanguage}
+            englishMode={englishMode}
+          />
+          <LogInButton englishMode={englishMode} />
+          <SignUpButton englishMode={englishMode} />
+        </AuthHolder>
       </InsideContainer>
     </MainContainer>
   );
