@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import MenuAccordian from './accordian/MenuAccordian';
-import SearchBar from '../searchbar/SearchBar';
-import ThemeButton from '../top-nav/buttons/ThemeButton';
-import LanguageButton from '../top-nav/buttons/LanguageButton';
-import LogInButton from '../top-nav/buttons/LogIn';
-import SignUpButton from '../top-nav/buttons/SignUp';
+import SearchBar from '../bottom-searchbar/SearchBar';
+import ThemeButton from '../buttons/ThemeButton';
+import LanguageButton from '../buttons/LanguageButton';
+import LogInButton from '../buttons/LogIn';
+import SignUpButton from '../buttons/SignUp';
 
 import {
   BottomNavigationMenu,

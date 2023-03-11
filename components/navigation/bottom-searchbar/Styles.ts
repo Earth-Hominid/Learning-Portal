@@ -10,7 +10,8 @@ export const SearchForm = tw.form`
   dark:border-yellow-100
   rounded-full
   px-3
-  py-1
+  py-0.5
+  mb-2
   dark:bg-[#1c1c1c]
   active:border-[#FDF335]
   max-w-sm

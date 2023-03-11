@@ -40,7 +40,11 @@ const MenuAccordian: React.FC<Props> = ({ props }) => {
         <AccordianSummary onClick={handleAccordianClick}>
           <SummaryTitle>{props.title}</SummaryTitle>
           <IconHolder>
-            {accordianOpen ? <ChevronDownIcon /> : <ChevronRightIcon />}
+            {accordianOpen ? (
+              <ChevronDownIcon h-5 w-5 />
+            ) : (
+              <ChevronRightIcon h-5 w-5 />
+            )}
           </IconHolder>
         </AccordianSummary>
         <AccordianContent props={props} />

@@ -1,10 +1,10 @@
-import Logo from '../logo/Logo';
+import Logo from './logo/Logo';
 import ThemeButton from './buttons/ThemeButton';
 import LanguageButton from './buttons/LanguageButton';
 import LogInButton from './buttons/LogIn';
 import SignUpButton from './buttons/SignUp';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import BottomNav from '../bottom-nav/BottomNav';
+import BottomNav from './bottom-nav/BottomNav';
 
 import {
   MainContainer,
@@ -17,7 +17,7 @@ import {
   StyledButton,
   LinkContainer,
   AuthHolder,
-} from './Styles';
+} from './top-nav/Styles';
 
 const TopNav = ({
   handleNavigationMenuClick,
