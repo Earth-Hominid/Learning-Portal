@@ -86,7 +86,7 @@ export const StyledButton = tw.button`
   relative  
   group
   dark:text-[#cdcdcd]
-  dark:bg-[#151F28]
+  dark:bg-[#1C1C1C]
   dark:hover:border-[#1c1c1c]
   dark:hover:text-yellow-100
   bg-white

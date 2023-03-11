@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
-import AuthContext from '@/context/AuthContext';
 import MenuAccordian from './accordian/MenuAccordian';
 import SearchBar from '../searchbar/SearchBar';
 
@@ -12,9 +11,15 @@ import {
 } from './Styles';
 
 const BottomNav = ({
-  handleDemoAccountClick,
+  toggleNavigationButton,
+  englishMode,
+  darkMode,
+  handleToggleLanguage,
 }: {
-  handleDemoAccountClick: Function;
+  toggleNavigationButton: () => void;
+  englishMode: boolean | null;
+  darkMode: boolean | null;
+  handleToggleLanguage: () => void;
 }) => {
   const router = useRouter();
 

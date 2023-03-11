@@ -26,7 +26,7 @@ const TopNav = ({
   handleToggleThemeClick,
   handleToggleLanguage,
 }: {
-  handleNavigationMenuClick: () => void;
+  handleNavigationMenuClick: Function;
   navigationMenuToggle: boolean;
   handleToggleThemeClick: () => void;
   handleToggleLanguage: () => void;

@@ -30,7 +30,7 @@ const Header = ({
   };
 
   const handleNavigationMenuClick = (
-    event: React.MouseEvent<HTMLButtonElement>
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     event.preventDefault();
     toggleNavigationButton();
