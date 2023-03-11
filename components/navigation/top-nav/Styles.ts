@@ -45,7 +45,9 @@ export const ActionButtonHolder = tw.div`
   items-center
   justify-center
   dark:text-[#cdcdcd]
-  text-black
+  text-[#4e4e4e]
+  hover:text-[#0085F2]
+  hover:bg-[#0085f2]/[.063]
   dark:hover:bg-[#1B324C]
   rounded-lg
   cursor-pointer
