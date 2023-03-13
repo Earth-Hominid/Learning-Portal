@@ -5,9 +5,9 @@ export const StyledSignUpButton = tw.button`
   items-center
   justify-center
   dark:text-[#1b1b1b]
-  dark:bg-[#fff]
-  dark:hover:bg-[#CDCDCD]
-  text-[#ffffff]
+  dark:bg-[#FDF335]
+  dark:hover:bg-[#FDF335]/[0.8]
+  text-[#FDF335]
   bg-[#1b1b1b]
   hover:bg-[#696969]
   text-sm
@@ -38,7 +38,7 @@ export const StyledThemeButton = tw.button`
   dark:hover:bg-[#858585]
   dark:text-[#CDCDCD]
   text-[#616161]
-  hover:bg-[#CDCDCD]
+  hover:bg-yellow-100
   p-1
   whitespace-nowrap
   rounded-sm

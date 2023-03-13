@@ -1,4 +1,8 @@
-import { GlobeAltIcon, SunIcon, MoonIcon } from '@heroicons/react/24/solid';
+import {
+  GlobeAmericasIcon,
+  SunIcon,
+  MoonIcon,
+} from '@heroicons/react/24/solid';
 
 import { StyledThemeButton, ThemeButtonText } from './Styles';
 
@@ -12,9 +16,11 @@ const LanguageButton = ({
 }) => {
   return (
     <StyledThemeButton onClick={handleToggleLanguage}>
-      <GlobeAltIcon className="h-4 w-4" />
+      <GlobeAmericasIcon className="h-4 w-4" />
 
-      <ThemeButtonText>{englishMode ? 'en-us' : 'pt-br'}</ThemeButtonText>
+      <ThemeButtonText>
+        {englishMode ? 'English' : 'Português-BR'}
+      </ThemeButtonText>
     </StyledThemeButton>
   );
 };
