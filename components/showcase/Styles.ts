@@ -4,7 +4,6 @@ export const MainSection = tw.section`
  w-full
  flex
  flex-col
- relative
  bg-gray-100
  min-h-[250px]
  border-b-2	

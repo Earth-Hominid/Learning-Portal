@@ -3,6 +3,7 @@ import ThemeButton from './buttons/ThemeButton';
 import LanguageButton from './buttons/LanguageButton';
 import LogInButton from './buttons/LogIn';
 import SignUpButton from './buttons/SignUp';
+import DropDownButton from './DropDownMenu/DropDownButton';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import BottomNav from './bottom-nav/BottomNav';
 
@@ -17,7 +18,7 @@ import {
   StyledButton,
   LinkContainer,
   AuthHolder,
-} from './top-nav/Styles';
+} from './Styles';
 
 const TopNav = ({
   handleNavigationMenuClick,
@@ -41,16 +42,13 @@ const TopNav = ({
       <InsideContainer>
         <Logo />
         <MainNav aria-label={'Main menu'}>
-          <a href="#">
-            <LinkContainer>
-              <LinkText>{englishMode ? 'Guides' : 'Guias'}</LinkText>
-            </LinkContainer>
-          </a>
-          <a href="#">
-            <LinkContainer>
-              <LinkText>{englishMode ? 'Resources' : 'Recursos'}</LinkText>
-            </LinkContainer>
-          </a>
+          <LinkContainer>
+            <LinkText>{englishMode ? 'Guides' : 'Guias'}</LinkText>
+          </LinkContainer>
+          <LinkContainer>
+            <LinkText>{englishMode ? 'Resources' : 'Recursos'}</LinkText>
+          </LinkContainer>
+          <DropDownButton />
         </MainNav>
         <IconContainer>
           <RelativeContainer>
