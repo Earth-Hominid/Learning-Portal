@@ -10,13 +10,11 @@ import BottomNav from './bottom-nav/BottomNav';
 import {
   MainContainer,
   InsideContainer,
-  LinkText,
   IconContainer,
   MainNav,
   RelativeContainer,
   AbsoluteContainer,
   StyledButton,
-  LinkContainer,
   AuthHolder,
 } from './Styles';
 
@@ -42,13 +40,8 @@ const TopNav = ({
       <InsideContainer>
         <Logo />
         <MainNav aria-label={'Main menu'}>
-          <LinkContainer>
-            <LinkText>{englishMode ? 'Guides' : 'Guias'}</LinkText>
-          </LinkContainer>
-          <LinkContainer>
-            <LinkText>{englishMode ? 'Resources' : 'Recursos'}</LinkText>
-          </LinkContainer>
-          <DropDownButton />
+          <DropDownButton buttonName={englishMode ? 'Guides' : 'Guias'} />
+          <DropDownButton buttonName={englishMode ? 'Resources' : 'Recursos'} />
         </MainNav>
         <IconContainer>
           <RelativeContainer>

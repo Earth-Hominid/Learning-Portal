@@ -2,7 +2,9 @@ import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 
 interface Props {
-  title: string;
+  buttonName: string;
+  heading: string;
+  description: string;
 }
 
 import {
@@ -16,32 +18,27 @@ import {
   SubMenuDescription,
 } from './Styles';
 
-const DropDownButton = () => {
+const DropDownButton: React.FC<Props> = ({
+  heading,
+  description,
+  buttonName,
+}) => {
   return (
     <>
       <Container>
-        <DropButton className="dropbtn">Drop Button</DropButton>
+        <DropButton className="dropbtn">{buttonName}</DropButton>
         <Content>
           <li>
             <Link href="">
               <Item>
                 <SubMenuIcon></SubMenuIcon>
                 <SubMenuContentContainer>
-                  <SubMenuHeading>Heading</SubMenuHeading>
-                  <SubMenuDescription>
-                    This is a very long long link.
-                  </SubMenuDescription>
+                  <SubMenuHeading>{heading}</SubMenuHeading>
+                  <SubMenuDescription>{description}</SubMenuDescription>
                 </SubMenuContentContainer>
               </Item>
             </Link>
           </li>
-
-          <Item>
-            <a href="#">Link 2</a>
-          </Item>
-          <Item>
-            <a href="#">Link 3</a>
-          </Item>
         </Content>
       </Container>
     </>

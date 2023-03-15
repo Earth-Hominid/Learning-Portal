@@ -70,7 +70,9 @@ export const SubMenuIcon = tw.div`
   relative
   w-[3.2px]
   dark:bg-[#5E9EFF]
+  dark:hover:bg-[#8CB4FF]
   bg-[#0085F2]
+  hover:bg-[#2969C2]
 `;
 
 export const SubMenuContentContainer = tw.div`

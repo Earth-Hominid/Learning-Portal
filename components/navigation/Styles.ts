@@ -27,31 +27,6 @@ export const MainNav = tw.nav`
   ml-5
 `;
 
-export const LinkContainer = tw.div`
-  flex
-  flex-row
-  space-x-1
-  items-center
-  justify-center
-  text-[#4e4e4e]
-  hover:text-[#0085F2]
-  hover:bg-[#0085f2]/[.063]
-  dark:hover:bg-[#1B324C]
-  dark:text-[#cdcdcd]
-  dark:hover:text-[#8CB4FF]
-  rounded-lg
-  cursor-pointer
-  p-2
-  lg:p-3
-`;
-
-export const LinkText = tw.h3`
-  font-interval
-  font-semibold
-  tracking-wide
-  whitespace-nowrap
-`;
-
 export const IconContainer = tw.div`
   flex
   flex-row
