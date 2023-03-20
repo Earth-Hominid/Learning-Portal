@@ -49,7 +49,7 @@ export const Content = tw.ul`
   text-left
 `;
 
-export const Item = tw.div`
+export const ItemContainer = tw.div`
   flex
   flex-row
   dark:hover:bg-[#343434]

@@ -6,11 +6,11 @@ export const Container = tw.div`
   flex-1
   items-center
   dark:bg-[#343434]
-  bg-white
+  bg-[#F9F9FB]
   border-b
   dark:border-gray-400
-  border-gray-600
-  py-1
+  border-gray-300
+  py-0.5
 `;
 
 export const SpacingContainer = tw.div`

@@ -40,8 +40,26 @@ const TopNav = ({
       <InsideContainer>
         <Logo />
         <MainNav aria-label={'Main menu'}>
-          <DropDownButton buttonName={englishMode ? 'Guides' : 'Guias'} />
           <DropDownButton buttonName={englishMode ? 'Resources' : 'Recursos'} />
+          <DropDownButton
+            buttonName={englishMode ? 'Guides' : 'Guias'}
+            headingOne={englishMode ? 'Procurement' : 'Compras'}
+            linkOne={englishMode ? '/en-us/purchasing' : '/pt-br/compras'}
+            headingTwo={englishMode ? 'Merchandising' : 'Merchandising'}
+            linkTwo={
+              englishMode ? '/en-us/merchandising' : '/pt-br/merchandising'
+            }
+            descriptionOne={
+              englishMode
+                ? 'Learn effective purchasing management skills'
+                : 'Aprenda habilidades eficazes de gerenciamento de compras'
+            }
+            descriptionTwo={
+              englishMode
+                ? 'Learn proven merchandising skills'
+                : 'Aprenda habilidades comprovadas em merchandising'
+            }
+          />
         </MainNav>
         <IconContainer>
           <RelativeContainer>

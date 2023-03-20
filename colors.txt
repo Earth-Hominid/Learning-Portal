@@ -59,3 +59,12 @@ card grey #172734 accent gradient #0E141B --> #1E2830
 
 yellow #FDF335
 
+--mdn-color-white: #fff;
+    --mdn-color-black: #000;
+    --mdn-color-ads: #00d0aa;
+    --mdn-color-background-highlight: #f0e498;
+    --mdn-color-dark-grey: #4e4e4e;
+    --mdn-background-dark: #1b1b1b;
+    --mdn-background-light: #fff;
+    --mdn-background-light-grey: #e2e2e2;
+    --color-announcement-banner-accent: #ff6d91;

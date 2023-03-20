@@ -1,5 +1,6 @@
 import { Inter, Montserrat } from 'next/font/google';
 import Layout from '@/components/Layout';
+import { API_URL } from '@/config';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,4 +21,15 @@ export default function Home() {
       />
     </>
   );
+}
+
+export async function getStaticProps() {
+  // fetch data from an API
+  const res = await fetch(`${API_URL}/api/articles`);
+  let articles = await res.json();
+  let articlesData = articles.data;
+
+  return {
+    props: { articlesData },
+  };
 }

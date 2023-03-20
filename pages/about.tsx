@@ -1,22 +1,11 @@
+import AboutPage from '@/components/about/AboutPage';
 import Layout from '@/components/Layout';
+import Showcase from '@/components/showcase/Showcase';
 
 type Props = {};
 
 const about = (props: Props) => {
-  return (
-    <Layout
-      title="Rede BS | Sobre nós"
-      description=""
-      keywords="about, sobre nós "
-      mainPageTitle="Rede BS"
-      mainPage="/"
-      currentPage="/about"
-      currentPageTitle="Sobre nós"
-      background=""
-      styles=""
-      width=""
-    ></Layout>
-  );
+  return <AboutPage />;
 };
 
 export default about;
