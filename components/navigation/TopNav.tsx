@@ -40,7 +40,13 @@ const TopNav = ({
       <InsideContainer>
         <Logo />
         <MainNav aria-label={'Main menu'}>
-          <DropDownButton buttonName={englishMode ? 'Resources' : 'Recursos'} />
+          <DropDownButton
+            buttonName={englishMode ? 'Resources' : 'Recursos'}
+            headingOne={englishMode ? 'Produce' : 'Hortifruti'}
+            linkOne={englishMode ? '/en-us/produce' : '/pt-br/hortifruti'}
+            headingTwo=""
+            linkTwo=""
+          />
           <DropDownButton
             buttonName={englishMode ? 'Guides' : 'Guias'}
             headingOne={englishMode ? 'Procurement' : 'Compras'}

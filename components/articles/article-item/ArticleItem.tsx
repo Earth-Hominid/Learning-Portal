@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import DefaultReportImage from '@/public/images/report-default.jpg';
 import ReactMarkdown from 'react-markdown';
 
 import {
@@ -55,14 +56,13 @@ const ArticleItem = ({ article }: { article: ArticleInterface }) => {
               src={
                 article.image
                   ? article.image.formats.medium.url
-                  : '/images/report-default.jpeg'
+                  : DefaultReportImage
               }
               className="absolute rounded-md"
               alt="imagem do artigo"
               priority={true}
               height="100"
               width="200"
-              layout="responsive"
             />
           </ImageContainer>
           <Link href={`/articles/${article.slug}`}>
