@@ -36,7 +36,7 @@ const Showcase: React.FC<Props> = ({
             </SubheadingText>
           ) : (
             <SubheadingText>
-              A
+              A{' '}
               <b className="font-extrabold dark:text-white text-gray-900">
                 Rede BS docs
               </b>{' '}
