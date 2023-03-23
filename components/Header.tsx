@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import TopNav from './navigation/TopNav';
+import TopNav from './navigation/wide-screen/TopNav';
 import BottomNav from './navigation/small-screen/bottom-nav/BottomNav';
 
 interface DarkModeContextType {

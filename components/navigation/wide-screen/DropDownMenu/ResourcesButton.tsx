@@ -1,14 +1,13 @@
-import { useRef, useEffect, useState } from 'react';
 import Item from './Item';
 
 interface Props {
   buttonName: string;
-  englishMode: boolean | null;
+  englishMode?: boolean | null;
 }
 
 import { Container, DropButton, Content } from './Styles';
 
-const DropDownButton: React.FC<Props> = ({ buttonName, englishMode }) => {
+const ResourcesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
   return (
     <>
       <Container>
@@ -30,4 +29,4 @@ const DropDownButton: React.FC<Props> = ({ buttonName, englishMode }) => {
   );
 };
 
-export default DropDownButton;
+export default ResourcesButton;

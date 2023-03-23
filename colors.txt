@@ -59,6 +59,26 @@ card grey #172734 accent gradient #0E141B --> #1E2830
 
 yellow #FDF335
 
+icon pink
+
+dark:hover:bg-[#C15C75]
+dark:bg-[#FF6D91]/[.7]
+bg-[#FF1F72]/[.7] 
+hover:bg-[#FD639B]
+
+icon blue 
+
+dark:bg-[#5E9EFF] 
+dark:hover:bg-[#8CB4FF] 
+bg-[#0085F2] 
+hover:bg-[#2969C2]
+
+yellow icon 
+
+dark:bg-[#AFA100]
+bg-[#AFA100]
+bg-[#938700]/[.7]
+
 --mdn-color-white: #fff;
     --mdn-color-black: #000;
     --mdn-color-ads: #00d0aa;

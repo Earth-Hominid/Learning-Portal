@@ -6,9 +6,7 @@ interface Props {
   buttonName: string;
   headingOne?: string;
   linkOne: string;
-  headingTwo?: string;
   descriptionOne?: string;
-  linkTwo: string;
   iconColor?: string;
 }
 

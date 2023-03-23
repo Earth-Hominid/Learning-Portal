@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import {
-  ContentList,
   MenuContentContainer,
   MenuIcon,
   SubMenuItemHeading,
@@ -23,7 +22,7 @@ const Item: React.FC<Props> = ({ heading, link, iconColor, description }) => {
           <li className="w-full">
             <Link
               href={link}
-              className="flex items-center border border-transparent dark:hover:bg-[#343434] hover:bg-[#f9f9fb] p-1"
+              className="flex items-center border border-transparent dark:hover:bg-[#343434] hover:bg-[#f9f9fb] p-1 rounded-sm"
             >
               <MenuIcon className={iconColor}></MenuIcon>
               <MenuContentContainer>

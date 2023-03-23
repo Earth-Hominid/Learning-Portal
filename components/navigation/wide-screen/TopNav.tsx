@@ -1,11 +1,13 @@
-import Logo from './logo/Logo';
-import ThemeButton from './buttons/ThemeButton';
-import LanguageButton from './buttons/LanguageButton';
-import LogInButton from './buttons/LogIn';
-import SignUpButton from './buttons/SignUp';
-import DropDownButton from './wide-screen/DropDownMenu/DropDownButton';
+import Logo from '../logo/Logo';
+import ThemeButton from '../buttons/ThemeButton';
+import LanguageButton from '../buttons/LanguageButton';
+import LogInButton from '../buttons/LogIn';
+import SignUpButton from '../buttons/SignUp';
+import ResourcesButton from './DropDownMenu/ResourcesButton';
+import GuidesButton from './DropDownMenu/GuidesButton';
+import DropDownButton from './DropDownMenu/DropDownButton';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import BottomNav from './small-screen/bottom-nav/BottomNav';
+import BottomNav from '../small-screen/bottom-nav/BottomNav';
 
 import {
   MainContainer,
@@ -40,32 +42,10 @@ const TopNav = ({
       <InsideContainer>
         <Logo />
         <MainNav aria-label={'Main menu'}>
-          <DropDownButton
+          <ResourcesButton
             buttonName={englishMode ? 'Resources' : 'Recursos'}
-            headingOne={englishMode ? 'Produce' : 'Hortifruti'}
-            linkOne={englishMode ? '/en-us/produce' : '/pt-br/hortifruti'}
-            headingTwo=""
-            linkTwo=""
           />
-          <DropDownButton
-            buttonName={englishMode ? 'Guides' : 'Guias'}
-            headingOne={englishMode ? 'Procurement' : 'Compras'}
-            linkOne={englishMode ? '/en-us/purchasing' : '/pt-br/compras'}
-            headingTwo={englishMode ? 'Merchandising' : 'Merchandising'}
-            linkTwo={
-              englishMode ? '/en-us/merchandising' : '/pt-br/merchandising'
-            }
-            descriptionOne={
-              englishMode
-                ? 'Learn effective purchasing management skills'
-                : 'Aprenda habilidades eficazes de gerenciamento de compras'
-            }
-            descriptionTwo={
-              englishMode
-                ? 'Learn proven merchandising skills'
-                : 'Aprenda habilidades comprovadas em merchandising'
-            }
-          />
+          <GuidesButton buttonName={englishMode ? 'Guides' : 'Guias'} />
         </MainNav>
         <IconContainer>
           <RelativeContainer>

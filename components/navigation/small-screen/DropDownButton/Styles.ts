@@ -40,31 +40,11 @@ export const IconHolder = tw.div`
   p-1
 `;
 
-export const ContentList = tw.ul`
-  my-[0.5rem]
-  ml-[1.5rem]
-  break-words
-  cursor-pointer
-  `;
-
-export const AccordianText = tw.p`
-  p-2
-  text-sm
-  dark:text-[#EEEEEE]
-  text-[#616161]
-  tracking-normal
-  leading-6
-  hover:bg-yellow-50
-  dark:hover:bg-[#343434]
-  rounded-md
-`;
-
 export const MenuIcon = tw.div`
   h-8 
   mr-[0.75rem]
   relative
   w-[0.2rem]
-  
 `;
 
 export const MenuContentContainer = tw.div`
@@ -84,5 +64,4 @@ export const SubMenuItemDescription = tw.p`
   text-xs
   hidden
   md:flex
-
 `;
