@@ -8,6 +8,7 @@ interface Props {
   headingTwo?: string;
   linkOne: string;
   linkTwo: string;
+  iconColor?: string;
 }
 
 import {
@@ -46,7 +47,11 @@ const DropDownButton: React.FC<Props> = ({
               )}
             </IconHolder>
           </AccordianSummary>
-          <Item heading={headingOne} link={linkOne} />
+          <Item
+            heading={headingOne}
+            link="/pt-br/hortifruti"
+            iconColor="bg-[#00b755] hover:bg-[#009A46]/[.7] dark:bg-[#00B755]/[.7] dark:hover:bg-[#00B754]"
+          />
         </details>
       </Container>
     </>

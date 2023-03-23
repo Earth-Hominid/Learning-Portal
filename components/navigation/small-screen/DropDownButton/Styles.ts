@@ -59,26 +59,21 @@ export const AccordianText = tw.p`
   rounded-md
 `;
 
-export const Content = tw.ul`
-  
+export const MenuIcon = tw.div`
+  h-8 
+  mr-[0.75rem]
+  relative
+  w-[0.2rem]
+  bg-[#00b755]
+  hover:bg-[#009A46]/[.7]
+  dark:bg-[#00B755]/[.7]
+  dark:hover:bg-[#00B754] 
 `;
 
-export const ItemContainer = tw.div`
-  
-`;
-
-export const SubMenuIcon = tw.div`
- 
-`;
-
-export const SubMenuContentContainer = tw.div`
-  
-`;
-
-export const SubMenuHeading = tw.h4`
- 
-`;
-
-export const SubMenuDescription = tw.p`
-  
+export const MenuContentContainer = tw.div`
+  dark:text-white 
+  text-[#1b1b1b] 
+  h-full 
+  w-full 
+  text-sm 
 `;

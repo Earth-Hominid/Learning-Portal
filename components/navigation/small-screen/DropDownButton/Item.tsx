@@ -1,25 +1,29 @@
 import Link from 'next/link';
-import { ContentList } from './Styles';
+import { ContentList, MenuContentContainer, MenuIcon } from './Styles';
 
 interface Props {
   heading?: string;
   description?: string;
+  link: string;
+  iconColor?: string;
 }
 
-const Item: React.FC<Props> = ({ heading }) => {
+const Item: React.FC<Props> = ({ heading, link, iconColor }) => {
   return (
     <>
-      <ul className="">
-        <li className="w-full">
-          <Link
-            href="/pt-br/hortifruti"
-            className="items-center border border-transparent dark:text-white text-[#1b1b1b] h-full w-full p-4 text-sm"
-          >
-            <div className="bg-[#00b755 h-8 relative w-[0.2rem] mr-[0.75rem]"></div>
-            <div>
-              <h4>{heading}</h4>
-            </div>
-          </Link>
+      <ul id="references-menu" className="ml-4">
+        <li className="relative">
+          <li className="w-full">
+            <Link
+              href={link}
+              className="flex items-center border border-transparent dark:hover:bg-[#343434] hover:bg-[#f9f9fb] p-1"
+            >
+              <MenuIcon className={iconColor}></MenuIcon>
+              <MenuContentContainer>
+                <h4>{heading}</h4>
+              </MenuContentContainer>
+            </Link>
+          </li>
         </li>
       </ul>
     </>
