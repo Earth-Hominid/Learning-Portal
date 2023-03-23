@@ -5,8 +5,9 @@ import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 interface Props {
   buttonName: string;
   headingOne?: string;
-  headingTwo?: string;
   linkOne: string;
+  headingTwo?: string;
+  descriptionOne?: string;
   linkTwo: string;
   iconColor?: string;
 }
@@ -22,6 +23,7 @@ const DropDownButton: React.FC<Props> = ({
   buttonName,
   headingOne,
   linkOne,
+  descriptionOne,
 }) => {
   const [accordianOpen, setAccordianOpen] = useState(false);
 
@@ -49,7 +51,8 @@ const DropDownButton: React.FC<Props> = ({
           </AccordianSummary>
           <Item
             heading={headingOne}
-            link="/pt-br/hortifruti"
+            description={descriptionOne}
+            link={linkOne}
             iconColor="bg-[#00b755] hover:bg-[#009A46]/[.7] dark:bg-[#00B755]/[.7] dark:hover:bg-[#00B754]"
           />
         </details>

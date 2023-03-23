@@ -62,8 +62,11 @@ const BottomNav = ({
           buttonName={englishMode ? 'Resources' : 'Recursos'}
           headingOne={englishMode ? 'Produce' : 'Hortifruti'}
           linkOne={englishMode ? '/en-us/produce' : '/pt-br/hortifruti'}
-          headingTwo=""
-          linkTwo=""
+          descriptionOne={
+            englishMode
+              ? 'Fruit and vegetable references for produce clerks'
+              : 'Referências de frutas e verduras para balconistas de hortifrúti.'
+          }
         />
         <DropDownButton
           buttonName={englishMode ? 'Guides' : 'Guias'}

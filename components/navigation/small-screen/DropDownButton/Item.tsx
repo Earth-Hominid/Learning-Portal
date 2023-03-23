@@ -1,5 +1,12 @@
 import Link from 'next/link';
-import { ContentList, MenuContentContainer, MenuIcon } from './Styles';
+import {
+  ContentList,
+  MenuContentContainer,
+  MenuIcon,
+  SubMenuItemHeading,
+  SubMenuItemDescription,
+} from './Styles';
+import { SubMenuDescription } from '../../wide-screen/DropDownMenu/Styles';
 
 interface Props {
   heading?: string;
@@ -8,7 +15,7 @@ interface Props {
   iconColor?: string;
 }
 
-const Item: React.FC<Props> = ({ heading, link, iconColor }) => {
+const Item: React.FC<Props> = ({ heading, link, iconColor, description }) => {
   return (
     <>
       <ul id="references-menu" className="ml-4">
@@ -20,7 +27,8 @@ const Item: React.FC<Props> = ({ heading, link, iconColor }) => {
             >
               <MenuIcon className={iconColor}></MenuIcon>
               <MenuContentContainer>
-                <h4>{heading}</h4>
+                <SubMenuItemHeading>{heading}</SubMenuItemHeading>
+                <SubMenuItemDescription>{description}</SubMenuItemDescription>
               </MenuContentContainer>
             </Link>
           </li>

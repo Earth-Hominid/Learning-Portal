@@ -64,10 +64,7 @@ export const MenuIcon = tw.div`
   mr-[0.75rem]
   relative
   w-[0.2rem]
-  bg-[#00b755]
-  hover:bg-[#009A46]/[.7]
-  dark:bg-[#00B755]/[.7]
-  dark:hover:bg-[#00B754] 
+  
 `;
 
 export const MenuContentContainer = tw.div`
@@ -76,4 +73,16 @@ export const MenuContentContainer = tw.div`
   h-full 
   w-full 
   text-sm 
+`;
+
+export const SubMenuItemHeading = tw.h4`
+  font-semibold
+`;
+
+export const SubMenuItemDescription = tw.p`
+  mt-[0.25rem]
+  text-xs
+  hidden
+  md:flex
+
 `;
