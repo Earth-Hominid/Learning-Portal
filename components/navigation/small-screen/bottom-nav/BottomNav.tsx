@@ -3,10 +3,11 @@ import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import MenuAccordian from './accordian/MenuAccordian';
 import SearchBar from '../bottom-searchbar/SearchBar';
-import ThemeButton from '../buttons/ThemeButton';
-import LanguageButton from '../buttons/LanguageButton';
-import LogInButton from '../buttons/LogIn';
-import SignUpButton from '../buttons/SignUp';
+import ThemeButton from '../../buttons/ThemeButton';
+import LanguageButton from '../../buttons/LanguageButton';
+import LogInButton from '../../buttons/LogIn';
+import SignUpButton from '../../buttons/SignUp';
+import DropDownButton from '../DropDownButton/DropDownButton';
 
 import {
   BottomNavigationMenu,
@@ -29,38 +30,6 @@ const BottomNav = ({
   handleToggleThemeClick: () => void;
 }) => {
   const router = useRouter();
-
-  const BusinessObject = {
-    title: 'Rede BS',
-    datapoints: [{ name: 'Sobre nós', id: '1', url: '/about/' }],
-  };
-
-  const LearningObject = {
-    title: 'Aprendendo',
-    datapoints: [
-      {
-        name: 'Atendimento ao Cliente',
-        id: '1',
-        url: '/atendimento-ao-cliente',
-      },
-      {
-        name: 'Cadeia de mantimentos',
-        id: '2',
-        url: '/supply-chain',
-      },
-    ],
-  };
-
-  const StoreObject = {
-    title: 'Supermercado',
-    datapoints: [
-      {
-        name: 'Hortifruti',
-        id: '1',
-        url: '/hortifruti',
-      },
-    ],
-  };
 
   return (
     <BottomNavigationMenu>
@@ -89,9 +58,22 @@ const BottomNav = ({
         <SearchBar />
       </ActionButtonHolder>
       <NavigationMenu>
-        <MenuAccordian props={StoreObject} />
-        <MenuAccordian props={LearningObject} />
-        <MenuAccordian props={BusinessObject} />
+        <DropDownButton
+          buttonName={englishMode ? 'Resources' : 'Recursos'}
+          headingOne={englishMode ? 'Produce' : 'Hortifruti'}
+          linkOne={englishMode ? '/en-us/produce' : '/pt-br/hortifruti'}
+          headingTwo=""
+          linkTwo=""
+        />
+        <DropDownButton
+          buttonName={englishMode ? 'Guides' : 'Guias'}
+          headingOne={englishMode ? 'Procurement' : 'Compras'}
+          linkOne={englishMode ? '/en-us/purchasing' : '/pt-br/compras'}
+          headingTwo={englishMode ? 'Merchandising' : 'Merchandising'}
+          linkTwo={
+            englishMode ? '/en-us/merchandising' : '/pt-br/merchandising'
+          }
+        />
       </NavigationMenu>
     </BottomNavigationMenu>
   );
