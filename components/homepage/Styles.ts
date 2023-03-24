@@ -13,6 +13,7 @@ export const FeaturedHeading = tw.h2`
   text-[#1b1b1b]
   dark:text-white
   text-xl
+  md:text-2xl
   font-inter
   mb-2
   tracking-tight
@@ -22,6 +23,7 @@ export const TileContainer = tw.div`
   gap-4
   grid-flow-row
   max-w-[52rem]
+  md:grid-cols-2
 `;
 
 export const ArticleTileContainer = tw.div`

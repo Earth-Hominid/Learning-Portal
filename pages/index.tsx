@@ -53,8 +53,8 @@ const Home: React.FC<Props> = ({ article, merchandise }) => {
         mainPageTitle="Rede BS Docs"
         currentPage=""
         currentPageTitle="Rede BS Docs"
-        background=""
-        styles=""
+        background="dark:bg-[#1b1b1b]"
+        styles="flex flex-col items-center overflow-x-clip overflow-y-visible relative w-full gap-8"
         width=""
       >
         <FeaturedArticles article={article} merchandise={merchandise} />
