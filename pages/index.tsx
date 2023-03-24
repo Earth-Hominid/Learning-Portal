@@ -56,6 +56,8 @@ const Home: React.FC<Props> = ({ article, merchandise }) => {
         background="dark:bg-[#1b1b1b]"
         styles="flex flex-col items-center overflow-x-clip overflow-y-visible relative w-full gap-8"
         width=""
+        parentPage=""
+        parentPageTitle=""
       >
         <FeaturedArticles article={article} merchandise={merchandise} />
       </Layout>

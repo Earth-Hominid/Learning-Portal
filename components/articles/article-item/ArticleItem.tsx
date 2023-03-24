@@ -20,7 +20,7 @@ import {
 } from './Styles';
 
 interface ArticleInterface {
-  id: string;
+  id: number;
   attributes: {
     content: string;
     subcategory: string;
@@ -37,15 +37,9 @@ interface ArticleInterface {
       data: {
         attributes: {
           formats: {
-            thumbnail: {
-              url: string;
-            };
-            large: {
-              url: string;
-            };
-            medium: {
-              url: string;
-            };
+            thumbnail: { url: string };
+            large: { url: string };
+            medium: { url: string };
           };
         };
       };
@@ -54,6 +48,8 @@ interface ArticleInterface {
 }
 
 const ArticleItem = ({ article }: { article: ArticleInterface }) => {
+  const art = article.attributes;
+
   return (
     <>
       <MainSection>
@@ -61,28 +57,28 @@ const ArticleItem = ({ article }: { article: ArticleInterface }) => {
           <ImageContainer>
             <Image
               src={
-                article.image
-                  ? article.image.formats.medium.url
+                art.image
+                  ? art.image.data.attributes.formats.medium.url
                   : DefaultReportImage
               }
               className="absolute rounded-md"
               alt="imagem do artigo"
-              priority={true}
-              height="100"
-              width="200"
+              priority
+              fill
+              object-fit
             />
           </ImageContainer>
-          <Link href={`/articles/${article.slug}`}>
+          <Link href={`/articles/${art.slug}`}>
             <TextContainer>
-              <ArticleCategoryText>{article.category}</ArticleCategoryText>
-              <ArticleTitle>{article.title}</ArticleTitle>
+              <ArticleCategoryText>{art.category}</ArticleCategoryText>
+              <ArticleTitle>{art.title}</ArticleTitle>
               <DesktopAuthorContainer>
                 <InlineRow>
                   <i className="text-xs text-gray-700"></i>
                   <DesktopAuthorHeading></DesktopAuthorHeading>
                 </InlineRow>
                 <DesktopAuthorDescription>
-                  <ReactMarkdown>{article.description}</ReactMarkdown>
+                  <ReactMarkdown>{art.description}</ReactMarkdown>
                 </DesktopAuthorDescription>
               </DesktopAuthorContainer>
             </TextContainer>
@@ -94,7 +90,7 @@ const ArticleItem = ({ article }: { article: ArticleInterface }) => {
             <MobileAuthorHeading></MobileAuthorHeading>
           </InlineRow>
           <MobileAuthorDescription>
-            <ReactMarkdown>{article.description}</ReactMarkdown>
+            <ReactMarkdown>{art.description}</ReactMarkdown>
           </MobileAuthorDescription>
         </MobileAuthorContainer>
       </MainSection>

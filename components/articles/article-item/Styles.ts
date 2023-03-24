@@ -53,6 +53,9 @@ export const ArticleTitle = tw.h2`
 `;
 
 export const ImageContainer = tw.div`
+  overflow-hidden
+  absolute
+  bg-cover
   h-auto
   sm:w-64
   md:w-80

@@ -18,6 +18,7 @@ export const FeaturedHeading = tw.h2`
   mb-2
   tracking-tight
 `;
+
 export const TileContainer = tw.div`
   grid
   gap-4
