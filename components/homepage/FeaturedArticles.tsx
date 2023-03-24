@@ -1,0 +1,76 @@
+import ArticleTile from './ArticleTile';
+
+interface ArticleInterface {
+  id: string;
+  attributes: {
+    content: string;
+    subcategory: string;
+    categoryLink: string;
+    headingLink: string;
+    title: string;
+    slug: string;
+    category: string;
+    description: string;
+    published_at: string;
+    created_at: string;
+    updated_at: string;
+  };
+}
+
+interface MerchandiseInterface {
+  id: string;
+  attributes: {
+    content: string;
+    subcategory: string;
+    categoryLink: string;
+    headingLink: string;
+    title: string;
+    slug: string;
+    category: string;
+    description: string;
+    published_at: string;
+    created_at: string;
+    updated_at: string;
+  };
+}
+
+import {
+  FeaturedArticlesContainer,
+  TileContainer,
+  FeaturedHeading,
+} from './Styles';
+
+const FeaturedArticles = ({
+  article,
+  merchandise,
+}: {
+  article: ArticleInterface;
+  merchandise: MerchandiseInterface;
+}) => {
+  const art = article.attributes;
+  const merch = merchandise.attributes;
+
+  return (
+    <FeaturedArticlesContainer className="featured-articles">
+      <FeaturedHeading>Featured Articles</FeaturedHeading>
+      <TileContainer className="tile-container">
+        <ArticleTile
+          heading={art.title}
+          subheading={art.category}
+          description={art.description}
+          headingLink={`/pt-br/${art.slug}`}
+          subheadingLink={art.categoryLink}
+        />
+        <ArticleTile
+          heading={merch.title}
+          subheading={merch.category}
+          description={merch.description}
+          headingLink={`/pt-br/${merch.slug}`}
+          subheadingLink={merch.categoryLink}
+        />
+      </TileContainer>
+    </FeaturedArticlesContainer>
+  );
+};
+
+export default FeaturedArticles;
