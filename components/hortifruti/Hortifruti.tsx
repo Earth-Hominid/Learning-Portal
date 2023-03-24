@@ -25,6 +25,8 @@ const Hortifruti = (props: Props) => {
         mainPageTitle="Rede BS Docs"
         currentPage="#"
         currentPageTitle="Hortifruti"
+        parentPage="#"
+        parentPageTitle="#"
         styles=""
         width=""
       >

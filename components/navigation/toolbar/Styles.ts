@@ -32,7 +32,7 @@ export const SpacingContainer = tw.div`
   max-w-5xl
 `;
 
-export const MainPageText = tw.p`
+export const ParentPageText = tw.p`
   cursor-pointer
   hover:underline
   underline-offset-2

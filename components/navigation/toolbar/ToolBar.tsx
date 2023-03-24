@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import LinkHolder from './LinkHolder';
+
 import {
   Container,
-  MainPageText,
+  ParentPageText,
   CurrentPageText,
   SpacingContainer,
   IconHolder,
@@ -13,8 +15,10 @@ import React from 'react';
 interface Props {
   mainPage: string;
   currentPage: string;
+  parentPage: string;
   mainPageTitle: string;
   currentPageTitle: string;
+  parentPageTitle: string;
 }
 
 const ToolBar: React.FC<Props> = ({
@@ -22,26 +26,22 @@ const ToolBar: React.FC<Props> = ({
   currentPage,
   mainPageTitle,
   currentPageTitle,
+  parentPageTitle,
+  parentPage,
 }) => {
   return (
     <>
       <Container>
         <SpacingContainer>
           <Link href={mainPage}>
-            <MainPageText>{mainPageTitle}</MainPageText>
+            <ParentPageText>{mainPageTitle}</ParentPageText>
           </Link>
-          {currentPageTitle == 'Rede BS Docs' ? (
-            ''
-          ) : (
-            <>
-              <IconHolder>
-                <ChevronDoubleRightIcon />
-              </IconHolder>
-              <Link href={currentPage}>
-                <CurrentPageText>{currentPageTitle}</CurrentPageText>
-              </Link>
-            </>
-          )}
+          <LinkHolder
+            currentPageTitle={currentPageTitle}
+            parentPage={parentPage}
+            parentPageTitle={parentPageTitle}
+            currentPage={currentPage}
+          />
         </SpacingContainer>
       </Container>
     </>

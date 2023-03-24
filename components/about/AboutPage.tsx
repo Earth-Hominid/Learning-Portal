@@ -19,11 +19,13 @@ const AboutPage = () => {
       keywords="about, sobre nós "
       mainPageTitle="Rede BS"
       mainPage="/"
+      parentPageTitle="#"
+      parentPage="#"
       currentPage="/about"
       currentPageTitle={englishMode ? 'About us' : 'Sobre nós'}
       background={darkMode ? 'bg-[#1c1c1c]' : 'bg-white'}
-      styles="pb-10 flex justify-center"
-      width="max-w-5xl"
+      styles=""
+      width=""
     >
       <Showcase englishMode={englishMode} />
       <div className="flex flex-col m-5 p-5 min-h-screen"></div>

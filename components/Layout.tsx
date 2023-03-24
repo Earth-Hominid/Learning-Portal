@@ -16,8 +16,10 @@ interface Props {
   children?: React.ReactNode;
   mainPage: string;
   currentPage: string;
+  parentPage: string;
   mainPageTitle: string;
   currentPageTitle: string;
+  parentPageTitle: string;
   styles?: string;
   width?: string;
 }
@@ -30,8 +32,10 @@ const Layout: React.FC<Props> = ({
   background,
   mainPage,
   currentPage,
+  parentPage,
   mainPageTitle,
   currentPageTitle,
+  parentPageTitle,
   styles,
   width,
 }) => {
@@ -63,8 +67,10 @@ const Layout: React.FC<Props> = ({
           <ToolBar
             mainPage={mainPage}
             currentPage={currentPage}
+            parentPage={parentPage}
             mainPageTitle={mainPageTitle}
             currentPageTitle={currentPageTitle}
+            parentPageTitle={parentPageTitle}
           />
         )}
         <div className={`${background} ${styles} `}>

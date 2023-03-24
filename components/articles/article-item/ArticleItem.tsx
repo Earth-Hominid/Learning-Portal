@@ -21,29 +21,36 @@ import {
 
 interface ArticleInterface {
   id: string;
-  title: string;
-  category: string;
-  image: {
-    formats: {
-      thumbnail: {
-        url: string;
-      };
-      large: {
-        url: string;
-      };
-      medium: {
-        url: string;
+  attributes: {
+    content: string;
+    subcategory: string;
+    categoryLink: string;
+    headingLink: string;
+    title: string;
+    slug: string;
+    category: string;
+    description: string;
+    published_at: string;
+    created_at: string;
+    updated_at: string;
+    image: {
+      data: {
+        attributes: {
+          formats: {
+            thumbnail: {
+              url: string;
+            };
+            large: {
+              url: string;
+            };
+            medium: {
+              url: string;
+            };
+          };
+        };
       };
     };
   };
-  content: string;
-  date: string;
-  description: string;
-  slug: string;
-  owner: string;
-  published_at: string;
-  created_at: string;
-  updated_at: string;
 }
 
 const ArticleItem = ({ article }: { article: ArticleInterface }) => {
