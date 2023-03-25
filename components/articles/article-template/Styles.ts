@@ -11,11 +11,12 @@ export const TopContainer = tw.div`
 `;
 
 export const CategoryText = tw.h6`
+  dark:text-yellow-300
   text-[#FF8600]
- tracking-wide
+  tracking-wide
   uppercase
   font-semibold
-  text-[10px]
+  text-[12px]
   font-montserrat
   mt-5
   mb-2
@@ -23,6 +24,7 @@ export const CategoryText = tw.h6`
 
 export const PageTitle = tw.div`
   text-[#1A1A1A]
+  dark:text-white
   text-2xl
   sm:text-3xl
   font-abrilfatface
@@ -31,16 +33,10 @@ export const PageTitle = tw.div`
   leading-tight
 `;
 
-export const DateText = tw.h6`
-italic
-text-slate-600
- text-[9px]
- my-2
-`;
-
 export const DescriptionText = tw.div`
   italic
   text-stone-500
+  dark:text-stone-100
   font-merriweather
   my-5
   tracking-wide
@@ -76,6 +72,7 @@ export const ArticleTextContainer = tw.div`
 
 export const ArticleText = tw.div`
   text-[#1a1a1a]
+  dark:text-white
   leading-8
   font-merriweather
    prose

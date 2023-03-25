@@ -29,15 +29,19 @@ export const TileContainer = tw.div`
 `;
 
 export const ImageContainer = tw.div`
-  max-w-[10rem]
-  xs:max-w-[14rem]
-  h-auto 
+  h-auto
+  w-32
+  xs:w-48
+  sm:min-w-[14rem]
+  md:w-80
+  lg:w-96
 `;
 
 export const TopContainer = tw.div`
   flex
   flex-row
   space-x-4
+  max-w-md
 `;
 
 export const CardContainer = tw.div`
@@ -46,26 +50,47 @@ export const CardContainer = tw.div`
 `;
 
 export const Subheading = tw.h3`
-  tracking-wider
+  tracking-widest
   text-[#ff8600]
   dark:text-yellow-300
   text-[9px]
+  font-semibold
+  pb-1
 `;
 
 export const Heading = tw.h2`
   text-[#1b1b1b]
   dark:text-white
+  hover:underline
+  hover:text-[#ff8600]
+  dark:hover:text-yellow-300
+  underline-offset-2
   text-[18px]
+  sm:text-[22px]
   font-merriweather
+  font-semibold
 `;
 
-export const Description = tw.p`
+export const TopDescription = tw.p`
+  hidden
+  sm:flex
+  text-gray-700
+  dark:text-white
+  tracking-wider
+  text-sm
+  font-montserrat
+  pt-8
+  pb-20
+`;
+
+export const BottomDescription = tw.p`
   text-[#1b1b1b]
   dark:text-white
   text-[14px]
   tracking-wider
-  xs:text-base
+  xs:text-sm
   font-montserrat
   pt-8
   pb-20
+  sm:hidden
 `;

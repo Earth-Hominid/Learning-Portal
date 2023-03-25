@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import DefaultReportImage from '@/public/images/default-report-image.jpg';
+import DefaultReportImage from '@/public/images/report-default.jpg';
 
 import {
   MainSection,
   TopContainer,
-  DateText,
   PageTitle,
   DescriptionText,
   CategoryText,
@@ -16,30 +15,26 @@ import {
 } from './Styles';
 
 interface ArticleInterface {
-  id: string;
+  id: number;
   attributes: {
     content: string;
+    subcategory: string;
+    categoryLink: string;
+    headingLink: string;
     title: string;
     slug: string;
     category: string;
     description: string;
-    date: string;
-    publishedAt: string;
-    createdAt: string;
-    updatedAt: string;
+    published_at: string;
+    created_at: string;
+    updated_at: string;
     image: {
       data: {
         attributes: {
           formats: {
-            thumbnail: {
-              url: string;
-            };
-            large: {
-              url: string;
-            };
-            medium: {
-              url: string;
-            };
+            thumbnail: { url: string };
+            large: { url: string };
+            medium: { url: string };
           };
         };
       };
@@ -49,7 +44,6 @@ interface ArticleInterface {
 
 const ArticleTemplate = ({ article }: { article: ArticleInterface }) => {
   const attribute = article.attributes;
-  console.log(attribute);
 
   const loaderProp = ({ src }: { src: any }) => {
     return src;
@@ -60,9 +54,6 @@ const ArticleTemplate = ({ article }: { article: ArticleInterface }) => {
       <TopContainer>
         <CategoryText>{attribute.category}</CategoryText>
         <PageTitle>{attribute.title}</PageTitle>
-        <DateText>
-          {new Date(attribute.createdAt).toLocaleDateString('en-US')}
-        </DateText>
         <DescriptionText>{attribute.description}</DescriptionText>
       </TopContainer>
       <ArticleHolder>

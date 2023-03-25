@@ -71,18 +71,14 @@ export const getStaticProps = async () => {
   const articleResponse = await fetch(
     `${API_URL}/api/portugueses?populate=*&filters[category][$eq]=Hortifruti&pagination[start]=0&pagination[limit]=1`
   );
-
   const articleJSON = await articleResponse.json();
   const article = articleJSON.data[0];
 
   const merchandisingResponse = await fetch(
     `${API_URL}/api/portugueses?populate=*&filters[category][$eq]=Merchandising&pagination[start]=0&pagination[limit]=1`
   );
-
   const merchandiseJSON = await merchandisingResponse.json();
-
   const merchandise = merchandiseJSON.data[0];
-  console.log(merchandise.attributes.slug);
 
   return {
     props: { article, merchandise },

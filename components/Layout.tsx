@@ -61,7 +61,7 @@ const Layout: React.FC<Props> = ({
           handleToggleLanguage={handleToggleLanguage}
         />
       </header>
-      <main className="min-h-screen">
+      <main className="min-h-screen dark:bg-[#1b1b1b]">
         {router.pathname === '/' && <Showcase englishMode={englishMode} />}
         {router.pathname !== '/' && (
           <ToolBar

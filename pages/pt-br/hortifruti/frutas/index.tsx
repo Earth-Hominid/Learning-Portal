@@ -65,14 +65,6 @@ const FrutasPage: React.FC<Props> = ({ articles }) => {
         <section>
           <FeaturePage articles={articles} />
         </section>
-
-        {/* <section className="min-h-screen">
-          {articles.length === 0 && <h3>Nenhum artigo para mostrar</h3>}
-
-          {articles.map((article) => (
-            <ArticleItem key={article.id} article={article} />
-          ))}
-        </section> */}
       </Layout>
     </>
   );
@@ -84,10 +76,8 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const res = await fetch(
     `${API_URL}/api/portugueses?populate=*&filters[subcategory][$eq]=Frutas`
   );
-
   const articleJSON = await res.json();
   const articles = articleJSON.data;
-  console.log(articles[0].id);
 
   return {
     props: { articles },

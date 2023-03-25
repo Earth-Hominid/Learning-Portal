@@ -5,7 +5,8 @@ import {
   ImageContainer,
   Subheading,
   Heading,
-  Description,
+  TopDescription,
+  BottomDescription,
   CardContainer,
   TopContainer,
 } from './Styles';
@@ -55,23 +56,27 @@ const ArticleTile = ({ article }: { article: ArticleInterface }) => {
 
   return (
     <CardContainer>
-      <TopContainer>
-        <ImageContainer>
-          <Image
-            src={art.image.data.attributes.formats.medium.url}
-            alt={`Imagem de ${art.title}`}
-            width="750"
-            height="500"
-            priority
-            className="rounded-sm"
-          />
-        </ImageContainer>
-        <div className="dark:text-white">
-          <Subheading>{capitalizeCategory}</Subheading>
-          <Heading>{art.title}</Heading>
-        </div>
-      </TopContainer>
-      <Description>{art.description}</Description>
+      <Link href={`frutas/${art.slug}`}>
+        <TopContainer>
+          <ImageContainer>
+            <Image
+              src={art.image.data.attributes.formats.medium.url}
+              alt={`Imagem de ${art.title}`}
+              width="750"
+              height="500"
+              priority
+              className="rounded-sm"
+            />
+          </ImageContainer>
+
+          <div className="dark:text-white">
+            <Subheading>{capitalizeCategory}</Subheading>
+            <Heading>{art.title}</Heading>
+            <TopDescription>{art.description}</TopDescription>
+          </div>
+        </TopContainer>
+        <BottomDescription>{art.description}</BottomDescription>
+      </Link>
     </CardContainer>
   );
 };
