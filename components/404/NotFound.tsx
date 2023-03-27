@@ -39,7 +39,7 @@ const NotFound = () => {
         font-bold
         "
           >
-            404 - Page Not Found
+            {englishMode ? 'Page not found' : 'Página não encontrada'}
           </h1>
           <p>
             {englishMode

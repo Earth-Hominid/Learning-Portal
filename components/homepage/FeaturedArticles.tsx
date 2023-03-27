@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { LanguageContext } from '@/context/language-context';
 import ArticleTile from './ArticleTile';
 
 interface ArticleInterface {
@@ -47,12 +49,16 @@ const FeaturedArticles = ({
   article: ArticleInterface;
   merchandise: MerchandiseInterface;
 }) => {
+  const { englishMode } = useContext(LanguageContext);
+
   const art = article.attributes;
   const merch = merchandise.attributes;
 
   return (
     <FeaturedArticlesContainer className="featured-articles">
-      <FeaturedHeading>Featured Articles</FeaturedHeading>
+      <FeaturedHeading>
+        {englishMode ? 'Featured Articles' : 'Artigos em destaque'}
+      </FeaturedHeading>
       <TileContainer className="tile-container">
         <ArticleTile
           heading={art.title}

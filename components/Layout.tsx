@@ -7,6 +7,7 @@ import { LanguageContext } from '@/context/language-context';
 import Header from './Header';
 import Showcase from './showcase/Showcase';
 import ToolBar from './navigation/toolbar/ToolBar';
+import Footer from './footer/Footer';
 
 interface Props {
   title: string;
@@ -77,7 +78,9 @@ const Layout: React.FC<Props> = ({
           <div className={`${width}`}>{children}</div>
         </div>
       </main>
-      <footer id="footer"></footer>
+      <footer id="nav-footer">
+        <Footer englishMode={englishMode} />
+      </footer>
     </div>
   );
 };
