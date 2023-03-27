@@ -49,8 +49,7 @@ const NotFound = () => {
           <Link
             href="/"
             className="underline dark:text-[#8cb4ff] text-[#0069C1] dark:accent-[#5e9eff]
-  hover:no-underline
-  underline-offset-2
+  hover:no-underline underline-offset-4
     accent-[#0085f2]"
           >
             {englishMode ? 'Go back home' : 'Voltar para a página inicial'}
