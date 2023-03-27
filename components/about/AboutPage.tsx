@@ -5,8 +5,8 @@ import Layout from '../Layout';
 import Showcase from '../showcase/Showcase';
 
 const AboutPage = () => {
-  const { darkMode, handleToggleThemeClick } = useContext(DarkContext);
-  const { englishMode, handleToggleLanguage } = useContext(LanguageContext);
+  const { darkMode } = useContext(DarkContext);
+  const { englishMode } = useContext(LanguageContext);
 
   return (
     <Layout

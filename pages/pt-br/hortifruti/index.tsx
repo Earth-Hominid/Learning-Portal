@@ -1,5 +1,3 @@
-import Layout from '@/components/Layout';
-import ArticleItem from '@/components/articles/article-item/ArticleItem';
 import Hortifruti from '@/components/hortifruti/Hortifruti';
 import { API_URL, PER_PAGE } from '@/config/index';
 

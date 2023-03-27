@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout';
-import ArticleItem from '@/components/articles/article-item/ArticleItem';
 import FeaturePage from '@/components/subcategory-page/FeaturePage';
 import { API_URL, PER_PAGE } from '@/config/index';
 

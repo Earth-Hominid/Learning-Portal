@@ -58,14 +58,14 @@ const FeaturedArticles = ({
           heading={art.title}
           subheading={art.category}
           description={art.description}
-          headingLink={`/pt-br/${art.slug}`}
+          headingLink={`/pt-br/hortifruti/frutas/${art.slug}`}
           subheadingLink={art.categoryLink}
         />
         <ArticleTile
           heading={merch.title}
           subheading={merch.category}
           description={merch.description}
-          headingLink={`/pt-br/${merch.slug}`}
+          headingLink={`/pt-br/merchandising/${merch.slug}`}
           subheadingLink={merch.categoryLink}
         />
       </TileContainer>
