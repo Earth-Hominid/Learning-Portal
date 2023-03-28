@@ -28,7 +28,7 @@ const AboutPage = () => {
       width=""
     >
       <Showcase englishMode={englishMode} />
-      <div className="flex flex-col m-5 p-5 min-h-screen"></div>
+      <div className=""></div>
     </Layout>
   );
 };
