@@ -57,7 +57,7 @@ const FrutasPage: React.FC<Props> = ({ articles }) => {
         currentPageTitle="Frutas"
         parentPage="/pt-br/hortifruti"
         parentPageTitle="Hortifruti"
-        background="dark:bg-[#1b1b1b]"
+        background="dark:bg-[#303136]"
         styles="flex flex-col items-center overflow-x-clip overflow-y-visible relative w-full gap-8"
         width=""
       >

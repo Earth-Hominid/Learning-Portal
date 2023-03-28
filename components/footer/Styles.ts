@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 
 export const MainContainer = tw.div`
-  dark:bg-[#343434]
+  dark:bg-[#202124]
   dark:text-[#cdcdcd]
   bg-[#f9f9fb]
   text-[#4e4e4e]

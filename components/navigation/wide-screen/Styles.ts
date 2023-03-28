@@ -2,7 +2,7 @@ import tw from 'tailwind-styled-components';
 
 export const MainContainer = tw.div`
   bg-white
-  dark:bg-[#1c1c1c]
+  dark:bg-[#1b1b1b]
   w-full
   border-b
   dark:border-b-gray-400

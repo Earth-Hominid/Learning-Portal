@@ -2,6 +2,8 @@ import tw from 'tailwind-styled-components';
 
 export const MainSection = tw.section`
   min-h-screen
+  prose
+  dark:prose-invert
 `;
 
 export const TopContainer = tw.div`
@@ -11,8 +13,8 @@ export const TopContainer = tw.div`
 `;
 
 export const CategoryText = tw.h6`
-  dark:text-yellow-300
-  text-[#FF8600]
+  text-[#00B754] 
+  dark:text-[#00B755]/[.7] 
   tracking-wide
   uppercase
   font-semibold
@@ -76,6 +78,7 @@ export const ArticleText = tw.div`
   leading-8
   font-merriweather
    prose
+   dark:prose-invert
 `;
 
 export const Caption = tw.div`

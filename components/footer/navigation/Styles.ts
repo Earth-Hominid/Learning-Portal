@@ -5,7 +5,7 @@ export const PageFooter = tw.div`
   flex-col
   w-full
   py-4
-  dark:bg-[#343434]
+  dark:bg-[#202124]
   dark:text-[#cdcdcd]
   bg-[#f9f9fb]
   text-[#4e4e4e]
@@ -68,7 +68,7 @@ export const HeaderSpan = tw.span`
   left-10
   md:bottom-4
   rounded-md
-  shadow-md 
+  shadow-md
   text-white 
   bg-[#1d1d1d] 
   text-xs 

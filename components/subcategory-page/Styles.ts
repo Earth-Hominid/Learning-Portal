@@ -51,8 +51,10 @@ export const CardContainer = tw.div`
 
 export const Subheading = tw.h3`
   tracking-widest
-  text-[#ff8600]
-  dark:text-yellow-300
+  text-[#00b755]
+  dark:text-[#00B755]/[.7]
+  hover:text-[#009A46]/[.7]
+  dark:hover:text-[#00B754]
   text-[9px]
   font-semibold
   pb-1
@@ -62,8 +64,8 @@ export const Heading = tw.h2`
   text-[#1b1b1b]
   dark:text-white
   hover:underline
-  hover:text-[#ff8600]
-  dark:hover:text-yellow-300
+hover:text-[#009A46]/[.7]
+dark:hover:text-[#00B754]
   underline-offset-2
   text-[18px]
   sm:text-[22px]
