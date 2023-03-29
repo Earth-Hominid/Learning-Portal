@@ -14,12 +14,16 @@ const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
         <DropButton>{buttonName}</DropButton>
         <Content>
           <Item
-            heading={englishMode ? 'Procurement' : 'Compras'}
-            link={englishMode ? '/en-us/purchasing' : '/pt-br/compras'}
+            heading={
+              englishMode
+                ? 'Sales and Inventory Management'
+                : 'Gerenciamento de Vendas e Estoques'
+            }
+            link="/pt-br/aprender/vendas/intro"
             description={
               englishMode
-                ? 'Learn effective purchasing management skills'
-                : 'Aprenda habilidades eficazes de gerenciamento de compras'
+                ? 'Learn effective inventory management skills'
+                : 'Desenvolva habilidades eficazes de gerenciamento de estoque.'
             }
             iconColor="
             dark:bg-[#5E9EFF] dark:hover:bg-[#8CB4FF] bg-[#0085F2] hover:bg-[#2969C2]"

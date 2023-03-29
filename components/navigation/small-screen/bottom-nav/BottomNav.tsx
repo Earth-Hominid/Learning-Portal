@@ -1,7 +1,4 @@
-import Link from 'next/link';
-import { useContext } from 'react';
 import { useRouter } from 'next/router';
-import MenuAccordian from './accordian/MenuAccordian';
 import SearchBar from '../bottom-searchbar/SearchBar';
 import ThemeButton from '../../buttons/ThemeButton';
 import LanguageButton from '../../buttons/LanguageButton';
@@ -67,14 +64,21 @@ const BottomNav = ({
               ? 'Fruit and vegetable references for produce clerks'
               : 'Referências de frutas e verduras para balconistas de hortifrúti.'
           }
+          iconColor="bg-[#00b755] hover:bg-[#009A46]/[.7] dark:bg-[#00B755]/[.7] dark:hover:bg-[#00B754"
         />
         <DropDownButton
           buttonName={englishMode ? 'Guides' : 'Guias'}
-          headingOne={englishMode ? 'Procurement' : 'Compras'}
-          linkOne={englishMode ? '/en-us/purchasing' : '/pt-br/compras'}
-          headingTwo={englishMode ? 'Merchandising' : 'Merchandising'}
-          linkTwo={
-            englishMode ? '/en-us/merchandising' : '/pt-br/merchandising'
+          headingOne={
+            englishMode
+              ? 'Sales and Inventory Management'
+              : 'Gerenciamento de Vendas e Estoques'
+          }
+          linkOne="/pt-br/aprender/vendas/intro"
+          iconColor="dark:bg-[#5E9EFF] dark:hover:bg-[#8CB4FF] bg-[#0085F2] hover:bg-[#2969C2]"
+          descriptionOne={
+            englishMode
+              ? 'Learn effective inventory management skills'
+              : 'Desenvolva habilidades eficazes de gerenciamento de estoque.'
           }
         />
       </NavigationMenu>

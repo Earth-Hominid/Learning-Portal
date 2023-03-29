@@ -1,0 +1,86 @@
+.diagram-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.diagram-title {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+.diagram-list {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.diagram-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.diagram-item-1 {
+  transform: rotate(0deg) translate(0, -100px);
+}
+
+.diagram-item-2 {
+  transform: rotate(40deg) translate(0, -100px);
+}
+
+.diagram-item-3 {
+  transform: rotate(80deg) translate(0, -100px);
+}
+
+.diagram-item-4 {
+  transform: rotate(120deg) translate(0, -100px);
+}
+
+.diagram-item-5 {
+  transform: rotate(160deg) translate(0, -100px);
+}
+
+.diagram-item-6 {
+  transform: rotate(200deg) translate(0, -100px);
+}
+
+.diagram-item-7 {
+  transform: rotate(240deg) translate(0, -100px);
+}
+
+.diagram-item-8 {
+  transform: rotate(280deg) translate(0, -100px);
+}
+
+.diagram-item-9 {
+  transform: rotate(320deg) translate(0, -100px);
+}
+
+.diagram-item:before {
+  content: '';
+  position: absolute;
+}

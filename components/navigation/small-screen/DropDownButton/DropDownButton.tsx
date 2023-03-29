@@ -22,6 +22,7 @@ const DropDownButton: React.FC<Props> = ({
   headingOne,
   linkOne,
   descriptionOne,
+  iconColor,
 }) => {
   const [accordianOpen, setAccordianOpen] = useState(false);
 
@@ -51,7 +52,7 @@ const DropDownButton: React.FC<Props> = ({
             heading={headingOne}
             description={descriptionOne}
             link={linkOne}
-            iconColor="bg-[#00b755] hover:bg-[#009A46]/[.7] dark:bg-[#00B755]/[.7] dark:hover:bg-[#00B754]"
+            iconColor={iconColor}
           />
         </details>
       </Container>

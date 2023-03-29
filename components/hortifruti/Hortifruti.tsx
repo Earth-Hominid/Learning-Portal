@@ -11,9 +11,7 @@ import {
   DescriptionDefinition,
 } from './Styles';
 
-type Props = {};
-
-const Hortifruti = (props: Props) => {
+const Hortifruti = () => {
   return (
     <>
       <Layout
