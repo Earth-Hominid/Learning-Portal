@@ -5,7 +5,6 @@ import {
   SubMenuItemHeading,
   SubMenuItemDescription,
 } from './Styles';
-import { SubMenuDescription } from '../../wide-screen/DropDownMenu/Styles';
 
 interface Props {
   heading?: string;

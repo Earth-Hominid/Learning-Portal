@@ -4,10 +4,12 @@ import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 interface Props {
   buttonName: string;
-  headingOne?: string;
-  linkOne: string;
-  descriptionOne?: string;
-  iconColor?: string;
+  englishMode?: boolean | null;
+}
+
+interface Props {
+  buttonName: string;
+  englishMode?: boolean | null;
 }
 
 import {
@@ -17,13 +19,7 @@ import {
   IconHolder,
 } from './Styles';
 
-const DropDownButton: React.FC<Props> = ({
-  buttonName,
-  headingOne,
-  linkOne,
-  descriptionOne,
-  iconColor,
-}) => {
+const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
   const [accordianOpen, setAccordianOpen] = useState(false);
 
   const handleAccordianClick = () => {
@@ -49,10 +45,18 @@ const DropDownButton: React.FC<Props> = ({
             </IconHolder>
           </AccordianSummary>
           <Item
-            heading={headingOne}
-            description={descriptionOne}
-            link={linkOne}
-            iconColor={iconColor}
+            heading={
+              englishMode
+                ? 'Sales and Inventory Management'
+                : 'Gerenciamento de Vendas e Estoques'
+            }
+            link="/pt-br/aprender/vendas/intro"
+            iconColor="dark:bg-[#5E9EFF] dark:hover:bg-[#8CB4FF] bg-[#0085F2] hover:bg-[#2969C2]"
+            description={
+              englishMode
+                ? 'Learn effective inventory management skills'
+                : 'Desenvolva habilidades eficazes de gerenciamento de estoque.'
+            }
           />
         </details>
       </Container>
@@ -60,4 +64,4 @@ const DropDownButton: React.FC<Props> = ({
   );
 };
 
-export default DropDownButton;
+export default GuidesButton;
