@@ -1,10 +1,11 @@
+import Link from 'next/link';
+
 import {
   ArticleTileContainer,
   SubHeadingLinkText,
   TileTitle,
   ContentParagraph,
 } from './Styles';
-import Link from 'next/link';
 
 interface ArticleProps {
   subheadingLink: string;

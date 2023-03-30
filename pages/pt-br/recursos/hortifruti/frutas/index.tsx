@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import FeaturePage from '@/components/subcategory-page/FeaturePage';
+import FeatureSection from '@/components/subcategory-page/feature-section/FeatureSection';
 import { API_URL, PER_PAGE } from '@/config/index';
 
 interface ArticleInterface {
@@ -57,11 +57,11 @@ const FrutasPage: React.FC<Props> = ({ articles }) => {
         currentPageTitle="Frutas"
         parentPage="/pt-br/recursos/hortifruti"
         parentPageTitle="Hortifruti"
-        background="dark:bg-[#303136]"
+        background=""
         styles="flex flex-col items-center overflow-x-clip overflow-y-visible relative w-full gap-8"
         width=""
       >
-        <FeaturePage articles={articles} />
+        <FeatureSection articles={articles} />
       </Layout>
     </>
   );

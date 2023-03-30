@@ -64,7 +64,7 @@ const FeaturedArticles = ({
           heading={art.title}
           subheading={art.category}
           description={art.description}
-          headingLink={`/pt-br/hortifruti/frutas/${art.slug}`}
+          headingLink={`/pt-br/recursos/hortifruti/frutas/${art.slug}`}
           subheadingLink={art.categoryLink}
         />
         <ArticleTile
