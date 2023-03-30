@@ -48,7 +48,10 @@ const nextConfig = {
   corePlugins: {
     fontFamily: true,
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwind-scrollbar-hide'),
+  ],
 };
 
 module.exports = nextConfig;

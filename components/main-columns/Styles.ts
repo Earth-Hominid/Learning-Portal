@@ -1,74 +1,78 @@
 import tw from 'tailwind-styled-components';
 
-export const MainWrapper = tw.div`
+export const MainWrapper = tw.main`
   bg-white 
   dark:bg-[#1b1b1b]
+  flex 
+  flex-col
+  h-screen
 `;
 
-export const InsideContainer = tw.div`
+export const InnerContainer = tw.div`
   flex 
-  flex-row 
-  space-x-4
+  flex-1 
+  overflow-hidden
 `;
 
 export const SideBarContainer = tw.div`
   hidden
-  md:max-w-[250px] 
-  flex-col
-  flex-1
-  justify-start 
-  min-h-screen 
+  md:flex
+  md:w-48
+  lg:w-64
+  p-4
   bg-white 
   dark:bg-[#1b1b1b]
   dark:text-white 
   overflow-y-auto
-  lg:max-w-xs 
   overflow-x-hidden
-  max-h-screen
   scroll
-  md:flex
   border-r
   dark:border-gray-400
   border-gray-300
 `;
 
+export const SideBarTopNav = tw.nav`
+  text-[#4e4e4e]
+  dark:text-[#cdcdcd]
+  text-left
+  pt-8
+  mb-4
+`;
+
 export const SideBarTitle = tw.h2`
   text-lg
-  mb-4
   leading-6
   tracking-wide
-  dark:text-[#cdcdcd]
-  text-[#4e4e4e]
-  text-left
 `;
 
 export const MainContentContainer = tw.div`
   bg-white 
-  dark:bg-[#1b1b1b] 
-  w-auto 
-  min-h-screen 
-  mx-10
-`;
-
-export const SideBarQuickLinks = tw.aside`
-  
-`;
-
-export const TopNav = tw.nav`
+  dark:bg-[#1b1b1b]
   flex 
-  flex-col 
-  items-left 
-  py-10
+  flex-1 
+  overflow-y-auto
+  paragraph
   px-4
-`;
-
-export const TopDocument = tw.section`
-  mb-8
-  relative
+  mb-10
+  scrollbar-hide
 `;
 
 export const TopList = tw.ul`
+  flex
+  flex-col
+  items-left
+  my-4
+  py-4
+  px-4
+  border-l-2
+  border-[#cdcdcd]
+  dark:border-[#858585]
+  space-y-5
+`;
+
+export const TopListItem = tw.li`
   text-sm
-  dark:text-[#cdcdcd]
-  text-[#4e4e4e]
+  hover:text-[#0085f2]
+  dark:hover:text-[#5e9eff]
+    
 `;

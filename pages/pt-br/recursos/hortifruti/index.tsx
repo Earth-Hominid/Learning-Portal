@@ -1,4 +1,4 @@
-import Hortifruti from '@/components/hortifruti/Hortifruti';
+import Hortifruti from '@/components/final-pages/hortifruti/Hortifruti';
 import { API_URL, PER_PAGE } from '@/config/index';
 
 interface Article {

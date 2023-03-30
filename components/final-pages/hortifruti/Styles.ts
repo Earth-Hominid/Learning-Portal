@@ -4,7 +4,7 @@ export const MainPageContentArticle = tw.article`
   text-[#1b1b1b]
   dark:text-white
   dark:bg-[#1b1b1b]
-    p-12
+    py-12
     text-base
     leading-7
     dark:accent-[#5e9eff]

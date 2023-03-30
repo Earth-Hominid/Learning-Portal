@@ -1,51 +1,48 @@
-import TopList from './TopList';
+import Link from 'next/link';
 
-interface HeadingInterface {
-  id: string;
-  title: string;
-}
-
-interface HeadingsInterface {
+interface childrenInterface {
   children?: React.ReactNode;
-  headings: HeadingInterface[];
 }
 
 import {
   MainWrapper,
+  InnerContainer,
   SideBarContainer,
   MainContentContainer,
-  SideBarQuickLinks,
-  InsideContainer,
+  SideBarTopNav,
+  TopList,
+  TopListItem,
   SideBarTitle,
-  TopNav,
-  TopDocument,
 } from './Styles';
 
-type Props = {};
-
-const MainColumns: React.FC<HeadingsInterface> = ({ headings, children }) => {
+const MainColumns: React.FC<childrenInterface> = ({ children }) => {
   return (
-    <>
-      <MainWrapper id="main-wrapper">
-        <InsideContainer>
-          <SideBarContainer id="sidebar-container">
-            <TopNav>
-              <TopDocument>
-                <header>
-                  <SideBarTitle>Neste artigo</SideBarTitle>
-                </header>
-                <TopList headings={headings} />
-              </TopDocument>
-
-              <ul className="space-y-5"></ul>
-            </TopNav>
-          </SideBarContainer>
+    <MainWrapper>
+      <InnerContainer>
+        <SideBarContainer id="sidebar">
+          <SideBarTopNav aria-label="Neste artigo">
+            <section>
+              <header>
+                <SideBarTitle>Neste artigo</SideBarTitle>
+                <TopList>
+                  <Link href="#relevance">
+                    <TopListItem>Relevância Hortifrúti</TopListItem>
+                  </Link>
+                  <Link href="#reference">
+                    <TopListItem>Referências</TopListItem>
+                  </Link>
+                </TopList>
+              </header>
+            </section>
+          </SideBarTopNav>
+        </SideBarContainer>
+        <div id="main-content-container" className="flex flex-1 flex-col">
           <MainContentContainer id="main-content-container">
             {children}
           </MainContentContainer>
-        </InsideContainer>
-      </MainWrapper>
-    </>
+        </div>
+      </InnerContainer>
+    </MainWrapper>
   );
 };
 
