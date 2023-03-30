@@ -50,13 +50,13 @@ const FrutasPage = ({ article }: { article: ArticleInterface }) => {
       description={`${art.description}`}
       keywords={`${art.title}`}
       background="dark:bg-[#1b1b1b]"
-      mainPage="/pt-br/hortifruti"
+      mainPage="/pt-br/recursos/hortifruti"
       mainPageTitle="Hortifruti"
       currentPage={`#`}
       currentPageTitle={`${art.title}`}
       styles="pb-10 lg:flex lg:justify-center"
       width="max-w-5xl"
-      parentPage="/pt-br/hortifruti/frutas"
+      parentPage={`${art.categoryLink}`}
       parentPageTitle="Frutas"
     >
       <section className="min-h-screen">

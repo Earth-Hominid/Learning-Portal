@@ -55,15 +55,13 @@ const FrutasPage: React.FC<Props> = ({ articles }) => {
         mainPageTitle="Rede BS Docs"
         currentPage="#"
         currentPageTitle="Frutas"
-        parentPage="/pt-br/hortifruti"
+        parentPage="/pt-br/recursos/hortifruti"
         parentPageTitle="Hortifruti"
         background="dark:bg-[#303136]"
         styles="flex flex-col items-center overflow-x-clip overflow-y-visible relative w-full gap-8"
         width=""
       >
-        <section>
-          <FeaturePage articles={articles} />
-        </section>
+        <FeaturePage articles={articles} />
       </Layout>
     </>
   );

@@ -74,7 +74,7 @@ const Hortifruti = () => {
               </ContentParagraph>
               <dl>
                 <DescriptionTerm id="frutas">
-                  <Link href="/pt-br/hortifruti/frutas">Frutas</Link>
+                  <Link href="/pt-br/recursos/hortifruti/frutas">Frutas</Link>
                 </DescriptionTerm>
                 <DescriptionDefinition>
                   <p>
@@ -86,7 +86,7 @@ const Hortifruti = () => {
                   </p>
                 </DescriptionDefinition>
                 <DescriptionTerm id="legumes">
-                  <Link href="/pt-br/hortifruti/legumes">Legumes</Link>
+                  <Link href="/pt-br/recursos/hortifruti/legumes">Legumes</Link>
                 </DescriptionTerm>
                 <DescriptionDefinition>
                   <p>

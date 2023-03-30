@@ -15,7 +15,7 @@ const ResourcesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
         <Content>
           <Item
             heading={englishMode ? 'Produce' : 'Hortifruti'}
-            link={englishMode ? '/en-us/produce' : '/pt-br/hortifruti'}
+            link="/pt-br/recursos/hortifruti"
             description={
               englishMode
                 ? 'Fruit and vegetable references for produce clerks'

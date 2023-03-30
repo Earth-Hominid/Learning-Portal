@@ -1,147 +1,50 @@
-import { useState } from 'react';
+import TopList from './TopList';
+
+interface HeadingInterface {
+  id: string;
+  title: string;
+}
+
+interface HeadingsInterface {
+  children?: React.ReactNode;
+  headings: HeadingInterface[];
+}
 
 import {
   MainWrapper,
   SideBarContainer,
   MainContentContainer,
   SideBarQuickLinks,
+  InsideContainer,
+  SideBarTitle,
+  TopNav,
+  TopDocument,
 } from './Styles';
 
 type Props = {};
 
-const MainColumns = (props: Props) => {
-  const [showSidebar, setShowSidebar] = useState(false);
-
-  const toggleSidebar = () => {};
-
+const MainColumns: React.FC<HeadingsInterface> = ({ headings, children }) => {
   return (
     <>
-      <div
-        id="main-wrapper"
-        className="min-h-screen bg-gray-200 dark:bg-[#454545]"
-      >
-        <div id="grid-wrapper" className="flex flex-row space-x-4">
-          <div
-            id="left-column"
-            className="
-                      hidden
-                      md:flex
-                      md:max-w-[250px] 
-                      flex-col
-                      flex-1
-                      justify-start 
-                      min-h-screen 
-                      bg-white 
-                      dark:bg-[#1b1b1b]
-                      dark:text-white 
-                      overflow-y-scroll
-                      lg:max-w-xs 
-                      overflow-x-hidden
-                      scroll
-                      "
-          >
-            <nav className="flex flex-col items-center py-10">
-              <p className="text-3xl mb-5">List</p>
-              <ul className="space-y-5">
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-                <li className="max-w-sm px-10 py-2 rounded-md border border-[#cdcdcd]">
-                  <div>
-                    <p>Item 1</p>
-                  </div>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div
-            id="right-column"
-            className="bg-white dark:bg-[#1b1b1b] w-auto min-h-screen mx-10"
-          ></div>
-        </div>
-      </div>
+      <MainWrapper id="main-wrapper">
+        <InsideContainer>
+          <SideBarContainer id="sidebar-container">
+            <TopNav>
+              <TopDocument>
+                <header>
+                  <SideBarTitle>Neste artigo</SideBarTitle>
+                </header>
+                <TopList headings={headings} />
+              </TopDocument>
+
+              <ul className="space-y-5"></ul>
+            </TopNav>
+          </SideBarContainer>
+          <MainContentContainer id="main-content-container">
+            {children}
+          </MainContentContainer>
+        </InsideContainer>
+      </MainWrapper>
     </>
   );
 };
