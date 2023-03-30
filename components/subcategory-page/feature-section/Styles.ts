@@ -4,16 +4,9 @@ export const MainContainer = tw.div`
   flex
   flex-start
   flex-col
-  gap-4
   p-8
-  dark:bg-[#1b1b1b]
-`;
-
-export const Subheading = tw.p`
-  text-sm
-  dark:text-yellow-100
-  text-[#FF8F0E]
-  ml-4
+  bg-transparent
+  z-1
 `;
 
 export const CardContainer = tw.div`
@@ -30,8 +23,7 @@ export const ArticleTileContainer = tw.div`
  flex-col 
  mt-4 
  max-w-full 
- p-5 
- relative 
+ p-5
  text-base 
  leading-7 
  break-words
@@ -46,6 +38,13 @@ export const ArticleTileContainer = tw.div`
  hover:border-[#3740ff]
  transition 
  duration-300
+`;
+
+export const Subheading = tw.p`
+  text-sm
+  dark:text-yellow-100
+  text-[#FF8F0E]
+  ml-4
 `;
 
 export const TileTitle = tw.h4`
@@ -64,7 +63,6 @@ export const TileTitle = tw.h4`
 export const ContentParagraph = tw.p`
   mt-3
   max-w-full
-  relative
   leading-6
   break-words
   dark:text-[#d2d3d7]

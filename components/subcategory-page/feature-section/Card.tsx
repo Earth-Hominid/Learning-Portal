@@ -52,8 +52,8 @@ const Card = ({ article }: { article: ArticleInterface }) => {
   const capitalizeCategory = capitalize(art.category);
 
   return (
-    <Link href={`frutas/${art.slug}`}>
-      <ArticleTileContainer>
+    <ArticleTileContainer>
+      <Link href={`frutas/${art.slug}`}>
         <div className="items-center flex ">
           <Image
             src={art.image.data.attributes.formats.medium.url}
@@ -68,8 +68,8 @@ const Card = ({ article }: { article: ArticleInterface }) => {
           <TileTitle>{art.title}</TileTitle>
           <ContentParagraph>{art.description}</ContentParagraph>
         </div>
-      </ArticleTileContainer>
-    </Link>
+      </Link>
+    </ArticleTileContainer>
   );
 };
 

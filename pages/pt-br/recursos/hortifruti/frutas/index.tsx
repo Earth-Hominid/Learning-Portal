@@ -58,7 +58,7 @@ const FrutasPage: React.FC<Props> = ({ articles }) => {
         parentPage="/pt-br/recursos/hortifruti"
         parentPageTitle="Hortifruti"
         background=""
-        styles="flex flex-col items-center overflow-x-clip overflow-y-visible relative w-full gap-8"
+        styles="flex flex-col items-center overflow-x-clip overflow-y-visible w-full gap-8"
         width=""
       >
         <FeatureSection articles={articles} />

@@ -44,7 +44,6 @@ export const Content = tw.ul`
   bg-white
   duration-300 
   rounded-md
-  z-50
   text-base
   text-left
 `;
