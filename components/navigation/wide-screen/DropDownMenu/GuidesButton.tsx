@@ -19,7 +19,7 @@ const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
                 ? 'Sales and Inventory Management'
                 : 'Gerenciamento de Vendas e Estoques'
             }
-            link="/pt-br/aprender/vendas/intro"
+            link="/pt-br/guias/vendas/intro"
             description={
               englishMode
                 ? 'Learn effective inventory management skills'
@@ -35,7 +35,7 @@ const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
                 ? 'Learn proven merchandising skills'
                 : 'Aprenda habilidades comprovadas em merchandising'
             }
-            link={englishMode ? '/en-us/merchandising' : '/pt-br/merchandising'}
+            link="/pt-br/merchandising"
             iconColor="dark:bg-[#AFA100] bg-[#938700]/[.7]"
           />
         </Content>
