@@ -15,6 +15,22 @@ import {
 } from './Styles';
 
 const ModuleOne = () => {
+  const ListObject = {
+    datapoints: [
+      { title: 'Introdução', id: '1', url: '#introduction' },
+      {
+        title: 'Introdução ao Serviço de Vendas',
+        id: '2',
+        url: '#service',
+      },
+      {
+        title: 'Qualidade do Serviço de Pós-Venda e Satisfação do Cliente',
+        id: '3',
+        url: '#customer-satisfaction',
+      },
+      { title: 'Conclusão', id: '4', url: '#' },
+    ],
+  };
   return (
     <>
       <Layout
@@ -31,7 +47,7 @@ const ModuleOne = () => {
         styles=""
         width=""
       >
-        <MainColumns>
+        <MainColumns props={ListObject}>
           <MainContent />
         </MainColumns>
       </Layout>

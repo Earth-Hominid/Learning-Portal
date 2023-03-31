@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components';
 export const MainPageContentArticle = tw.article`
   text-[#1b1b1b]
   dark:text-[#f8f9fa]
-  dark:bg-[#202123]
+  dark:bg-[#1b1b1b]
     p-12
     text-base
     leading-7
@@ -53,12 +53,20 @@ export const DescriptionDefinition = tw.dd`
 `;
 
 export const QuoteContainer = tw.div`
-  my-4
+  my-8
   p-4
-  dark:text-[#deeafd]
-  dark:bg-[#2c333f]
-  text-[#174ea6]
-  bg-[#deeafd]
-  rounded-md
+  text-[#1b1b1b]
+  dark:text-white 
+  dark:bg-[#343434]
+   relative 
+  mx-0 
+  rounded-md 
+  border-l-4
+  bg-[#f9f9fb] 
+  font-inter 
   text-base
+  border
+  dark:border-[#858585]
+  border-[#cdcdcd]
+  shadow-md
   `;

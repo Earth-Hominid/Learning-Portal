@@ -44,7 +44,11 @@ const FeatureSection: React.FC<Props> = ({ articles }) => {
   return (
     <MainContainer>
       <CardContainer>
-        {articles.length === 0 && <h3>Nenhum artigo disponível</h3>}
+        {articles.length === 0 && (
+          <h3 className="text-xl text-center dark:text-white">
+            Nenhum artigo disponível
+          </h3>
+        )}
 
         {articles.map((article) => (
           <Card key={article.id} article={article} />
