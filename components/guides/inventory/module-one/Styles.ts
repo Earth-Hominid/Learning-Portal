@@ -70,3 +70,17 @@ export const QuoteContainer = tw.div`
   border-[#cdcdcd]
   shadow-md
   `;
+
+export const OrderedList = tw.ol`
+  list-decimal
+  list-inside
+  ml-10
+  my-8
+`;
+
+export const FigureTitle = tw.h5`
+  text-xl
+  font-semibold
+  mb-8
+  font-montserrat
+`;
