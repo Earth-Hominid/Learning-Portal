@@ -166,9 +166,11 @@ const MainContent = () => {
             individuais ou departamentos de produtos. Também devem ser
             considerados os tipos de pedidos, descontos em pedidos,
             oportunidades especiais de compra e a condição financeira do
-            negócio. O inventário é capital de giro e, portanto, deve ser
-            utilizado de forma eficiente para otimizar o retorno sobre o
-            investimento.
+            negócio.{' '}
+            <BoldText>
+              O inventário é capital de giro e, portanto, deve ser utilizado de
+              forma eficiente para otimizar o retorno sobre o investimento.
+            </BoldText>
           </ContentParagraph>
           <ContentParagraph>
             Embora a maioria das lojas de varejo possuam muitos departamentos, a
@@ -177,7 +179,7 @@ const MainContent = () => {
             disponibilidade de produtos para atender efetivamente seus clientes
             e cumprir o requisito de satisfação do cliente de{' '}
             {`"fazer certo da
-            primeira vez". Cada departamento é um negócio complexo que deve se
+            primeira vez"`}. Cada {''}<BoldText>departamento</BoldText> é um{' '}<BoldText>negócio complexo</BoldText> que deve se
             sobressair nas variáveis "rígidas" e "brandas"`}{' '}
             da administração para atender às expectativas cada vez maiores,
             obter um retorno razoável do investimento e ganhar dinheiro.
@@ -276,7 +278,7 @@ const MainContent = () => {
           <ContentParagraph>
             Existe um amplo consenso de que fornecer um desempenho competente no
             {`"Básico"`} é imperativo.{' '}
-            <strong>Os clientes esperam isso!</strong> Há, portanto, apenas uma
+            <BoldText>Os clientes esperam isso!</BoldText> Há, portanto, apenas uma
             desvantagem potencial para um desempenho inconsistente. As
             expectativas evoluíram para um desempenho sólido no Básico que
             oferece ao cliente, na melhor das hipóteses, uma experiência neutra.
@@ -326,6 +328,7 @@ const MainContent = () => {
             de um cliente, se conseguir que o cliente ligue com um problema e
             fornecer uma solução que satisfaça esse cliente.
           </ContentParagraph>
+          <FigureTitle>Figura 2:</FigureTitle>
           <Image src={FigureTwo} alt="figura two" className="rounded-md my-8" />
           <ContentParagraph>
             A Figura 2 ilustra que os clientes que se queixam e que, em seguida,
@@ -335,16 +338,16 @@ const MainContent = () => {
             tem uma boa chance de manter sua lealdade.{' '}
           </ContentParagraph>
           <ContentParagraph>
-            Mas - e <strong>isso é importante</strong> - se os clientes ficarem
+            Mas - e <BoldText>isso é importante</BoldText> - se os clientes ficarem
             insatisfeitos, sua lealdade é reduzida a um nível abaixo do que era
             antes que a empresa tentasse lidar com o problema. Em outras
             palavras,{' '}
-            <strong>
+            <BoldText>
               se você pretende oferecer atendimento ao cliente para ajudar a
               manter a lealdade do cliente, é melhor resolver o problema. Caso
               contrário, você terá um cliente que está insatisfeito, não uma,
               mas duas vezes!
-            </strong>
+            </BoldText>
           </ContentParagraph>
           <ContentParagraph>
             A qualidade do atendimento prestado por uma organização é
@@ -357,7 +360,7 @@ const MainContent = () => {
             atendimento da loja sejam robustos e, simultaneamente, flexíveis e
             responsivos.
           </ContentParagraph>
-          <SectionTitle>
+          <SectionTitle id="link-de-fidelidade">
             A Satisfação do Cliente e o Link de Fidelidade do Cliente
           </SectionTitle>
           <ContentParagraph>

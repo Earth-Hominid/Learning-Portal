@@ -73,7 +73,6 @@ export const QuoteContainer = tw.div`
 
 export const OrderedList = tw.ol`
   list-decimal
-  list-inside
   ml-10
   my-8
 `;

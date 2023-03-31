@@ -28,7 +28,11 @@ const ModuleOne = () => {
         id: '3',
         url: '#customer-satisfaction',
       },
-      { title: 'Conclusão', id: '4', url: '#' },
+      {
+        title: 'A Satisfação do Cliente e o Link de Fidelidade do Cliente',
+        id: '4',
+        url: '#link-de-fidelidade',
+      },
     ],
   };
   return (
