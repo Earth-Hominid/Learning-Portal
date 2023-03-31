@@ -6,6 +6,8 @@ export const MainWrapper = tw.main`
   flex 
   flex-col
   h-screen
+  mx-auto
+  max-w-7xl
 `;
 
 export const InnerContainer = tw.div`
@@ -52,9 +54,11 @@ export const MainContentContainer = tw.div`
   flex-1 
   overflow-y-auto
   paragraph
-  px-4
   mb-10
   scrollbar-hide
+  max-w-4xl
+  mx-auto
+  px-4
 `;
 
 export const TopList = tw.ul`

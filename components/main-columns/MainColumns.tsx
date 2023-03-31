@@ -8,7 +8,7 @@ interface DatapointInterface {
 
 interface Props {
   children?: React.ReactNode;
-  props: Array<DatapointInterface>;
+  props: { datapoints: Array<DatapointInterface> };
 }
 
 import {

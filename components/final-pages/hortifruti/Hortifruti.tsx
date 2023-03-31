@@ -2,17 +2,6 @@ import Layout from '../../Layout';
 import MainColumns from '@/components/main-columns/MainColumns';
 import MainContent from './MainContent';
 
-interface DatapointInterface {
-  id: string;
-  url: string;
-  title: string;
-}
-
-interface Props {
-  children?: React.ReactNode;
-  datapoints: Array<DatapointInterface>;
-}
-
 const Hortifruti = () => {
   const ListObject = {
     datapoints: [
