@@ -1,10 +1,34 @@
-import Link from 'next/link';
 import Layout from '../../Layout';
 import MainColumns from '@/components/main-columns/MainColumns';
-
 import MainContent from './MainContent';
 
+interface DatapointInterface {
+  id: string;
+  url: string;
+  title: string;
+}
+
+interface Props {
+  children?: React.ReactNode;
+  datapoints: Array<DatapointInterface>;
+}
+
 const Hortifruti = () => {
+  const ListObject = {
+    datapoints: [
+      {
+        title: 'Relevância Hortifrúti',
+        id: '1',
+        url: '#relevance',
+      },
+      {
+        title: 'Referências',
+        id: '2',
+        url: '#reference',
+      },
+    ],
+  };
+
   return (
     <>
       <Layout
@@ -21,7 +45,7 @@ const Hortifruti = () => {
         styles=""
         width=""
       >
-        <MainColumns>
+        <MainColumns props={ListObject}>
           <MainContent />
         </MainColumns>
       </Layout>

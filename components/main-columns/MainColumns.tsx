@@ -1,7 +1,14 @@
 import Link from 'next/link';
 
-interface childrenInterface {
+interface DatapointInterface {
+  id: string;
+  url: string;
+  title: string;
+}
+
+interface Props {
   children?: React.ReactNode;
+  props: Array<DatapointInterface>;
 }
 
 import {
@@ -15,7 +22,7 @@ import {
   SideBarTitle,
 } from './Styles';
 
-const MainColumns: React.FC<childrenInterface> = ({ children }) => {
+const MainColumns: React.FC<Props> = ({ props, children }) => {
   return (
     <MainWrapper>
       <InnerContainer>
@@ -25,12 +32,13 @@ const MainColumns: React.FC<childrenInterface> = ({ children }) => {
               <header>
                 <SideBarTitle>Neste artigo</SideBarTitle>
                 <TopList>
-                  <Link href="#relevance">
-                    <TopListItem>Relevância Hortifrúti</TopListItem>
-                  </Link>
-                  <Link href="#reference">
-                    <TopListItem>Referências</TopListItem>
-                  </Link>
+                  {props.datapoints.map((datapoint) => (
+                    <div key={datapoint.id}>
+                      <Link href={datapoint.url}>
+                        <TopListItem>{datapoint.title}</TopListItem>
+                      </Link>
+                    </div>
+                  ))}
                 </TopList>
               </header>
             </section>
