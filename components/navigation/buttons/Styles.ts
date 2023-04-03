@@ -19,6 +19,7 @@ export const StyledSignUpButton = tw.button`
   rounded-md
   tracking-wide
   leading-4
+  whitespace-nowrap
 `;
 
 export const StyledOutButton = tw.button`
