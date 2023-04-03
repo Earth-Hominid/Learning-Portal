@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from '@/components/Layout';
 import FeatureSection from '@/components/subcategory-page/feature-section/FeatureSection';
+import Search from '@/components/search/Search';
 
 interface ArticleInterface {
   id: number;
@@ -80,7 +81,6 @@ export const getServerSideProps = async ({
 const SearchPage: React.FC<Props> = ({ articles }) => {
   const router = useRouter();
   const queryTerm = `Procurar resultados: ${router.query.term}`;
-  const linkTerm = '/articles/';
 
   return (
     <>
@@ -92,13 +92,13 @@ const SearchPage: React.FC<Props> = ({ articles }) => {
         mainPage="/"
         mainPageTitle="Rede BS Docs"
         currentPage="#"
-        currentPageTitle={queryTerm}
+        currentPageTitle={`Procurar Resultados: ${queryTerm}`}
         parentPage="#"
         parentPageTitle="#"
         styles="flex flex-col items-center overflow-x-clip overflow-y-visible w-full gap-8"
         width=""
       >
-        <FeatureSection articles={articles} />
+        <Search articles={articles} />
       </Layout>
     </>
   );

@@ -25,8 +25,8 @@ const NotFound = () => {
       currentPageTitle={englishMode ? '404. Not found' : '404. Não encontrado'}
       styles=""
       width=""
-      parentPage=""
-      parentPageTitle=""
+      parentPage="#"
+      parentPageTitle="#"
     >
       <div
         className="flex flex-col items-center h-screen pt-10 dark:text-white

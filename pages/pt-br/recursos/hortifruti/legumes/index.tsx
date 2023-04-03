@@ -53,8 +53,8 @@ const LegumesPage: React.FC<Props> = ({ articles }) => {
         mainPageTitle="Rede BS Docs"
         currentPage="#"
         currentPageTitle="Legumes"
-        parentPage="/pt-br/recursos/legumes"
-        parentPageTitle="Legumes"
+        parentPage="/pt-br/recursos/hortifruti"
+        parentPageTitle="Hortifruti"
         background=""
         styles=""
         width=""
@@ -69,7 +69,7 @@ export default LegumesPage;
 
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const res = await fetch(
-    `${API_URL}/api/portugueses?filters[subcategory][$eq]=Legumes&populate=*&sort=title:asc`
+    `${API_URL}/api/portugueses?filters[subcategory][$eq]=legumes&populate=*&sort=title:asc`
   );
 
   const articleJSON = await res.json();

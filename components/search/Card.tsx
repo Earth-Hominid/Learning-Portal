@@ -13,6 +13,7 @@ interface ArticleInterface {
   id: number;
   attributes: {
     content: string;
+    main: string;
     subcategory: string;
     categoryLink: string;
     headingLink: string;
@@ -54,7 +55,7 @@ const Card = ({ article }: { article: ArticleInterface }) => {
 
   return (
     <ArticleTileContainer>
-      <Link href={`${art.subcategory}/${art.slug}`}>
+      <Link href={`${art.main}/${art.category}/${art.subcategory}/${art.slug}`}>
         <div className="items-center flex ">
           {art.image?.data?.attributes?.formats?.thumbnail?.url ? (
             <Image

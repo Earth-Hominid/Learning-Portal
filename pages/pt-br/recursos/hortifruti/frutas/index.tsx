@@ -71,7 +71,7 @@ export default FrutasPage;
 
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const res = await fetch(
-    `${API_URL}/api/portugueses?populate=*&filters[subcategory][$eq]=Frutas`
+    `${API_URL}/api/portugueses?populate=*&filters[subcategory][$eq]=frutas`
   );
   const articleJSON = await res.json();
   const articles = articleJSON.data;

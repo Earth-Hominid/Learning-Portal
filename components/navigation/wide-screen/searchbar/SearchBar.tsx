@@ -15,7 +15,7 @@ const SearchBar = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push(`/articles/search?term=${term}`);
+    router.push(`/pt-br/search?term=${term}`);
     setTerm('');
   };
 
