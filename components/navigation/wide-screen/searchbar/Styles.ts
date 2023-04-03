@@ -34,8 +34,8 @@ export const PlaceholderInput = tw.input`
   placeholder:text-[#cdcdcd]
   text-[#616161]
   bg-white
-  dark:text-[#cdcdcd]
-  dark:placeholder:text-yellow-50
+  dark:text-yellow-100
+  dark:placeholder:text-[#cdcdcd]
   dark:bg-[#1c1c1c]
   focus:outline-none
   focus:ring-none

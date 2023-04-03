@@ -41,11 +41,18 @@ interface Props {
 import { MainContainer, CardContainer } from './Styles';
 
 const FeatureSection: React.FC<Props> = ({ articles }) => {
+  if (!articles)
+    return (
+      <div className="flex w-full h-full items-center text-center justify-center dark:text-white mt-10">
+        Loading...
+      </div>
+    );
+
   return (
     <MainContainer>
       <CardContainer>
         {articles.length === 0 && (
-          <h3 className="text-xl text-center dark:text-white">
+          <h3 className="text-xl text-center dark:text-white mt-10">
             Nenhum artigo disponível
           </h3>
         )}

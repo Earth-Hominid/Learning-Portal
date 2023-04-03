@@ -179,10 +179,13 @@ const MainContent = () => {
             disponibilidade de produtos para atender efetivamente seus clientes
             e cumprir o requisito de satisfação do cliente de{' '}
             {`"fazer certo da
-            primeira vez"`}. Cada {''}<BoldText>departamento</BoldText> é um{' '}<BoldText>negócio complexo</BoldText> que deve se
-            sobressair nas variáveis "rígidas" e "brandas"`}{' '}
-            da administração para atender às expectativas cada vez maiores,
-            obter um retorno razoável do investimento e ganhar dinheiro.
+            primeira vez"`}
+            . Cada {''}
+            <BoldText>departamento</BoldText> é um{' '}
+            <BoldText>negócio complexo</BoldText> que deve se sobressair nas
+            variáveis {`"rígidas"`} e {`"brandas"`} da administração para
+            atender às expectativas cada vez maiores, obter um retorno razoável
+            do investimento e ganhar dinheiro.
           </ContentParagraph>
           <ContentParagraph>
             O negócio de varejo opera em um mercado implacavelmente competitivo,
@@ -278,8 +281,8 @@ const MainContent = () => {
           <ContentParagraph>
             Existe um amplo consenso de que fornecer um desempenho competente no
             {`"Básico"`} é imperativo.{' '}
-            <BoldText>Os clientes esperam isso!</BoldText> Há, portanto, apenas uma
-            desvantagem potencial para um desempenho inconsistente. As
+            <BoldText>Os clientes esperam isso!</BoldText> Há, portanto, apenas
+            uma desvantagem potencial para um desempenho inconsistente. As
             expectativas evoluíram para um desempenho sólido no Básico que
             oferece ao cliente, na melhor das hipóteses, uma experiência neutra.
             Ele não cria um compromisso com o cliente, mas raramente é mais do
@@ -338,9 +341,9 @@ const MainContent = () => {
             tem uma boa chance de manter sua lealdade.{' '}
           </ContentParagraph>
           <ContentParagraph>
-            Mas - e <BoldText>isso é importante</BoldText> - se os clientes ficarem
-            insatisfeitos, sua lealdade é reduzida a um nível abaixo do que era
-            antes que a empresa tentasse lidar com o problema. Em outras
+            Mas - e <BoldText>isso é importante</BoldText> - se os clientes
+            ficarem insatisfeitos, sua lealdade é reduzida a um nível abaixo do
+            que era antes que a empresa tentasse lidar com o problema. Em outras
             palavras,{' '}
             <BoldText>
               se você pretende oferecer atendimento ao cliente para ajudar a
@@ -389,7 +392,7 @@ const MainContent = () => {
           <Image
             src={DiagamThree}
             alt="Lealdade vs Índice de serviço ao cliente"
-            className="rounded-md my-8"
+            className="rounded-md my-8 md:max-w-[500px]"
           />
           <ContentParagraph>
             Consequentemente, a relação entre a satisfação do cliente e a

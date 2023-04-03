@@ -37,9 +37,15 @@ interface ArticleInterface {
       data: {
         attributes: {
           formats: {
-            thumbnail: { url: string };
-            large: { url: string };
-            medium: { url: string };
+            thumbnail: {
+              url: string;
+            };
+            large: {
+              url: string;
+            };
+            medium: {
+              url: string;
+            };
           };
         };
       };
@@ -49,6 +55,11 @@ interface ArticleInterface {
 
 const ArticleItem = ({ article }: { article: ArticleInterface }) => {
   const art = article.attributes;
+
+  if (!article)
+    return (
+      <div className="flex w-full items-center text-center">Loading...</div>
+    );
 
   return (
     <>

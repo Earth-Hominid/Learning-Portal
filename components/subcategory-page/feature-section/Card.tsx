@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import DefaultReportImage from '@/public/images/report-default.jpg';
 
 import {
   ArticleTileContainer,
@@ -22,7 +23,7 @@ interface ArticleInterface {
     published_at: string;
     created_at: string;
     updated_at: string;
-    image: {
+    image?: {
       data: {
         attributes: {
           formats: {
@@ -55,13 +56,23 @@ const Card = ({ article }: { article: ArticleInterface }) => {
     <ArticleTileContainer>
       <Link href={`frutas/${art.slug}`}>
         <div className="items-center flex ">
-          <Image
-            src={art.image.data.attributes.formats.thumbnail.url}
-            alt={`Imagem de ${art.title}`}
-            width="750"
-            height="500"
-            className="h-10 w-10 rounded-full object-cover"
-          />
+          {art.image?.data?.attributes?.formats?.thumbnail?.url ? (
+            <Image
+              src={art.image.data.attributes.formats.thumbnail.url}
+              alt={`Imagem de ${art.title}`}
+              width="750"
+              height="500"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+          ) : (
+            <Image
+              src={DefaultReportImage}
+              alt="Imagem padrão"
+              width="750"
+              height="500"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+          )}
           <Subheading>{art.category}</Subheading>
         </div>
         <div className="flex-grow flex-shrink my-5 max-w-full">
