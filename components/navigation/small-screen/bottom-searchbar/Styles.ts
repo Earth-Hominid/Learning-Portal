@@ -38,7 +38,6 @@ export const PlaceholderInput = tw.input`
   dark:bg-[#1c1c1c]
   focus:outline-none
   focus:ring-none
- 
   rounded-full
 `;
 

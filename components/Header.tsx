@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import TopNav from './navigation/wide-screen/TopNav';
-import BottomNav from './navigation/small-screen/bottom-nav/BottomNav';
 
 interface DarkModeContextType {
   darkMode: boolean | null;
@@ -29,10 +28,7 @@ const Header = ({
     }
   };
 
-  const handleNavigationMenuClick = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    event.preventDefault();
+  const handleNavigationMenuClick = () => {
     toggleNavigationButton();
     document.documentElement.scrollTop = 0;
   };

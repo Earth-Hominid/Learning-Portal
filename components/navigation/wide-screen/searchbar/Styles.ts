@@ -1,7 +1,8 @@
 import tw from 'tailwind-styled-components';
 
 export const SearchForm = tw.form`
-  flex 
+  hidden
+  lg:flex 
   flex-1
   items-center
   space-x-2
@@ -38,7 +39,6 @@ export const PlaceholderInput = tw.input`
   dark:bg-[#1c1c1c]
   focus:outline-none
   focus:ring-none
- 
   rounded-full
 `;
 

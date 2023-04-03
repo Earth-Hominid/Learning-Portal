@@ -5,9 +5,9 @@ import LogInButton from '../buttons/LogIn';
 import SignUpButton from '../buttons/SignUp';
 import ResourcesButton from './DropDownMenu/ResourcesButton';
 import GuidesButton from './DropDownMenu/GuidesButton';
-import DropDownButton from './DropDownMenu/DropDownButton';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import BottomNav from '../small-screen/bottom-nav/BottomNav';
+import SearchBar from './searchbar/SearchBar';
 
 import {
   MainContainer,
@@ -62,6 +62,7 @@ const TopNav = ({
             </StyledButton>
           </RelativeContainer>
         </IconContainer>
+        <SearchBar />
         <AuthHolder>
           <li>
             <ThemeButton

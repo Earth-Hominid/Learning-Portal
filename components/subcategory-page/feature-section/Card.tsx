@@ -56,7 +56,7 @@ const Card = ({ article }: { article: ArticleInterface }) => {
       <Link href={`frutas/${art.slug}`}>
         <div className="items-center flex ">
           <Image
-            src={art.image.data.attributes.formats.medium.url}
+            src={art.image.data.attributes.formats.thumbnail.url}
             alt={`Imagem de ${art.title}`}
             width="750"
             height="500"

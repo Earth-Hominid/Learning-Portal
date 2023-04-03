@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import MainColumns from '@/components/main-columns/MainColumns';
+import Search from '@/components/search/Search';
 
 const index = () => {
   return (
@@ -18,7 +18,7 @@ const index = () => {
         parentPage=""
         parentPageTitle=""
       >
-        <MainColumns />
+        <Search />
       </Layout>
     </>
   );
