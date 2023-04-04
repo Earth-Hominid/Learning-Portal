@@ -39,6 +39,55 @@ interface ArticleInterface {
   };
 }
 
-const PrateleirasPage = ({ article }: { article: ArticleInterface }) => {};
+const PrateleirasPage = ({ article }: { article: ArticleInterface }) => {
+  const art = article.attributes;
+
+  if (!article)
+    return (
+      <div className="flex items-center dark:text-white justify-center w-full">
+        Loading...
+      </div>
+    );
+
+  return (
+    <Layout
+      title={`${art.title}`}
+      description={`${art.description}`}
+      keywords={`${art.title}`}
+      background="dark:bg-[#1b1b1b]"
+      mainPage="/pt-br/recursos/hortifruti"
+      mainPageTitle="Hortifruti"
+      currentPage={`#`}
+      currentPageTitle={`${art.title}`}
+      styles="pb-10 lg:flex lg:justify-center"
+      width="max-w-5xl"
+      parentPage={`${art.categoryLink}`}
+      parentPageTitle="Frutas"
+    >
+      <section className="min-h-screen">
+        <ToastContainer />
+        <ArticleTemplate article={article} />
+      </section>
+    </Layout>
+  );
+};
 
 export default PrateleirasPage;
+
+export const getServerSideProps: GetServerSideProps = async ({
+  query: { slug },
+}) => {
+  //fetch articles
+  const res = await fetch(
+    `${API_URL}/api/portugueses?filters[slug][$eq]=${slug}&populate=*`
+  );
+
+  const JSONresponse = await res.json();
+  const articles = JSONresponse.data;
+
+  return {
+    props: {
+      article: articles[0],
+    },
+  };
+};

@@ -42,7 +42,12 @@ interface ArticleInterface {
 const FrutasPage = ({ article }: { article: ArticleInterface }) => {
   const art = article.attributes;
 
-  if (!article) return <div>Loading...</div>;
+  if (!article)
+    return (
+      <div className="flex items-center dark:text-white justify-center w-full">
+        Loading...
+      </div>
+    );
 
   return (
     <Layout

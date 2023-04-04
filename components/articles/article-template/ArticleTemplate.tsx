@@ -28,7 +28,7 @@ interface ArticleInterface {
     published_at: string;
     created_at: string;
     updated_at: string;
-    image: {
+    image?: {
       data: {
         attributes: {
           formats: {
@@ -45,10 +45,6 @@ interface ArticleInterface {
 const ArticleTemplate = ({ article }: { article: ArticleInterface }) => {
   const attribute = article.attributes;
 
-  const loaderProp = ({ src }: { src: any }) => {
-    return src;
-  };
-
   return (
     <MainSection>
       <TopContainer>
@@ -57,20 +53,25 @@ const ArticleTemplate = ({ article }: { article: ArticleInterface }) => {
         <DescriptionText>{attribute.description}</DescriptionText>
       </TopContainer>
       <ArticleHolder>
-        <Image
-          className=" w-full lg:w-[1100px] lg:rounded-md"
-          src={
-            attribute.image
-              ? attribute.image.data.attributes.formats.large.url
-              : `${DefaultReportImage}`
-          }
-          alt="imagem do artigo"
-          priority={true}
-          height="100"
-          width="200"
-          loader={loaderProp}
-        />
-
+        {attribute.image?.data?.attributes.formats.large.url ? (
+          <Image
+            className=" w-full lg:w-[1100px] lg:rounded-md"
+            src={attribute.image.data.attributes.formats.large.url}
+            alt={`Imagem de ${attribute.title}`}
+            height="100"
+            width="200"
+            priority={true}
+          />
+        ) : (
+          <Image
+            src={DefaultReportImage}
+            alt="Imagem padrão"
+            height="100"
+            width="200"
+            priority={true}
+            className=" w-full lg:w-[1100px] lg:rounded-md"
+          />
+        )}
         <ArticleTextContainer>
           <ArticleText>
             <ReactMarkdown>{attribute.content}</ReactMarkdown>
