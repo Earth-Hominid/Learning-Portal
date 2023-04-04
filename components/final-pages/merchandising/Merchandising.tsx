@@ -1,5 +1,5 @@
 import Layout from '../../Layout';
-import MainColumns from '@/components/main-columns/MainColumns';
+import MainColumns from './columns/MainColumns';
 import MainContent from './MainContent';
 
 const Merchandising = () => {
@@ -17,13 +17,13 @@ const Merchandising = () => {
         mainPage="/"
         mainPageTitle="Rede BS Docs"
         currentPage="#"
-        currentPageTitle="Hortifruti"
+        currentPageTitle="Merchandising"
         parentPage="#"
         parentPageTitle="#"
         styles=""
         width=""
       >
-        <MainColumns props={ListObject}>
+        <MainColumns>
           <MainContent />
         </MainColumns>
       </Layout>

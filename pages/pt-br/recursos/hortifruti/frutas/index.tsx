@@ -43,12 +43,17 @@ interface Props {
 }
 
 const FrutasPage: React.FC<Props> = ({ articles }) => {
-  if (!articles) return <div>Loading...</div>;
+  if (!articles)
+    return (
+      <div className="flex items-center justify-center text-center mt-10">
+        Loading...
+      </div>
+    );
 
   return (
     <>
       <Layout
-        title="Rede BS Docs | Frutas"
+        title="Frutas"
         description="Bem-vindo à Rede BS Docs | Frutas, o melhor recurso de treinamento para funcionários de frutaria! Nosso site é dedicado a fornecer treinamento abrangente sobre como manusear, armazenar e cuidar adequadamente de uma ampla variedade de frutas encontradas em um departamento de frutaria de supermercado."
         keywords="frutas, frutaria, treinamento, treinamento de frutas, treinamento de frutaria, treinamen, funcionário de frutaria, manuseio de frutas, cuidado com as frutas,departamento de frutaria do supermercado, recurso de treinamento, funcionário de frutaria habilidoso, knowledgeable produce clerk, frutas frescas educação empresarial, educação em vendas no varejo, gestão de inventário, treinamento de atendimento ao cliente"
         mainPage="/"

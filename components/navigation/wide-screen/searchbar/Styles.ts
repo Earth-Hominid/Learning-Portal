@@ -18,9 +18,9 @@ export const SearchForm = tw.form`
   text-sm
   focus-within:border-transparent
   focus-within:ring 
-  focus-within:ring-[#FDF335]
+  dark:focus-within:ring-[#FDF335]
   hover:ring
-  hover:ring-[#FDF335]
+  dark:hover:ring-[#FDF335]
   hover:border-transparent
 `;
 

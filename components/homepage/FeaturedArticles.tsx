@@ -71,7 +71,7 @@ const FeaturedArticles = ({
           heading={merch.title}
           subheading={merch.category}
           description={merch.description}
-          headingLink={`/pt-br/merchandising/${merch.slug}`}
+          headingLink={`/pt-br/recursos/merchandising/prateleiras/${merch.slug}`}
           subheadingLink={merch.categoryLink}
         />
       </TileContainer>
