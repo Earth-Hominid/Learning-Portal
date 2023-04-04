@@ -1,10 +1,21 @@
 import Layout from '../../Layout';
-import MainColumns from './columns/MainColumns';
+import MainColumns from '@/components/main-columns/MainColumns';
 import MainContent from './MainContent';
 
 const Merchandising = () => {
   const ListObject = {
-    datapoints: [],
+    datapoints: [
+      {
+        title: 'Relevância Merchandising',
+        id: '1',
+        url: '#relevance',
+      },
+      {
+        title: 'Referências',
+        id: '2',
+        url: '#reference',
+      },
+    ],
   };
 
   return (
@@ -23,7 +34,7 @@ const Merchandising = () => {
         styles=""
         width=""
       >
-        <MainColumns>
+        <MainColumns props={ListObject}>
           <MainContent />
         </MainColumns>
       </Layout>

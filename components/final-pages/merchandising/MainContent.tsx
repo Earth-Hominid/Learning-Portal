@@ -15,7 +15,7 @@ const MainContent = () => {
   return (
     <>
       <MainPageContentArticle>
-        <ArticleTitle>Merchandising</ArticleTitle>
+        <ArticleTitle id="relevance">Merchandising</ArticleTitle>
         <Content className="section-content">
           <ContentParagraph>
             A localização dos produtos em uma loja desempenha um papel essencial
@@ -47,6 +47,36 @@ const MainContent = () => {
             agradável que promove o crescimento das vendas.
           </ContentParagraph>
         </Content>
+        <section aria-labelledby="referência">
+          <SectionTitle id="reference">
+            <a href="#referências">Referências</a>
+          </SectionTitle>
+          <Content className="section-content">
+            <ContentParagraph>
+              Navegue por uma documentação detalhada de referências sobre visual
+              merchandising.
+            </ContentParagraph>
+            <dl>
+              <DescriptionTerm id="prateleiras">
+                <Link href="/pt-br/recursos/merchandising/prateleiras">
+                  Maximizando Vendas: A Ciência da Exposição nas Prateleiras
+                </Link>
+              </DescriptionTerm>
+              <DescriptionDefinition>
+                <p>
+                  Leia sobre as pesquisas mais recentes sobre merchandising e
+                  exibição em prateleiras de supermercados. A análise de dados
+                  sobre comportamento do consumidor, posicionamento do produto e
+                  outros fatores permitiu que especialistas determinassem a
+                  maneira ideal de organizar e expor os produtos nas prateleiras
+                  dos supermercados. Esta informação é essencial para os
+                  varejistas que desejam maximizar as vendas e aumentar os
+                  lucros.
+                </p>
+              </DescriptionDefinition>
+            </dl>
+          </Content>
+        </section>
       </MainPageContentArticle>
     </>
   );

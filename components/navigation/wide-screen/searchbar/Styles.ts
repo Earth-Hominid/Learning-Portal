@@ -9,6 +9,8 @@ export const SearchForm = tw.form`
   border
   border-[#cdcdcd]
   dark:border-yellow-100
+  dark:hover:border-transparent
+  dark:focus-within:border-transparent
   rounded-full
   px-3
   py-0.5

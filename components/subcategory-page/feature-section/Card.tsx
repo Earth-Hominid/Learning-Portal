@@ -73,7 +73,7 @@ const Card = ({ article }: { article: ArticleInterface }) => {
               className="h-10 w-10 rounded-full object-cover"
             />
           )}
-          <Subheading>{art.category}</Subheading>
+          <Subheading>{capitalizeCategory}</Subheading>
         </div>
         <div className="flex-grow flex-shrink my-5 max-w-full">
           <TileTitle>{art.title}</TileTitle>
