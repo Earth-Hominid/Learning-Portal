@@ -42,7 +42,7 @@ export const ArticleTileContainer = tw.div`
 export const SubHeadingLinkText = tw.p`
   font-inter
   font-semibold
-  text-base
+  text-sm
   hover:underline
   dark:decoration-[#FDF335]
   underline-offset-2

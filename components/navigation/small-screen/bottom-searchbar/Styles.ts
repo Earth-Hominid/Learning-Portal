@@ -8,6 +8,7 @@ export const SearchForm = tw.form`
   border
   border-[#cdcdcd]
   dark:border-yellow-100
+  
   rounded-full
   px-3
   py-0.5
@@ -16,6 +17,12 @@ export const SearchForm = tw.form`
   active:border-[#FDF335]
   max-w-sm
   text-sm
+  focus-within:border-transparent
+  focus-within:ring
+  focus-within:ring-[#FDF335]
+  hover:ring
+  hover:ring-[#FDF335]
+  hover:border-transparent  
 `;
 
 export const IconHolder = tw.div`
@@ -31,10 +38,10 @@ export const PlaceholderInput = tw.input`
   py-1
   px-2
   placeholder:text-[#cdcdcd]
+  dark:placeholder:text-[#cdcdcd]
   text-[#616161]
   bg-white
-  dark:text-[#cdcdcd]
-  dark:placeholder:text-yellow-50
+  dark:text-yellow-50
   dark:bg-[#1c1c1c]
   focus:outline-none
   focus:ring-none

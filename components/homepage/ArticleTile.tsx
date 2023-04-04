@@ -22,10 +22,11 @@ const ArticleCard: React.FC<ArticleProps> = ({
   subheading,
   description,
 }) => {
+  const capitalizeSubheading = subheading?.toUpperCase();
   return (
     <ArticleTileContainer>
       <Link href={subheadingLink}>
-        <SubHeadingLinkText>{subheading}</SubHeadingLinkText>
+        <SubHeadingLinkText>{capitalizeSubheading}</SubHeadingLinkText>
       </Link>
       <TileTitle>
         <Link href={headingLink}>{heading}</Link>
