@@ -8,6 +8,7 @@ export const SearchForm = tw.form`
   space-x-2
   border
   border-[#cdcdcd]
+  hover:border-none
   dark:border-yellow-100
   rounded-full
   px-3
@@ -17,6 +18,9 @@ export const SearchForm = tw.form`
   active:border-[#FDF335]
   max-w-sm
   text-sm
+  hover:outlin-none 
+  hover:ring 
+  hover:ring-[#FDF335]
 `;
 
 export const IconHolder = tw.div`

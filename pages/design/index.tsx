@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout';
-import Search from '@/components/search/Search';
 
 const index = () => {
   return (
@@ -17,9 +16,7 @@ const index = () => {
         width=""
         parentPage=""
         parentPageTitle=""
-      >
-        <Search />
-      </Layout>
+      ></Layout>
     </>
   );
 };

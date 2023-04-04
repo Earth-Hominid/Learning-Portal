@@ -8,7 +8,7 @@ import {
   SectionTitle,
   DescriptionTerm,
   DescriptionDefinition,
-} from './Styles';
+} from '../Styles';
 
 const MainContent = () => {
   return (

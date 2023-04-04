@@ -92,7 +92,7 @@ const SearchPage: React.FC<Props> = ({ articles }) => {
         mainPage="/"
         mainPageTitle="Rede BS Docs"
         currentPage="#"
-        currentPageTitle={`Procurar Resultados: ${queryTerm}`}
+        currentPageTitle={`${queryTerm}`}
         parentPage="#"
         parentPageTitle="#"
         styles="flex flex-col items-center overflow-x-clip overflow-y-visible w-full gap-8"

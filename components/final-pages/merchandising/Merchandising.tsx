@@ -2,26 +2,15 @@ import Layout from '../../Layout';
 import MainColumns from '@/components/main-columns/MainColumns';
 import MainContent from './MainContent';
 
-const Hortifruti = () => {
+const Merchandising = () => {
   const ListObject = {
-    datapoints: [
-      {
-        title: 'Relevância Hortifrúti',
-        id: '1',
-        url: '#relevance',
-      },
-      {
-        title: 'Referências',
-        id: '2',
-        url: '#reference',
-      },
-    ],
+    datapoints: [],
   };
 
   return (
     <>
       <Layout
-        title="Hortifruti"
+        title="Merchandising"
         description="A Rede BS publica regularmente artigos para melhorar ainda mais a formação de seus funcionários."
         keywords="supermercado, hortifruti, frutas, legumes, artigos, educação empresarial, educação em vendas no varejo, gestão de inventário, treinamento de atendimento ao cliente"
         background=""
@@ -42,4 +31,4 @@ const Hortifruti = () => {
   );
 };
 
-export default Hortifruti;
+export default Merchandising;
