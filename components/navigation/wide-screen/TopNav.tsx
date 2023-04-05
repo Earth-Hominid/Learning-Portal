@@ -5,8 +5,8 @@ import Link from 'next/link';
 import Logo from '../logo/Logo';
 import ThemeButton from '../buttons/ThemeButton';
 import LanguageButton from '../buttons/LanguageButton';
-import LogInButton from '../buttons/LogIn';
-import SignUpButton from '../buttons/SignUp';
+import DemoButton from '../buttons/Demo';
+import LoginButton from '../buttons/Login';
 import ResourcesButton from './DropDownMenu/ResourcesButton';
 import GuidesButton from './DropDownMenu/GuidesButton';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -45,10 +45,6 @@ const TopNav = ({
 
   const handleAccountClick = () => {
     router.push('/account/login');
-  };
-
-  const handleSignUpClick = () => {
-    router.push('/account/register');
   };
 
   // const { user, logout } = useContext(AuthContext);
@@ -94,13 +90,10 @@ const TopNav = ({
             />
           </li>
           <li>
-            <LogInButton
+            <LoginButton
               englishMode={englishMode}
               handleAccountClick={handleAccountClick}
             />
-          </li>
-          <li>
-            <SignUpButton englishMode={englishMode} />
           </li>
         </AuthHolder>
       </InsideContainer>
@@ -111,6 +104,7 @@ const TopNav = ({
           darkMode={darkMode}
           handleToggleLanguage={handleToggleLanguage}
           handleToggleThemeClick={handleToggleThemeClick}
+          handleAccountClick={handleAccountClick}
         />
       ) : (
         ''

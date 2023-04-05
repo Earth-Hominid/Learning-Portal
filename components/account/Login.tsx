@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 // import AuthContext from '@/context/AuthContext';
 import { LanguageContext } from '@/context/language-context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Link from 'next/link';
-import Logo from '@/components/navigation/logo/Logo';
+import Navigation from './Navigation';
+
 import HeroImage from '@/public/images/comp-desk.png';
 
 import {
@@ -18,11 +19,9 @@ import {
   LargeScreenContainer,
 } from './Styles';
 
-const Login = () => {
+const Login = ({ englishMode }: { englishMode: boolean | null }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const { englishMode } = useContext(LanguageContext);
 
   // const { login, error, clearError } = useContext(AuthContext);
 
@@ -40,16 +39,7 @@ const Login = () => {
   return (
     <>
       <MainContainer>
-        <nav
-          id="header"
-          className="flex flex-row flex-start items-center w-full border-b border-b-gray-200 "
-        >
-          <Logo />
-
-          <div className="border-l border-l-gray-200 pl-4 md:text-lg tracking-wide font-montserrat">
-            {englishMode ? 'Employee Program' : 'Programa Funcionário'}
-          </div>
-        </nav>
+        <Navigation englishMode={englishMode} />
         <InsideContainer>
           <SmallScreenContainer>
             <HeadingContainer>

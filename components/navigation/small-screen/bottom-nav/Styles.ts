@@ -16,7 +16,8 @@ export const ActionButtonHolder = tw.div`
   items-center
   justify-center
   space-x-2
-  py-1
+  pt-1
+  pb-3
 `;
 
 export const NavigationMenu = tw.div`

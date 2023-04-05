@@ -2,8 +2,8 @@ import { useRouter } from 'next/router';
 import SearchBar from '../bottom-searchbar/SearchBar';
 import ThemeButton from '../../buttons/ThemeButton';
 import LanguageButton from '../../buttons/LanguageButton';
-import LogInButton from '../../buttons/LogIn';
-import SignUpButton from '../../buttons/SignUp';
+import DemoButton from '../../buttons/Demo';
+import LoginButton from '../../buttons/Login';
 import GuidesButton from '../DropDownButton/GuidesButton';
 import ResourcesButton from '../DropDownButton/ResourcesButton';
 
@@ -20,12 +20,14 @@ const BottomNav = ({
   englishMode,
   darkMode,
   handleToggleLanguage,
+  handleAccountClick,
 }: {
   toggleNavigationButton: () => void;
   englishMode: boolean | null;
   darkMode: boolean | null;
   handleToggleLanguage: () => void;
   handleToggleThemeClick: () => void;
+  handleAccountClick: () => void;
 }) => {
   const router = useRouter();
 
@@ -47,10 +49,10 @@ const BottomNav = ({
         </li>
       </AuthHolder>
       <ActionButtonHolder>
-        <SignUpButton englishMode={englishMode} />
-      </ActionButtonHolder>
-      <ActionButtonHolder>
-        <LogInButton englishMode={englishMode} />
+        <LoginButton
+          englishMode={englishMode}
+          handleAccountClick={handleAccountClick}
+        />
       </ActionButtonHolder>
       <ActionButtonHolder>
         <SearchBar />

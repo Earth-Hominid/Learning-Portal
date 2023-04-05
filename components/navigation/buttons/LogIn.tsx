@@ -1,6 +1,6 @@
-import { StyledThemeButton, ThemeButtonText } from './Styles';
+import { StyledLogInButton } from './Styles';
 
-const LogInButton = ({
+const LoginButton = ({
   englishMode,
   handleAccountClick,
 }: {
@@ -8,10 +8,10 @@ const LogInButton = ({
   handleAccountClick: () => void;
 }) => {
   return (
-    <StyledThemeButton onClick={handleAccountClick}>
-      <ThemeButtonText>{englishMode ? 'Log in' : 'Conecte-se'}</ThemeButtonText>
-    </StyledThemeButton>
+    <StyledLogInButton onClick={handleAccountClick}>
+      {englishMode ? 'Log in' : 'Conecte-se'}
+    </StyledLogInButton>
   );
 };
 
-export default LogInButton;
+export default LoginButton;

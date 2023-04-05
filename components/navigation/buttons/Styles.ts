@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 
-export const StyledSignUpButton = tw.button`
+export const StyledLogInButton = tw.button`
   flex
   items-center
   justify-center
