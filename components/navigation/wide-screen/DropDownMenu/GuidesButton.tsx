@@ -28,16 +28,6 @@ const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
             iconColor="
             dark:bg-[#5E9EFF] dark:hover:bg-[#8CB4FF] bg-[#0085F2] hover:bg-[#2969C2]"
           />
-          <Item
-            heading={englishMode ? 'Merchandising' : 'Merchandising'}
-            description={
-              englishMode
-                ? 'Learn proven merchandising skills'
-                : 'Aprenda habilidades comprovadas em merchandising'
-            }
-            link="/pt-br/merchandising"
-            iconColor="dark:bg-[#AFA100] bg-[#938700]/[.7]"
-          />
         </Content>
       </Container>
     </>

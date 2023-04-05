@@ -23,6 +23,16 @@ const ResourcesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
             }
             iconColor="bg-[#00b755] hover:bg-[#009A46]/[.7] dark:bg-[#00B755]/[.7] dark:hover:bg-[#00B754"
           />
+          <Item
+            heading={englishMode ? 'Merchandising' : 'Merchandising'}
+            description={
+              englishMode
+                ? 'Learn proven merchandising skills'
+                : 'Aprenda habilidades comprovadas em merchandising'
+            }
+            link="/pt-br/recursos/merchandising"
+            iconColor="dark:bg-[#AFA100] bg-[#938700]/[.7]"
+          />
         </Content>
       </Container>
     </>
