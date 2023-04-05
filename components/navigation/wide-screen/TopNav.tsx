@@ -1,3 +1,7 @@
+import { useContext } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+// import AuthContext from '@/context/AuthContext';
 import Logo from '../logo/Logo';
 import ThemeButton from '../buttons/ThemeButton';
 import LanguageButton from '../buttons/LanguageButton';
@@ -37,6 +41,18 @@ const TopNav = ({
   darkMode: boolean | null;
   toggleNavigationButton: () => void;
 }) => {
+  const router = useRouter();
+
+  const handleAccountClick = () => {
+    router.push('/account/login');
+  };
+
+  const handleSignUpClick = () => {
+    router.push('/account/register');
+  };
+
+  // const { user, logout } = useContext(AuthContext);
+
   return (
     <MainContainer>
       <InsideContainer>
@@ -78,7 +94,10 @@ const TopNav = ({
             />
           </li>
           <li>
-            <LogInButton englishMode={englishMode} />
+            <LogInButton
+              englishMode={englishMode}
+              handleAccountClick={handleAccountClick}
+            />
           </li>
           <li>
             <SignUpButton englishMode={englishMode} />

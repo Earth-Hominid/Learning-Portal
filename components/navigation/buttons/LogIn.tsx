@@ -1,8 +1,14 @@
 import { StyledThemeButton, ThemeButtonText } from './Styles';
 
-const LogInButton = ({ englishMode }: { englishMode: boolean | null }) => {
+const LogInButton = ({
+  englishMode,
+  handleAccountClick,
+}: {
+  englishMode: boolean | null;
+  handleAccountClick: () => void;
+}) => {
   return (
-    <StyledThemeButton>
+    <StyledThemeButton onClick={handleAccountClick}>
       <ThemeButtonText>{englishMode ? 'Log in' : 'Conecte-se'}</ThemeButtonText>
     </StyledThemeButton>
   );
