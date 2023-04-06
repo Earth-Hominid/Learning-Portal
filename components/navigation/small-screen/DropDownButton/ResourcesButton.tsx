@@ -33,9 +33,9 @@ const ResourcesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
             <SummaryTitle>{buttonName}</SummaryTitle>
             <IconHolder>
               {accordianOpen ? (
-                <ChevronDownIcon h-5 w-5 />
+                <ChevronDownIcon className="h-5 w-5" />
               ) : (
-                <ChevronRightIcon h-5 w-5 />
+                <ChevronRightIcon className="h-5 w-5" />
               )}
             </IconHolder>
           </AccordianSummary>
@@ -48,6 +48,16 @@ const ResourcesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
                 : 'Referências de frutas e verduras para balconistas de hortifrúti.'
             }
             iconColor="bg-[#00b755] hover:bg-[#009A46]/[.7] dark:bg-[#00B755]/[.7] dark:hover:bg-[#00B754"
+          />
+          <Item
+            heading={englishMode ? 'Merchandising' : 'Merchandising'}
+            description={
+              englishMode
+                ? 'Learn proven merchandising skills'
+                : 'Aprenda habilidades comprovadas em merchandising'
+            }
+            link="/pt-br/recursos/merchandising"
+            iconColor="dark:bg-[#AFA100] bg-[#938700]/[.7]"
           />
         </details>
       </Container>

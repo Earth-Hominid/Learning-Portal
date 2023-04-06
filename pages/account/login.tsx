@@ -8,18 +8,7 @@ const LoginPage = () => {
   const { englishMode } = useContext(LanguageContext);
   return (
     <>
-      <Head>
-        <title>{englishMode ? 'Log In' : 'Conecte-se'}</title>
-        <meta
-          name="description"
-          content="Log in to your account. Faça login na sua conta."
-        />
-        <meta name="keywords" content="log in, account, conta, conecte-se" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Login englishMode={englishMode} />
-      <Footer englishMode={englishMode} />
     </>
   );
 };

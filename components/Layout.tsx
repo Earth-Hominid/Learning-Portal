@@ -7,6 +7,7 @@ import { LanguageContext } from '@/context/language-context';
 import Header from './Header';
 import Showcase from './showcase/Showcase';
 import ToolBar from './navigation/toolbar/ToolBar';
+import Logo from '@/components/navigation/logo/Logo';
 import Footer from './footer/Footer';
 
 interface Props {
@@ -55,25 +56,37 @@ const Layout: React.FC<Props> = ({
       </Head>
 
       <header id="header">
-        <Header
-          darkMode={darkMode}
-          handleToggleThemeClick={handleToggleThemeClick}
-          englishMode={englishMode}
-          handleToggleLanguage={handleToggleLanguage}
-        />
-      </header>
-      <main className="min-h-screen dark:bg-[#1b1b1b]">
-        {router.pathname === '/' && <Showcase englishMode={englishMode} />}
-        {router.pathname !== '/' && (
-          <ToolBar
-            mainPage={mainPage}
-            currentPage={currentPage}
-            parentPage={parentPage}
-            mainPageTitle={mainPageTitle}
-            currentPageTitle={currentPageTitle}
-            parentPageTitle={parentPageTitle}
+        {router.pathname === '/account/login' && (
+          <div className="flex flex-row flex-start items-center w-full border-b border-b-gray-200">
+            <Logo />
+            <div className="border-l border-l-gray-200 pl-4 md:text-lg tracking-wide font-montserrat">
+              {englishMode ? 'Employee Program' : 'Programa Funcionário'}
+            </div>
+          </div>
+        )}
+        {router.pathname !== '/account/login' && (
+          <Header
+            darkMode={darkMode}
+            handleToggleThemeClick={handleToggleThemeClick}
+            englishMode={englishMode}
+            handleToggleLanguage={handleToggleLanguage}
           />
         )}
+      </header>
+
+      <main className="min-h-screen dark:bg-[#1b1b1b]">
+        {router.pathname === '/' && <Showcase englishMode={englishMode} />}
+        {router.pathname !== '/' ||
+          ('/account/login' && (
+            <ToolBar
+              mainPage={mainPage}
+              currentPage={currentPage}
+              parentPage={parentPage}
+              mainPageTitle={mainPageTitle}
+              currentPageTitle={currentPageTitle}
+              parentPageTitle={parentPageTitle}
+            />
+          ))}
         <div className={`${background} ${styles} `}>
           <div className={`${width}`}>{children}</div>
         </div>

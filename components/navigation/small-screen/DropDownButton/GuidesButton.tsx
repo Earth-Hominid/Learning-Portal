@@ -38,9 +38,9 @@ const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
             <SummaryTitle>{buttonName}</SummaryTitle>
             <IconHolder>
               {accordianOpen ? (
-                <ChevronDownIcon h-5 w-5 />
+                <ChevronDownIcon className="h-5 w-5" />
               ) : (
-                <ChevronRightIcon h-5 w-5 />
+                <ChevronRightIcon className="h-5 w-5" />
               )}
             </IconHolder>
           </AccordianSummary>
@@ -57,16 +57,6 @@ const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
                 ? 'Learn effective inventory management skills'
                 : 'Desenvolva habilidades eficazes de gerenciamento de estoque.'
             }
-          />
-          <Item
-            heading={englishMode ? 'Merchandising' : 'Merchandising'}
-            description={
-              englishMode
-                ? 'Learn proven merchandising skills'
-                : 'Aprenda habilidades comprovadas em merchandising'
-            }
-            link="/pt-br/merchandising"
-            iconColor="dark:bg-[#AFA100] bg-[#938700]/[.7]"
           />
         </details>
       </Container>
