@@ -123,7 +123,6 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
                 src={HeroImage}
                 alt="hero"
                 className="px-5 lg:px-10 pt-4 lg:pt-12"
-                priority
               />
             </LargeScreenContainer>
           </InsideContainer>

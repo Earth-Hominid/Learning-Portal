@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Logo from '@/components/navigation/logo/Logo';
+import { useRouter } from 'next/router';
 import { ArrowUpCircleIcon } from '@heroicons/react/24/solid';
 
 import {
@@ -16,6 +17,8 @@ interface Props {
 }
 
 const Navigation: React.FC<Props> = ({ englishMode }) => {
+  const router = useRouter();
+  const href = router.pathname + '#header';
   return (
     <>
       <PageFooter>
@@ -35,7 +38,7 @@ const Navigation: React.FC<Props> = ({ englishMode }) => {
           © 2022-2023 Rede Bazar Souza. All Rights Reserved.
         </SmallText>
         <IconContainer>
-          <Link href="#header">
+          <Link href={href}>
             <IconHolder>
               <ArrowUpCircleIcon className="h-8 w-8 md:h-10 md:w-10 rounded-full cursor-pointer" />
               <HeaderSpan>
