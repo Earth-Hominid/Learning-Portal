@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import Image from 'next/image';
 import Link from 'next/link';
-// import AuthContext from '@/context/AuthContext';
+import AuthContext from '@/context/auth-context';
 import { LanguageContext } from '@/context/language-context';
 import Layout from '../Layout';
 import 'react-toastify/dist/ReactToastify.css';
@@ -22,7 +22,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // const { login, error, clearError } = useContext(AuthContext);
+  const { logIn, error } = useContext(AuthContext);
 
   // useEffect(() => {
   //   if (error) {
@@ -31,14 +31,9 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
   //   clearError();
   // });
 
-  // const handleSubmit = (e: React.SyntheticEvent) => {
-  //   e.preventDefault();
-  //   login({ email, password });
-  // };
-
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log(email, password);
+    logIn({ email, password, identifier: email });
   };
 
   return (

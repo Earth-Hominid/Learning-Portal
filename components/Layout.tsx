@@ -7,6 +7,7 @@ import { LanguageContext } from '@/context/language-context';
 import Header from './Header';
 import Showcase from './showcase/Showcase';
 import ToolBar from './navigation/toolbar/ToolBar';
+import LoginNav from './navigation/login-nav/LoginNav';
 import Logo from '@/components/navigation/logo/Logo';
 import Footer from './footer/Footer';
 
@@ -57,12 +58,7 @@ const Layout: React.FC<Props> = ({
 
       <header id="header">
         {router.pathname === '/account/login' && (
-          <div className="flex flex-row flex-start items-center w-full border-b border-b-gray-200">
-            <Logo />
-            <div className="border-l border-l-gray-200 pl-4 md:text-lg tracking-wide font-montserrat">
-              {englishMode ? 'Employee Program' : 'Programa Funcionário'}
-            </div>
-          </div>
+          <LoginNav englishMode={englishMode} />
         )}
         {router.pathname !== '/account/login' && (
           <Header

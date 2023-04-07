@@ -8,6 +8,7 @@ import LanguageButton from '../buttons/LanguageButton';
 import DemoButton from '../buttons/Demo';
 import LoginButton from '../buttons/Login';
 import LogoutButton from '../buttons/LogOut';
+import DashboardButton from '../buttons/Dashboard';
 import ResourcesButton from './DropDownMenu/ResourcesButton';
 import GuidesButton from './DropDownMenu/GuidesButton';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -91,6 +92,14 @@ const TopNav = ({
               englishMode={englishMode}
             />
           </li>
+          {user ? (
+            <DashboardButton
+              handleDashboardClick={handleDashboardClick}
+              englishMode={englishMode}
+            />
+          ) : (
+            ''
+          )}
           <li>
             {user ? (
               <LogoutButton englishMode={englishMode} logOut={logOut} />

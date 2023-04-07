@@ -5,6 +5,7 @@ export const MainContainer = tw.div`
   font-montserrat
   border-b
   border-b-gray-200
+  dark:text-white
 `;
 
 export const InsideContainer = tw.div`
@@ -23,6 +24,7 @@ export const LargeScreenContainer = tw.div`
   justify-top
   items-center
   bg-[#F9F9FB]
+  dark:bg-[#1B324C]
   h-screen
   w-full
 `;
@@ -41,6 +43,7 @@ export const StyledLabel = tw.label`
   pt-2
   pb-1 
 text-gray-600
+dark:text-gray-300
 `;
 
 export const StyledButton = tw.button`

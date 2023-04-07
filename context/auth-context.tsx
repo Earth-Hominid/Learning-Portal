@@ -5,6 +5,7 @@ import { NEXT_URL } from '@/config/index';
 type User = {
   username: string;
   email: string;
+  identifier: string;
 };
 
 type Error = {
@@ -36,7 +37,7 @@ type AuthProviderProps = {
 };
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState({ name: 'Chris' });
+  const [user, setUser] = useState(null);
   const [error, setError] = useState<Error | null>(null);
 
   const router = useRouter();
