@@ -47,6 +47,9 @@ const TopNav = ({
   const handleAccountClick = () => {
     router.push('/account/login');
   };
+  const handleDashboardClick = () => {
+    router.push('/account/dashboard');
+  };
 
   return (
     <MainContainer>
@@ -108,6 +111,9 @@ const TopNav = ({
           handleToggleLanguage={handleToggleLanguage}
           handleToggleThemeClick={handleToggleThemeClick}
           handleAccountClick={handleAccountClick}
+          logOut={logOut}
+          user={user}
+          handleDashboardClick={handleDashboardClick}
         />
       ) : (
         ''

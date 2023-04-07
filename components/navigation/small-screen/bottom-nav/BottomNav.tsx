@@ -1,11 +1,17 @@
-import { useRouter } from 'next/router';
 import SearchBar from '../bottom-searchbar/SearchBar';
 import ThemeButton from '../../buttons/ThemeButton';
 import LanguageButton from '../../buttons/LanguageButton';
 import DemoButton from '../../buttons/Demo';
 import LoginButton from '../../buttons/Login';
+import LogoutButton from '../../buttons/LogOut';
 import GuidesButton from '../DropDownButton/GuidesButton';
 import ResourcesButton from '../DropDownButton/ResourcesButton';
+import DashboardButton from '../../buttons/Dashboard';
+
+type User = {
+  username: string;
+  email: string;
+};
 
 import {
   BottomNavigationMenu,
@@ -21,6 +27,9 @@ const BottomNav = ({
   darkMode,
   handleToggleLanguage,
   handleAccountClick,
+  handleDashboardClick,
+  logOut,
+  user,
 }: {
   toggleNavigationButton: () => void;
   englishMode: boolean | null;
@@ -28,9 +37,10 @@ const BottomNav = ({
   handleToggleLanguage: () => void;
   handleToggleThemeClick: () => void;
   handleAccountClick: () => void;
+  handleDashboardClick: () => void;
+  logOut: () => void;
+  user: User | null;
 }) => {
-  const router = useRouter();
-
   return (
     <BottomNavigationMenu>
       <AuthHolder>
@@ -47,12 +57,26 @@ const BottomNav = ({
             englishMode={englishMode}
           />
         </li>
+        <li>
+          {user ? (
+            <DashboardButton
+              englishMode={englishMode}
+              handleDashboardClick={handleDashboardClick}
+            />
+          ) : (
+            ''
+          )}
+        </li>
       </AuthHolder>
       <ActionButtonHolder>
-        <LoginButton
-          englishMode={englishMode}
-          handleAccountClick={handleAccountClick}
-        />
+        {user ? (
+          <LogoutButton englishMode={englishMode} logOut={logOut} />
+        ) : (
+          <LoginButton
+            englishMode={englishMode}
+            handleAccountClick={handleAccountClick}
+          />
+        )}
       </ActionButtonHolder>
       <ActionButtonHolder>
         <SearchBar />

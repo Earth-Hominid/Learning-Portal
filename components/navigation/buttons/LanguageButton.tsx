@@ -1,8 +1,4 @@
-import {
-  GlobeAmericasIcon,
-  SunIcon,
-  MoonIcon,
-} from '@heroicons/react/24/solid';
+import { GlobeAmericasIcon } from '@heroicons/react/24/solid';
 
 import { StyledThemeButton, ThemeButtonText } from './Styles';
 
@@ -11,13 +7,11 @@ const LanguageButton = ({
   englishMode,
 }: {
   handleToggleLanguage: () => void;
-
   englishMode: boolean | null;
 }) => {
   return (
     <StyledThemeButton onClick={handleToggleLanguage}>
       <GlobeAmericasIcon className="h-4 w-4" />
-
       <ThemeButtonText>
         {englishMode ? 'English' : 'Português-BR'}
       </ThemeButtonText>
