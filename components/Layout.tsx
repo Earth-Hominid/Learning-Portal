@@ -76,17 +76,17 @@ const Layout: React.FC<Props> = ({
 
       <main className="min-h-screen dark:bg-[#1b1b1b]">
         {router.pathname === '/' && <Showcase englishMode={englishMode} />}
-        {router.pathname !== '/' ||
-          ('/account/login' && (
-            <ToolBar
-              mainPage={mainPage}
-              currentPage={currentPage}
-              parentPage={parentPage}
-              mainPageTitle={mainPageTitle}
-              currentPageTitle={currentPageTitle}
-              parentPageTitle={parentPageTitle}
-            />
-          ))}
+        {router.pathname !== '/' && router.pathname !== '/account/login' && (
+          <ToolBar
+            mainPage={mainPage}
+            currentPage={currentPage}
+            parentPage={parentPage}
+            mainPageTitle={mainPageTitle}
+            currentPageTitle={currentPageTitle}
+            parentPageTitle={parentPageTitle}
+          />
+        )}
+
         <div className={`${background} ${styles} `}>
           <div className={`${width}`}>{children}</div>
         </div>

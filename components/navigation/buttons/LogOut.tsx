@@ -1,11 +1,17 @@
-import { StyledOutButton } from './Styles';
+import { StyledLogInButton } from './Styles';
 
-interface Props {
-  text: string;
-}
-
-const LogOut: React.FC<Props> = ({ text }) => {
-  return <StyledOutButton>{text}</StyledOutButton>;
+const LogoutButton = ({
+  englishMode,
+  logOut,
+}: {
+  englishMode: boolean | null;
+  logOut: () => void;
+}) => {
+  return (
+    <StyledLogInButton onClick={() => logOut()}>
+      {englishMode ? 'Log out' : 'Sair'}
+    </StyledLogInButton>
+  );
 };
 
-export default LogOut;
+export default LogoutButton;

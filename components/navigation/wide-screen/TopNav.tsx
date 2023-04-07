@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-// import AuthContext from '@/context/AuthContext';
+import AuthContext from '@/context/auth-context';
 import Logo from '../logo/Logo';
 import ThemeButton from '../buttons/ThemeButton';
 import LanguageButton from '../buttons/LanguageButton';
 import DemoButton from '../buttons/Demo';
 import LoginButton from '../buttons/Login';
+import LogoutButton from '../buttons/LogOut';
 import ResourcesButton from './DropDownMenu/ResourcesButton';
 import GuidesButton from './DropDownMenu/GuidesButton';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -41,13 +42,11 @@ const TopNav = ({
   darkMode: boolean | null;
   toggleNavigationButton: () => void;
 }) => {
+  const { user, logOut } = useContext(AuthContext);
   const router = useRouter();
-
   const handleAccountClick = () => {
     router.push('/account/login');
   };
-
-  // const { user, logout } = useContext(AuthContext);
 
   return (
     <MainContainer>
@@ -90,10 +89,14 @@ const TopNav = ({
             />
           </li>
           <li>
-            <LoginButton
-              englishMode={englishMode}
-              handleAccountClick={handleAccountClick}
-            />
+            {user ? (
+              <LogoutButton englishMode={englishMode} logOut={logOut} />
+            ) : (
+              <LoginButton
+                englishMode={englishMode}
+                handleAccountClick={handleAccountClick}
+              />
+            )}
           </li>
         </AuthHolder>
       </InsideContainer>

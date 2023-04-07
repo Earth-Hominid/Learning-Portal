@@ -40,6 +40,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
     e.preventDefault();
     console.log(email, password);
   };
+
   return (
     <>
       <Layout
@@ -71,7 +72,10 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
               </HeadingContainer>
               <ToastContainer />
 
-              <form className="container mx-4 px-4 flex flex-col">
+              <form
+                className="container mx-4 px-4 flex flex-col"
+                onSubmit={handleSubmit}
+              >
                 <StyledLabel>Email *</StyledLabel>
 
                 <input
@@ -100,9 +104,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
                   className="px-5 py-3 bg-blue-100 max-w-xs rounded-sm"
                 />
                 <div>
-                  <StyledButton type="submit" onSubmit={handleSubmit}>
-                    Entrar
-                  </StyledButton>
+                  <StyledButton type="submit">Entrar</StyledButton>
                 </div>
               </form>
               <div className="flex flex-row space-x-2 items-center mt-6 text-sm mx-4 px-4">
