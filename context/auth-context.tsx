@@ -15,20 +15,20 @@ type Error = {
 type AuthContextType = {
   user: User | null;
   error: Error | null;
-  logIn: (credentials: {
+  login: (credentials: {
     email: string;
     identifier: string;
     password: string;
   }) => Promise<void>;
-  logOut: () => void;
+  logout: () => void;
   clearError: () => void;
 };
 
 const AuthContext = createContext<AuthContextType>({
   user: null,
   error: null,
-  logIn: async () => {},
-  logOut: () => {},
+  login: async () => {},
+  logout: () => {},
   clearError: () => {},
 });
 
@@ -44,7 +44,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const router = useRouter();
 
-  const logIn = async ({
+  const login = async ({
     email: identifier,
     password,
   }: {
@@ -78,7 +78,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setError(null);
   };
 
-  const logOut = async () => {
+  const logout = async () => {
     console.log('Logout');
 
     const isLoggedIn = async ({ user }: { user: User }) => {
@@ -89,7 +89,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, error, logIn, logOut, clearError }}>
+    <AuthContext.Provider value={{ user, error, login, logout, clearError }}>
       {children}
     </AuthContext.Provider>
   );
