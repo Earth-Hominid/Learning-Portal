@@ -2,8 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import Image from 'next/image';
 import Link from 'next/link';
-import AuthContext from '@/context/auth-context';
-import { LanguageContext } from '@/context/language-context';
+import AuthContext from '@/context/AuthContext';
 import Layout from '../Layout';
 import 'react-toastify/dist/ReactToastify.css';
 import HeroImage from '@/public/images/comp-desk.png';
@@ -16,24 +15,25 @@ import {
   InsideContainer,
   SmallScreenContainer,
   LargeScreenContainer,
+  StyledInput,
 } from './Styles';
 
 const Login = ({ englishMode }: { englishMode: boolean | null }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { logIn, error } = useContext(AuthContext);
+  const { login, error, clearError } = useContext(AuthContext);
 
-  // useEffect(() => {
-  //   if (error) {
-  //     toast.error(error);
-  //   }
-  //   clearError();
-  // });
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+    }
+    clearError();
+  });
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    logIn({ email, password, identifier: email });
+    login({ email, password, identifier: email });
   };
 
   return (
@@ -66,18 +66,16 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
                 </p>
               </HeadingContainer>
               <ToastContainer />
-
               <form
                 className="container mx-4 px-4 flex flex-col"
                 onSubmit={handleSubmit}
               >
                 <StyledLabel>Email *</StyledLabel>
 
-                <input
+                <StyledInput
                   placeholder={
                     englishMode ? 'Enter your email' : 'Digite seu email'
                   }
-                  className="px-5 py-3 bg-blue-100 max-w-xs rounded-sm"
                   id="email"
                   type="email"
                   value={email}
@@ -86,7 +84,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
                   }
                 />
                 <StyledLabel>Password *</StyledLabel>
-                <input
+                <StyledInput
                   placeholder={
                     englishMode ? 'Enter your password' : 'Digite sua senha'
                   }
@@ -96,7 +94,6 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setPassword(e.target.value)
                   }
-                  className="px-5 py-3 bg-blue-100 max-w-xs rounded-sm"
                 />
                 <div>
                   <StyledButton type="submit">Entrar</StyledButton>

@@ -37,6 +37,15 @@ export const HeadingContainer = tw.div`
   lg:pt-12
 `;
 
+export const StyledInput = tw.input`
+  px-5 py-3 
+  bg-blue-100 
+  max-w-xs 
+  rounded-sm 
+  dark:bg-[#1B324C]
+  dark:text-[#8CB4FF]
+`;
+
 export const StyledLabel = tw.label`
   text-sm
   tracking-wide

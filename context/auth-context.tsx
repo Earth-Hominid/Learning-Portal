@@ -21,6 +21,7 @@ type AuthContextType = {
     password: string;
   }) => Promise<void>;
   logOut: () => void;
+  clearError: () => void;
 };
 
 const AuthContext = createContext<AuthContextType>({
@@ -28,6 +29,7 @@ const AuthContext = createContext<AuthContextType>({
   error: null,
   logIn: async () => {},
   logOut: () => {},
+  clearError: () => {},
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -50,7 +52,30 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     identifier: string;
     password: string;
   }) => {
-    console.log({ identifier, password });
+    const res = await fetch(`${NEXT_URL}/api/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        identifier,
+        password,
+      }),
+    });
+
+    const data = await res.json();
+    console.log(data);
+    if (res.ok) {
+      setUser(data.user);
+      router.push('/account/dashboard');
+    } else {
+      setError(data.message);
+      setError(null);
+    }
+  };
+
+  const clearError = () => {
+    setError(null);
   };
 
   const logOut = async () => {
@@ -64,7 +89,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, error, logIn, logOut }}>
+    <AuthContext.Provider value={{ user, error, logIn, logOut, clearError }}>
       {children}
     </AuthContext.Provider>
   );

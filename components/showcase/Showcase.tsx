@@ -20,8 +20,8 @@ const Showcase: React.FC<Props> = ({
         <TextContainer>
           <HeadingText>
             {englishMode
-              ? 'Illuminating business intelligence and retail research.'
-              : 'Iluminando inteligência de negócios e pesquisa de varejo.'}
+              ? 'Exploring insights in business intelligence and retail market research.'
+              : 'Explorando insights em inteligência empresarial e pesquisa de mercado varejista.'}
           </HeadingText>
           {englishMode ? (
             <SubheadingText>
