@@ -1,22 +1,7 @@
-import Layout from '@/components/Layout';
+import DashboardPage from '@/components/account/dashboard/Dashboard';
 
 const dashboard = () => {
-  return (
-    <Layout
-      title="Dashboard"
-      description="Dashboard"
-      keywords="dashboard"
-      background=""
-      mainPage="/"
-      currentPage="/account/dashboard"
-      parentPage="#"
-      mainPageTitle="Rede BS"
-      currentPageTitle="Dashboard"
-      parentPageTitle="#"
-    >
-      dashboard
-    </Layout>
-  );
+  return <DashboardPage />;
 };
 
 export default dashboard;

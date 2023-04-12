@@ -55,14 +55,14 @@ const PrateleirasPage = ({ article }: { article: ArticleInterface }) => {
       description={`${art.description}`}
       keywords={`${art.title}`}
       background="dark:bg-[#1b1b1b]"
-      mainPage="/pt-br/recursos/hortifruti"
-      mainPageTitle="Hortifruti"
+      mainPage="/pt-br/recursos/merchandising"
+      mainPageTitle="Merchandising"
       currentPage={`#`}
       currentPageTitle={`${art.title}`}
       styles="pb-10 lg:flex lg:justify-center"
       width="max-w-5xl"
-      parentPage={`${art.categoryLink}`}
-      parentPageTitle="Frutas"
+      parentPage={`${art.headingLink}`}
+      parentPageTitle="Prateleiras"
     >
       <section className="min-h-screen">
         <ToastContainer />
