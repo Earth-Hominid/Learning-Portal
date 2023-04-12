@@ -1,7 +1,6 @@
-import { API_URL } from '@/config/index';
 import cookie from 'cookie';
-
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { API_URL } from '@/config';
 
 interface StrapiResponseData {
   jwt: string;
@@ -12,13 +11,11 @@ interface StrapiResponseData {
     created_at: string;
     updated_at: string;
   };
-  message?: {
-    messages: {
-      id: string;
-      message: string;
-      field?: string;
-    }[];
-  }[];
+  error?: {
+    message: string;
+    status: number;
+    name: string;
+  };
   statusCode?: number;
 }
 
@@ -31,7 +28,7 @@ const loginUser = async (
   if (req.method === 'POST') {
     const { identifier, password } = req.body;
 
-    const strapiResponse = await fetch(`${API_URL}/api/auth/local`, {
+    const strapiRes = await fetch(`${API_URL}/api/auth/local`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,9 +39,9 @@ const loginUser = async (
       }),
     });
 
-    const data: StrapiResponseData = await strapiResponse.json();
+    const data: StrapiResponseData = await strapiRes.json();
 
-    if (strapiResponse.ok) {
+    if (strapiRes.ok) {
       // set cookie
       res.setHeader(
         'Set-Cookie',
@@ -60,8 +57,7 @@ const loginUser = async (
       res.status(200).json({ user: data.user });
     } else {
       res.status(data.statusCode ?? 400).json({
-        message:
-          data.message?.[0]?.messages?.[0]?.message ?? 'Something went wrong',
+        message: data.error?.message ?? 'Something went wrong',
       });
     }
   } else {

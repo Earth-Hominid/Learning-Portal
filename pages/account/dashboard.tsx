@@ -1,9 +1,22 @@
-import React from 'react';
+import Layout from '@/components/Layout';
 
-type Props = {};
-
-const dashboard = (props: Props) => {
-  return <div>dashboard</div>;
+const dashboard = () => {
+  return (
+    <Layout
+      title="Dashboard"
+      description="Dashboard"
+      keywords="dashboard"
+      background=""
+      mainPage="/"
+      currentPage="/account/dashboard"
+      parentPage="#"
+      mainPageTitle="Rede BS"
+      currentPageTitle="Dashboard"
+      parentPageTitle="#"
+    >
+      dashboard
+    </Layout>
+  );
 };
 
 export default dashboard;

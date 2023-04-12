@@ -2,9 +2,10 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { DarkProvider } from '@/context/dark-context';
 import { LanguageProvider } from '@/context/language-context';
-import { AuthProvider, AuthProviderProps } from '@/context/AuthContext';
+import { AuthProvider } from '@/context/auth-context';
+import { ClerkProvider } from '@clerk/nextjs';
 
-export default function App({ Component, pageProps }: AppPropsWithAuth) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <AuthProvider>
@@ -17,5 +18,3 @@ export default function App({ Component, pageProps }: AppPropsWithAuth) {
     </>
   );
 }
-
-type AppPropsWithAuth = AppProps & AuthProviderProps;

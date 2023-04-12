@@ -3,7 +3,7 @@ import ThemeButton from '../../buttons/ThemeButton';
 import LanguageButton from '../../buttons/LanguageButton';
 import DemoButton from '../../buttons/Demo';
 import LoginButton from '../../buttons/Login';
-import LogoutButton from '../../buttons/LogOut';
+import LogoutButton from '../../buttons/Logout';
 import GuidesButton from '../DropDownButton/GuidesButton';
 import ResourcesButton from '../DropDownButton/ResourcesButton';
 import DashboardButton from '../../buttons/Dashboard';
@@ -28,7 +28,6 @@ const BottomNav = ({
   handleToggleLanguage,
   handleAccountClick,
   handleDashboardClick,
-  logOut,
   user,
 }: {
   toggleNavigationButton: () => void;
@@ -38,7 +37,6 @@ const BottomNav = ({
   handleToggleThemeClick: () => void;
   handleAccountClick: () => void;
   handleDashboardClick: () => void;
-  logOut: () => void;
   user: User | null;
 }) => {
   return (
@@ -70,7 +68,7 @@ const BottomNav = ({
       </AuthHolder>
       <ActionButtonHolder>
         {user ? (
-          <LogoutButton englishMode={englishMode} logOut={logOut} />
+          <LogoutButton englishMode={englishMode} />
         ) : (
           <LoginButton
             englishMode={englishMode}

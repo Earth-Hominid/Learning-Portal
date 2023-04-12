@@ -1,13 +1,12 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import AuthContext from '@/context/auth-context';
 import Logo from '../logo/Logo';
 import ThemeButton from '../buttons/ThemeButton';
 import LanguageButton from '../buttons/LanguageButton';
 import DemoButton from '../buttons/Demo';
 import LoginButton from '../buttons/Login';
-import LogoutButton from '../buttons/LogOut';
+import LogoutButton from '../buttons/Logout';
 import DashboardButton from '../buttons/Dashboard';
 import ResourcesButton from './DropDownMenu/ResourcesButton';
 import GuidesButton from './DropDownMenu/GuidesButton';
@@ -43,7 +42,7 @@ const TopNav = ({
   darkMode: boolean | null;
   toggleNavigationButton: () => void;
 }) => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const router = useRouter();
   const handleAccountClick = () => {
     router.push('/account/login');
@@ -102,7 +101,7 @@ const TopNav = ({
           )}
           <li>
             {user ? (
-              <LogoutButton englishMode={englishMode} logOut={logOut} />
+              <LogoutButton englishMode={englishMode} />
             ) : (
               <LoginButton
                 englishMode={englishMode}
@@ -120,7 +119,6 @@ const TopNav = ({
           handleToggleLanguage={handleToggleLanguage}
           handleToggleThemeClick={handleToggleThemeClick}
           handleAccountClick={handleAccountClick}
-          logOut={logOut}
           user={user}
           handleDashboardClick={handleDashboardClick}
         />

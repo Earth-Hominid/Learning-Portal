@@ -17,7 +17,7 @@ const Item: React.FC<Props> = ({ heading, link, iconColor, description }) => {
   return (
     <>
       <ul id="references-menu" className="ml-4">
-        <li className="relative">
+        <div className="relative">
           <li className="w-full">
             <Link
               href={link}
@@ -30,7 +30,7 @@ const Item: React.FC<Props> = ({ heading, link, iconColor, description }) => {
               </MenuContentContainer>
             </Link>
           </li>
-        </li>
+        </div>
       </ul>
     </>
   );

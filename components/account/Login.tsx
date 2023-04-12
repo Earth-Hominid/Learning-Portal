@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import Image from 'next/image';
 import Link from 'next/link';
-import AuthContext from '@/context/AuthContext';
+import AuthContext from '@/context/auth-context';
 import Layout from '../Layout';
 import 'react-toastify/dist/ReactToastify.css';
 import HeroImage from '@/public/images/comp-desk.png';
@@ -34,6 +34,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     login({ email, password, identifier: email });
+    toast.error('Login failed');
   };
 
   return (
@@ -70,7 +71,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
                 className="container mx-4 px-4 flex flex-col"
                 onSubmit={handleSubmit}
               >
-                <StyledLabel>Email *</StyledLabel>
+                <StyledLabel htmlFor="email">Email *</StyledLabel>
 
                 <StyledInput
                   placeholder={
@@ -83,7 +84,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
                     setEmail(e.target.value)
                   }
                 />
-                <StyledLabel>Password *</StyledLabel>
+                <StyledLabel htmlFor="password">Password *</StyledLabel>
                 <StyledInput
                   placeholder={
                     englishMode ? 'Enter your password' : 'Digite sua senha'
@@ -101,7 +102,7 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
               </form>
               <div className="flex flex-row space-x-2 items-center mt-6 text-sm mx-4 px-4">
                 {englishMode
-                  ? 'Not a Rede BS member??'
+                  ? 'Not a Rede BS member?'
                   : 'Não é associado da Rede BS?'}
                 <Link href="/">
                   <p className="ml-2 underline underline-offset-2">
