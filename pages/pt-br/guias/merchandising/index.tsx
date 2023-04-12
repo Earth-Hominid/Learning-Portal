@@ -15,6 +15,8 @@ export default function MerchandisingPage() {
         background=""
         styles=""
         width=""
+        parentPage=""
+        parentPageTitle=""
       />
     </>
   );
