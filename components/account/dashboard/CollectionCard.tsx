@@ -21,13 +21,11 @@ const CollectionCard: React.FC<ArticleProps> = ({
   englishMode,
 }) => {
   return (
-    <Link href={'/account/reports'}>
-      <ArticleTileContainer className={styles}>
-        <TileTitle>{heading}</TileTitle>
-        <ContentDescription>{description}</ContentDescription>
-        <TileFooter>{englishMode ? `Reports` : `Relatórios`}</TileFooter>
-      </ArticleTileContainer>
-    </Link>
+    <ArticleTileContainer className={styles}>
+      <TileTitle>{heading}</TileTitle>
+      <ContentDescription>{description}</ContentDescription>
+      <TileFooter>{englishMode ? `0 Reports` : `0 Relatórios`}</TileFooter>
+    </ArticleTileContainer>
   );
 };
 

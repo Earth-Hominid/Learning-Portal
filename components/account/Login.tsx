@@ -34,7 +34,6 @@ const Login = ({ englishMode }: { englishMode: boolean | null }) => {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     login({ email, password, identifier: email });
-    toast.error('Login failed');
   };
 
   return (

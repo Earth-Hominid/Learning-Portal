@@ -64,6 +64,7 @@ export const TileContainer = tw.div`
 
 export const ArticleTileContainer = tw.div`
   dark:border-[#858585]
+  dark:border
   dark:text-white
   text-[#1b1b1b]
   rounded-md
@@ -98,5 +99,7 @@ export const TileFooter = tw.div`
   flex
   justify-between
   items-center
-  mt-auto  
+  mt-auto 
+  text-[#0085F2]
+  dark:text-[#8CB4FF]
 `;
