@@ -4,6 +4,7 @@ interface ArticleInterface {
   id: number;
   attributes: {
     content: string;
+    main: string;
     subcategory: string;
     categoryLink: string;
     headingLink: string;
@@ -14,7 +15,7 @@ interface ArticleInterface {
     published_at: string;
     created_at: string;
     updated_at: string;
-    image: {
+    image?: {
       data: {
         attributes: {
           formats: {
