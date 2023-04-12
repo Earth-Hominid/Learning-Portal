@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Item from './Item';
 
 interface Props {
@@ -8,11 +9,21 @@ interface Props {
 import { Container, DropButton, Content } from './Styles';
 
 const GuidesButton: React.FC<Props> = ({ buttonName, englishMode }) => {
+  const [dropDownOpen, setDropDownOpen] = useState(false);
+
+  const handleDropDownClick = () => {
+    if (!dropDownOpen) {
+      setDropDownOpen(true);
+    } else {
+      setDropDownOpen(false);
+    }
+  };
+
   return (
     <>
       <Container>
-        <DropButton>{buttonName}</DropButton>
-        <Content>
+        <DropButton onClick={handleDropDownClick}>{buttonName}</DropButton>
+        <Content className={dropDownOpen ? 'flex' : 'hidden'}>
           <Item
             heading={
               englishMode

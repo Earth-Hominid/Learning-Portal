@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useState } from 'react';
 import Item from './Item';
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
