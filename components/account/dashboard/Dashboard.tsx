@@ -3,7 +3,13 @@ import { DarkContext } from '@/context/dark-context';
 import { LanguageContext } from '@/context/language-context';
 import AuthContext from '@/context/auth-context';
 import Layout from '@/components/Layout';
-import { Container, UserContainer, WelcomeContainer } from './Styles';
+import ReportSection from './ReportSection';
+import {
+  Container,
+  UserContainer,
+  WelcomeContainer,
+  ReportContainer,
+} from './Styles';
 
 const DashboardPage = () => {
   const { darkMode } = useContext(DarkContext);
@@ -40,6 +46,9 @@ const DashboardPage = () => {
             </p>
           </UserContainer>
         </WelcomeContainer>
+        <ReportContainer>
+          <ReportSection />
+        </ReportContainer>
       </Container>
     </Layout>
   );
