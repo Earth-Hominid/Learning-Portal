@@ -1,8 +1,12 @@
 import { StyledThemeButton, ThemeButtonText } from './Styles';
 
-const DemoButton = () => {
+const DemoButton = ({
+  handleDemoAccountClick,
+}: {
+  handleDemoAccountClick: () => void;
+}) => {
   return (
-    <StyledThemeButton>
+    <StyledThemeButton onClick={handleDemoAccountClick}>
       <ThemeButtonText>Demo</ThemeButtonText>
     </StyledThemeButton>
   );

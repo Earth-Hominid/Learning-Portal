@@ -6,7 +6,7 @@ const LanguageButton = ({
   handleToggleLanguage,
   englishMode,
 }: {
-  handleToggleLanguage: () => void;
+  handleToggleLanguage?: (event: React.MouseEvent<HTMLElement>) => void;
   englishMode: boolean | null;
 }) => {
   return (

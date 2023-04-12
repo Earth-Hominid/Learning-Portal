@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from 'react';
 
 interface LanguageModeInterface {
   englishMode?: boolean | null;
-  handleToggleLanguage?: () => void;
+  handleToggleLanguage?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 type LanguageProps = { children: React.ReactNode };
@@ -50,8 +50,7 @@ export const LanguageProvider = ({ children }: LanguageProps) => {
     setEnglishMode(!englishMode);
   };
 
-  const handleToggleLanguage = (event: React.MouseEvent<HTMLElement>) => {
-    event.preventDefault();
+  const handleToggleLanguage = () => {
     toggleLanguage();
   };
 

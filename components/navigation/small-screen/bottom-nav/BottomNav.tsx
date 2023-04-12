@@ -29,15 +29,17 @@ const BottomNav = ({
   handleAccountClick,
   handleDashboardClick,
   user,
+  handleDemoAccountClick,
 }: {
   toggleNavigationButton: () => void;
   englishMode: boolean | null;
   darkMode: boolean | null;
-  handleToggleLanguage: () => void;
-  handleToggleThemeClick: () => void;
+  handleToggleThemeClick: (event: React.MouseEvent<HTMLElement>) => void;
   handleAccountClick: () => void;
   handleDashboardClick: () => void;
   user: User | null;
+  handleToggleLanguage?: (event: React.MouseEvent<HTMLElement>) => void;
+  handleDemoAccountClick: () => void;
 }) => {
   return (
     <BottomNavigationMenu>
@@ -54,6 +56,9 @@ const BottomNav = ({
             handleToggleLanguage={handleToggleLanguage}
             englishMode={englishMode}
           />
+        </li>
+        <li>
+          <DemoButton handleDemoAccountClick={handleDemoAccountClick} />
         </li>
         <li>
           {user ? (

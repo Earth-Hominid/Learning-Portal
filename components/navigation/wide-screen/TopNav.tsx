@@ -33,14 +33,16 @@ const TopNav = ({
   handleToggleThemeClick,
   handleToggleLanguage,
   toggleNavigationButton,
+  handleDemoAccountClick,
 }: {
   handleNavigationMenuClick: () => void;
   navigationMenuToggle: boolean;
-  handleToggleThemeClick: () => void;
-  handleToggleLanguage: () => void;
   englishMode: boolean | null;
   darkMode: boolean | null;
   toggleNavigationButton: () => void;
+  handleToggleThemeClick: (event: React.MouseEvent<HTMLElement>) => void;
+  handleToggleLanguage?: (event: React.MouseEvent<HTMLElement>) => void;
+  handleDemoAccountClick: () => void;
 }) => {
   const { user } = useContext(AuthContext);
   const router = useRouter();
@@ -91,6 +93,9 @@ const TopNav = ({
               englishMode={englishMode}
             />
           </li>
+          <li>
+            <DemoButton handleDemoAccountClick={handleDemoAccountClick} />
+          </li>
           {user ? (
             <DashboardButton
               handleDashboardClick={handleDashboardClick}
@@ -121,6 +126,7 @@ const TopNav = ({
           handleAccountClick={handleAccountClick}
           user={user}
           handleDashboardClick={handleDashboardClick}
+          handleDemoAccountClick={handleDemoAccountClick}
         />
       ) : (
         ''

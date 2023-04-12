@@ -6,7 +6,7 @@ const ThemeButton = ({
   handleToggleThemeClick,
   englishMode,
 }: {
-  handleToggleThemeClick: () => void;
+  handleToggleThemeClick: (event: React.MouseEvent<HTMLElement>) => void;
   darkMode: boolean | null;
   englishMode: boolean | null;
 }) => {

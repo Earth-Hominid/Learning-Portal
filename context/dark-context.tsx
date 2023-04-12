@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from 'react';
 
 interface DarkModeInterface {
   darkMode?: boolean | null;
-  handleToggleThemeClick?: () => void;
+  handleToggleThemeClick?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 type ThemeProps = { children: React.ReactNode };
