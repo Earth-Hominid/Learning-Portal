@@ -2,7 +2,7 @@ import SearchBar from '../bottom-searchbar/SearchBar';
 import ThemeButton from '../../buttons/ThemeButton';
 import LanguageButton from '../../buttons/LanguageButton';
 import DemoButton from '../../buttons/Demo';
-import LoginButton from '../../buttons/Login';
+import LoginButton from '../../buttons/LoginButton';
 import LogoutButton from '../../buttons/Logout';
 import GuidesButton from '../DropDownButton/GuidesButton';
 import ResourcesButton from '../DropDownButton/ResourcesButton';

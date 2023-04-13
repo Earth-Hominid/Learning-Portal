@@ -5,7 +5,7 @@ import Logo from '../logo/Logo';
 import ThemeButton from '../buttons/ThemeButton';
 import LanguageButton from '../buttons/LanguageButton';
 import DemoButton from '../buttons/Demo';
-import LoginButton from '../buttons/Login';
+import LoginButton from '../buttons/LoginButton';
 import LogoutButton from '../buttons/Logout';
 import DashboardButton from '../buttons/Dashboard';
 import ResourcesButton from './DropDownMenu/ResourcesButton';
