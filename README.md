@@ -26,13 +26,13 @@ Strapi is a community built, open source headless Content Management System. In 
 
 Visitors to the website can only access public articles. Once a user is authenticated, they will be granted access to their own personal dashboard where they can access private managerial reports. These reports are private and only available to authenticated users.
 
-#### Public User View
+#### Public User View (Darkmode Theme | Brazilian Portuguese)
 
 <img width="1295" alt="public-user-view" src="https://user-images.githubusercontent.com/66766688/231913970-8be08c02-ebd4-4651-9430-afc40162ff31.png">
 
 <img width="483" alt="mobile-public-user-view" src="https://user-images.githubusercontent.com/66766688/231914218-96ed4e56-b441-470d-b5b9-9817dc173ff0.png">
 
-#### Private User View (Lightmode Theme)
+#### Private User View (Lightmode Theme | Emglish)
 
 <img width="1423" alt="private-view-lightmode-english" src="https://user-images.githubusercontent.com/66766688/231916560-7e9edc68-a338-4fb1-aa37-8e26a77ce3fe.png">
 
