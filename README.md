@@ -30,9 +30,11 @@ Visitors to the website can only access public articles. Once a user is authenti
 
 <img width="1295" alt="public-user-view" src="https://user-images.githubusercontent.com/66766688/231913970-8be08c02-ebd4-4651-9430-afc40162ff31.png">
 
-#### Private User View
+<img width="483" alt="mobile-public-user-view" src="https://user-images.githubusercontent.com/66766688/231914218-96ed4e56-b441-470d-b5b9-9817dc173ff0.png">
 
-<img width="444" alt="Screen Shot 2022-08-18 at 9 27 30 AM" src="https://user-images.githubusercontent.com/66766688/185410592-5498ce0c-9328-4316-a041-2249bb24ced2.png">
+#### Private User View (Lightmode Theme)
+
+<img width="1428" alt="private-user-lightmode" src="https://user-images.githubusercontent.com/66766688/231915518-4e632657-6d1a-4b76-9a51-a73b696b1d8f.png">
 
 ## Frontend
 
