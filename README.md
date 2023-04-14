@@ -28,7 +28,7 @@ Visitors to the website can only access public articles. Once a user is authenti
 
 #### Public User View
 
-<img width="363" alt="Screen Shot 2022-08-18 at 9 26 35 AM" src="https://user-images.githubusercontent.com/66766688/185410555-8050720d-17b3-49d8-aaff-543c676a6ef9.png">
+<img width="1295" alt="public-user-view" src="https://user-images.githubusercontent.com/66766688/231913970-8be08c02-ebd4-4651-9430-afc40162ff31.png">
 
 #### Private User View
 
