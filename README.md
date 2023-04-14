@@ -56,7 +56,7 @@ The SAAS product Cloudinary was chosen to host image files. When an image file i
 
 SQLite was used for the development database and PostgreSQL was chosen for the production database.
 
-<img width="964" alt="Screen Shot 2022-08-20 at 10 35 22 AM" src="https://user-images.githubusercontent.com/66766688/185748651-d121bb06-9af0-4440-8cf3-79462d69900f.png">
+<img width="1400" alt="backend" src="https://user-images.githubusercontent.com/66766688/231917019-17514b5b-7411-497e-a8f4-795b408cedbe.png">
 
 ### Dependencies
 
