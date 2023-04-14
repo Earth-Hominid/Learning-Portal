@@ -1,4 +1,4 @@
-# Business Learning Portal | Full Stack
+# Learning Portal | Full Stack
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
@@ -6,9 +6,9 @@ The goal of this application is to provide businesses with an easy to use web ap
 
 <img width="988" alt="Screen Shot 2022-08-18 at 9 18 40 AM" src="https://user-images.githubusercontent.com/66766688/185407806-9d71b8dd-11cc-403a-9a8a-3864bb887c57.png">
 
-Click here for the [live demo](https://rbsdocsfrontend.vercel.app). (The application will take a few seconds to start from sleep, as the back end is hosted on the free heroku plan.)
+Click here for the [live demo](https://learningportal-xi.vercel.app). (The application will take a few seconds to start from sleep, as the back end is hosted on Heroku.)
 
-The repository for the back-end can be found [here](https://github.com/Earth-Hominid/docs-backend).
+The repository for the back-end can be found [here](https://github.com/Earth-Hominid/Learning-Portal-Backend).
 
 ## Description
 
