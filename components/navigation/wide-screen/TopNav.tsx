@@ -93,9 +93,14 @@ const TopNav = ({
               englishMode={englishMode}
             />
           </li>
-          <li>
-            <DemoButton handleDemoAccountClick={handleDemoAccountClick} />
-          </li>
+          {user ? (
+            ''
+          ) : (
+            <li>
+              <DemoButton handleDemoAccountClick={handleDemoAccountClick} />
+            </li>
+          )}
+
           {user ? (
             <DashboardButton
               handleDashboardClick={handleDashboardClick}

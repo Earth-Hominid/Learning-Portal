@@ -57,9 +57,13 @@ const BottomNav = ({
             englishMode={englishMode}
           />
         </li>
-        <li>
-          <DemoButton handleDemoAccountClick={handleDemoAccountClick} />
-        </li>
+        {user ? (
+          ''
+        ) : (
+          <li>
+            <DemoButton handleDemoAccountClick={handleDemoAccountClick} />
+          </li>
+        )}
         <li>
           {user ? (
             <DashboardButton

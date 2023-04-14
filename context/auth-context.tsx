@@ -47,7 +47,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const checkUserLoggedIn = async (): Promise<void> => {
     const res = await fetch(`${NEXT_URL}/api/user`);
-
     const data = await res.json();
 
     if (res.ok) {
@@ -78,8 +77,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     });
 
     const data = await res.json();
-
-    console.log(data);
 
     if (res.ok) {
       setUser(data.user);
