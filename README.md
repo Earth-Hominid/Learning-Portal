@@ -34,7 +34,7 @@ Visitors to the website can only access public articles. Once a user is authenti
 
 #### Private User View (Lightmode Theme)
 
-<img width="1428" alt="private-user-lightmode" src="https://user-images.githubusercontent.com/66766688/231915518-4e632657-6d1a-4b76-9a51-a73b696b1d8f.png">
+<img width="1423" alt="private-view-lightmode-english" src="https://user-images.githubusercontent.com/66766688/231916560-7e9edc68-a338-4fb1-aa37-8e26a77ce3fe.png">
 
 ## Frontend
 
