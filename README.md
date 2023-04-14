@@ -4,7 +4,7 @@
 
 The goal of this application is to provide businesses with an easy to use web application where management can provide business reports for executives and online training material for their employees.
 
-<img width="988" alt="Screen Shot 2022-08-18 at 9 18 40 AM" src="https://user-images.githubusercontent.com/66766688/185407806-9d71b8dd-11cc-403a-9a8a-3864bb887c57.png">
+<img width="1387" alt="homepage" src="https://user-images.githubusercontent.com/66766688/231913530-b9051647-0975-4ba0-945d-277eca1e57ee.png">
 
 Click here for the [live demo](https://learningportal-xi.vercel.app). (The application will take a few seconds to start from sleep, as the back end is hosted on Heroku.)
 
