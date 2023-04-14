@@ -36,9 +36,6 @@ Visitors to the website can only access public articles. Once a user is authenti
 
 <img width="1423" alt="private-view-lightmode-english" src="https://user-images.githubusercontent.com/66766688/231916560-7e9edc68-a338-4fb1-aa37-8e26a77ce3fe.png">
 
-<img width="483" alt="mobile-private-user" src="https://user-images.githubusercontent.com/66766688/231917554-d4219e2c-4bfe-46b6-b8ee-845cc7d56c5c.png">
-
-
 ## Frontend
 
 The front-end is written in TypeScript and built with the NextJS framework and React functional components.
