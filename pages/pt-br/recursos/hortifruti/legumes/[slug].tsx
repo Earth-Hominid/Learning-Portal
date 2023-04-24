@@ -54,7 +54,7 @@ const LegumesPage = ({ article }: { article: ArticleInterface }) => {
       mainPageTitle="Hortifruti"
       currentPage={`#`}
       currentPageTitle={`${art.title}`}
-      styles="pb-10 lg:flex lg:justify-center"
+      styles="pb-10 flex justify-center"
       width="max-w-5xl"
       parentPage={`${art.categoryLink}`}
       parentPageTitle="Frutas"
