@@ -16,7 +16,7 @@ This full-stack NextJS application is a demo of an application that was built to
 
 Strapi, an open-source headless Content Management System, was chosen to build the RESTful API to handle routing and authentication. Image files are hosted on Cloudinary.
 
-The administration panel, users and user content is handled within the Strapi back-end. Authenticated users can also post content and upload data and files on the front-end. The application contains authentication, pagination and search functionality.
+The administration panel, users and user content is handled within the Strapi back-end. The application contains authentication, pagination and search functionality.
 
 ## Authentication
 
