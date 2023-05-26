@@ -12,7 +12,7 @@ The repository for the back-end can be found [here](https://github.com/Earth-Hom
 
 ## Description
 
-This full-stack NextJS application is a demo of an application that was built to allow small businesses to create educational material, reports and to share sensitive information among the mangement team.
+This full-stack NextJS application is a demo of an application that was built to allow small businesses to create educational material, reports and to share sensitive information among the management team.
 
 Strapi, an open-source headless Content Management System, was chosen to build the RESTful API to handle routing and authentication. Image files are hosted on Cloudinary.
 
